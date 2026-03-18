@@ -34,10 +34,10 @@ export default function Home() {
         {/* Left Side: Bakery Highlight - Only on Desktop */}
         <motion.div 
           style={{ y: smoothY1 }}
-          className="absolute left-[5%] top-[20%] z-20 hidden 2xl:block"
+          className="absolute left-[2%] min-[1200px]:left-[5%] top-[20%] z-20 hidden min-[1200px]:block"
         >
           <div className="relative group">
-            <div className="w-[300px] h-[400px] rounded-[3rem] overflow-hidden shadow-artisan rotate-[-3deg] transition-all duration-700 group-hover:rotate-0 border-[6px] border-white active:scale-95">
+            <div className="w-[220px] min-[1200px]:w-[260px] 2xl:w-[300px] h-[300px] min-[1200px]:h-[360px] 2xl:h-[400px] rounded-[3rem] overflow-hidden shadow-artisan rotate-[-3deg] transition-all duration-700 group-hover:rotate-0 border-[6px] border-white active:scale-95">
                <img 
                  src="https://images.pexels.com/photos/205961/pexels-photo-205961.jpeg?auto=compress&cs=tinysrgb&w=800" 
                  alt="Artisan Lotus Cake" 
@@ -55,10 +55,10 @@ export default function Home() {
         {/* Right Side: Boutique Highlight - Only on Desktop */}
         <motion.div 
           style={{ y: smoothY2 }}
-          className="absolute right-[5%] top-[25%] z-20 hidden 2xl:block"
+          className="absolute right-[2%] min-[1200px]:right-[5%] top-[25%] z-20 hidden min-[1200px]:block"
         >
           <div className="relative group">
-            <div className="w-[320px] h-[460px] rounded-[3rem] overflow-hidden shadow-artisan rotate-[2deg] transition-all duration-700 group-hover:rotate-0 border-[6px] border-white active:scale-95">
+            <div className="w-[240px] min-[1200px]:w-[280px] 2xl:w-[320px] h-[340px] min-[1200px]:h-[400px] 2xl:h-[460px] rounded-[3rem] overflow-hidden shadow-artisan rotate-[2deg] transition-all duration-700 group-hover:rotate-0 border-[6px] border-white active:scale-95">
                <img 
                  src="https://anyaonline.in/cdn/shop/files/5_4e137679-25e0-4fec-94de-0661134b06ad_400x.jpg?v=1770902247" 
                  alt="Atelier Collection" 
@@ -83,14 +83,14 @@ export default function Home() {
           >
             <div className="space-y-4">
               <span className="text-[10px] md:text-xs font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">The Pranavika Manifesto</span>
-              <h1 className="text-4xl md:text-6xl lg:text-[75px] font-fraunces font-black leading-[1.05] tracking-tight text-[#1a1c24] italic">
+              <h1 className="text-4xl md:text-6xl lg:text-[75px] min-[1200px]:text-[50px] 2xl:text-[75px] font-fraunces font-black leading-[1.05] tracking-tight text-[#1a1c24] italic">
                 Where <span className="text-[#ff4d6d]">Artistry</span> Meets <br className="hidden sm:block" />
                 <span className="text-[#bfa37e] font-normal">Divine Moments</span>
               </h1>
             </div>
             
-            <p className="max-w-3xl mx-auto text-base md:text-2xl text-[#1a1c24]/40 font-outfit font-medium italic leading-relaxed">
-              "Bespoke threads & sacred crumbs. Experience a world <br className="hidden md:block" />
+            <p className="max-w-3xl min-[1200px]:max-w-lg 2xl:max-w-3xl mx-auto text-base md:text-2xl min-[1200px]:text-lg 2xl:text-2xl text-[#1a1c24]/40 font-outfit font-medium italic leading-relaxed z-30 relative px-4">
+              "Bespoke threads & sacred crumbs. Experience a world <br className="hidden md:block min-[1200px]:hidden 2xl:block" />
               curated for those who worship the rituals of life."
             </p>
 
