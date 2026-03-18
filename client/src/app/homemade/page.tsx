@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Heart, ShoppingBag, ChevronRight } from 'lucide-react';
 import { Navbar } from '../../components/sections/Navbar';
+import { Footer } from '../../components/sections/Footer';
 
 const categories = [
   'All', 'Sweets', 'Namkeen & Snacks', 'Pickles', 'Spice Powders',
@@ -117,7 +118,7 @@ export default function HomemadePage() {
                   <div className="hidden sm:block h-px w-12 bg-[#ff4d6d]" />
                   <span className="text-[10px] md:text-xs font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">The Sacred Kitchen</span>
                 </div>
-                <h1 className="text-4xl md:text-7xl lg:text-[84px] font-fraunces font-black text-[#1a1c24] leading-[1.05] tracking-tight italic">
+                <h1 className="text-3xl md:text-5xl lg:text-6xl font-fraunces font-black text-[#1a1c24] leading-[1.05] tracking-tight italic">
                   Made with <br /><span className="italic font-normal text-[#bfa37e]">Grandma's Rituals.</span>
                 </h1>
               </div>
@@ -190,7 +191,7 @@ export default function HomemadePage() {
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
           <div className="text-center mb-16 md:mb-32 space-y-6 md:space-y-8">
             <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">Scroll the Archives</span>
-            <h2 className="text-4xl md:text-7xl lg:text-8xl font-fraunces font-black text-[#1a1c24] leading-tight italic">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-fraunces font-black text-[#1a1c24] leading-tight italic">
               Browse the <br className="sm:hidden" /><span className="italic font-normal text-[#bfa37e]">Sacred Library.</span>
             </h2>
           </div>
@@ -225,7 +226,7 @@ export default function HomemadePage() {
           <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 md:mb-24 gap-10 md:gap-16">
             <div className="space-y-6 text-center lg:text-left">
               <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">The Full Manifestation</span>
-              <h2 className="text-4xl md:text-7xl lg:text-8xl font-fraunces font-black text-[#1a1c24] leading-tight italic">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-fraunces font-black text-[#1a1c24] leading-tight italic">
                 {activeCategory === 'All' ? <>Our Favorite <span className="italic font-normal text-[#bfa37e]">Rituals.</span></> : <>{activeCategory} <span className="italic font-normal text-[#bfa37e]">Series.</span></>}
               </h2>
             </div>
@@ -295,61 +296,28 @@ export default function HomemadePage() {
       </section>
 
       {/* ── CUSTOM HAMPER CTA ── Refined stacking */}
-      <section className="py-24 md:py-48 bg-[#1a1c24] relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/silk.png')" }} />
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#ff4d6d]/10 rounded-full blur-[200px] pointer-events-none" />
-        
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-32 items-center">
-            <div className="space-y-10 md:space-y-16 text-center lg:text-left">
-              <div className="space-y-6">
-                <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">The Gifting Protocol</span>
-                <h2 className="text-4xl md:text-8xl font-fraunces font-black text-white leading-[1.1] italic">
-                  Craft Your Own <br /><span className="italic font-normal text-[#bfa37e]">Gift Scroll.</span>
-                </h2>
-              </div>
-              <p className="text-sm md:text-2xl text-white/30 font-outfit leading-relaxed max-w-xl mx-auto lg:mx-0 italic">
-                "Weave your own ritual box with divine sweets, snacks, and sacred threads. Hand-packed in premium artifacts for your most celestial celebrations."
-              </p>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start pt-4">
-                <Link href="/contact" className="group relative inline-flex items-center justify-center gap-6 px-12 md:px-16 py-6 md:py-8 bg-[#ff4d6d] text-white rounded-full font-black text-xs md:text-sm uppercase tracking-[0.5em] hover:scale-110 active:scale-95 transition-all shadow-2xl italic">
-                   Manifest Custom Hamper <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
-                </Link>
-                <Link href="/contact" className="inline-flex items-center justify-center gap-6 px-12 md:px-20 py-6 md:py-8 border-2 border-white/5 bg-white/5 text-white/50 rounded-full font-black text-xs md:text-sm uppercase tracking-[0.5em] hover:bg-white/10 hover:text-white transition-all hover:scale-105 italic">
-                  Bulk / Ritual Orders
-                </Link>
-              </div>
+      <section className="py-24 md:py-48 bg-[#1a1c24] relative overflow-hidden flex flex-col items-center">
+         <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/silk.png')" }} />
+         <div className="absolute top-0 right-0 w-[400px] h-[400px] md:w-[600px] md:h-[600px] bg-[#ff4d6d]/10 rounded-full blur-[150px] md:blur-[200px]" />
+         
+         <div className="max-w-[1400px] mx-auto px-6 md:px-10 text-center space-y-10 md:space-y-16 relative z-10 flex flex-col items-center">
+            <div className="space-y-6 text-center">
+               <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">The Gifting Protocol</span>
+               <h2 className="text-3xl md:text-5xl lg:text-6xl font-fraunces font-black text-white leading-tight italic">
+                  Craft Your Own <br className="md:hidden" /><span className="italic font-normal text-[#bfa37e]">Gift Scroll.</span>
+               </h2>
+               <p className="text-sm md:text-2xl text-white/30 font-outfit max-w-2xl mx-auto leading-relaxed italic">
+                  "Weave your own ritual box with divine sweets, snacks, and sacred threads. Hand-packed in premium artifacts for your most celestial celebrations."
+               </p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
-              {[
-                { emoji: '🎁', title: 'Curated Selection', desc: 'Manifest any item from our sacred archives' },
-                { emoji: '🎀', title: 'Premium Artifact', desc: 'Sacredly wrapped in designer boxes with silk ribbons' },
-                { emoji: '🚚', title: 'Celestial Reach', desc: 'Safely shipped to any soul across the sub-continent' },
-                { emoji: '🏢', title: 'Gifting Guild', desc: 'Custom artifacts for your corporate rituals' },
-              ].map((f, i) => (
-                <div key={i} className="p-10 md:p-12 rounded-[3.5rem] bg-white/[0.03] border border-white/5 hover:bg-white/[0.08] transition-all space-y-6 group text-center lg:text-left active:scale-95">
-                  <span className="text-5xl block group-hover:scale-125 group-hover:rotate-12 transition-transform duration-500">{f.emoji}</span>
-                  <div className="space-y-3">
-                     <h4 className="font-fraunces font-black text-xl text-white italic">{f.title}</h4>
-                     <p className="text-[11px] md:text-xs text-white/20 font-outfit leading-relaxed font-medium italic">" {f.desc} "</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+            <Link href="/contact" className="group relative inline-flex items-center justify-center gap-6 px-12 md:px-16 py-6 md:py-8 bg-[#ff4d6d] text-white rounded-full font-black text-xs md:text-sm uppercase tracking-[0.5em] hover:scale-105 active:scale-95 transition-all shadow-2xl italic overflow-hidden">
+               <div className="absolute inset-0 bg-[#1a1c24]/10 -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
+               <span className="relative z-10 flex items-center justify-center gap-4 text-center">Design Custom Hamper 🎁</span>
+            </Link>
+         </div>
       </section>
 
-      <footer className="py-12 md:py-20 bg-[#fbf9f6] border-t border-[#1a1c24]/5">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 flex flex-col sm:flex-row items-center justify-between gap-10">
-          <p className="text-[10px] md:text-[11px] font-outfit font-black uppercase tracking-[0.5em] text-[#1a1c24]/20 text-center sm:text-left italic leading-relaxed">
-             © 2026 PRANAVIKA'S · Sweet & Chic · Manifesting Pure Homemade Artistry
-          </p>
-          <Link href="/" className="group flex items-center gap-4 text-[10px] font-outfit font-black uppercase tracking-[0.4em] text-[#1a1c24]/20 hover:text-[#ff4d6d] transition-all italic">
-            <ArrowRight className="w-4 h-4 rotate-180 group-hover:-translate-x-2 transition-transform" /> Back to Home
-          </Link>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

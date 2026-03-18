@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { ShoppingBag, ArrowRight, Heart, Star, ChevronRight, Scissors, Instagram, Facebook, Twitter } from 'lucide-react';
 import { Navbar } from '../components/sections/Navbar';
+import { Footer } from '../components/sections/Footer';
 import { Logo } from '../components/ui/Logo';
 
 export default function Home() {
@@ -82,7 +83,7 @@ export default function Home() {
           >
             <div className="space-y-4">
               <span className="text-[10px] md:text-xs font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">The Pranavika Manifesto</span>
-              <h1 className="text-4xl md:text-7xl lg:text-[100px] font-fraunces font-black leading-[1.05] tracking-tight text-[#1a1c24] italic">
+              <h1 className="text-4xl md:text-6xl lg:text-[75px] font-fraunces font-black leading-[1.05] tracking-tight text-[#1a1c24] italic">
                 Where <span className="text-[#ff4d6d]">Artistry</span> Meets <br className="hidden sm:block" />
                 <span className="text-[#bfa37e] font-normal">Divine Moments</span>
               </h1>
@@ -125,7 +126,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-32 gap-10 md:gap-16">
             <div className="space-y-6 md:space-y-8">
               <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">The Weekly Manifesto</span>
-              <h2 className="text-4xl md:text-7xl lg:text-8xl font-fraunces font-black text-[#1a1c24] leading-[1.1] tracking-tight italic">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-fraunces font-black text-[#1a1c24] leading-[1.1] tracking-tight italic">
                 Most Desired <br /> <span className="italic font-normal text-[#bfa37e]">Creations.</span>
               </h2>
             </div>
@@ -247,7 +248,7 @@ export default function Home() {
             >
               <div className="space-y-6">
                 <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">The Atelier Sanctum</span>
-                <h2 className="text-4xl md:text-7xl lg:text-8xl font-fraunces font-black text-[#1a1c24] leading-[1.1] italic">
+                <h2 className="text-3xl md:text-5xl lg:text-6xl font-fraunces font-black text-[#1a1c24] leading-[1.1] italic">
                   Crafted for <br /><span className="italic font-normal text-[#bfa37e]">Every Manifestation.</span>
                 </h2>
               </div>
@@ -278,7 +279,7 @@ export default function Home() {
         <div className="max-w-[1400px] mx-auto px-6 md:px-10 relative z-10">
           <div className="text-center mb-20 md:mb-32 space-y-8 md:space-y-12">
             <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">The Sacred Bakery</span>
-            <h2 className="text-4xl md:text-7xl lg:text-[100px] font-fraunces font-black text-[#1a1c24] leading-tight italic">
+            <h2 className="text-3xl md:text-5xl lg:text-[75px] font-fraunces font-black text-[#1a1c24] leading-tight italic">
               Sweet <span className="italic font-normal text-[#bfa37e]">Temptations.</span>
             </h2>
             <p className="max-w-2xl mx-auto text-sm md:text-2xl text-[#1a1c24]/30 font-outfit italic leading-relaxed">
@@ -351,7 +352,7 @@ export default function Home() {
         <div className="max-w-[1400px] mx-auto px-6 md:px-10 relative z-10">
           <div className="text-center mb-24 md:mb-32 space-y-6 md:space-y-10">
             <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">The Pranavika Soul</span>
-            <h2 className="text-4xl md:text-8xl font-fraunces font-black text-white leading-tight italic">
+            <h2 className="text-3xl md:text-6xl font-fraunces font-black text-white leading-tight italic">
               Artistry You Can <span className="text-[#bfa37e] font-normal">Taste & Wear.</span>
             </h2>
           </div>
@@ -381,89 +382,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── PREMIUM FOOTER ── Refined for mobile */}
-      <footer className="bg-[#fbf9f6] relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.02] pointer-events-none" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/natural-paper.png')" }} />
-        
-        {/* Main footer body */}
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 py-24 md:py-48">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-20 lg:gap-32 mb-24 md:mb-48">
-            
-            {/* Brand col */}
-            <div className="sm:col-span-2 space-y-12 md:space-y-16">
-              <Logo />
-              <p className="text-sm md:text-2xl text-[#1a1c24]/20 font-outfit italic leading-relaxed max-w-sm">
-                "Where fine threads meet finest flavours. Crafting sacred memories since 2020."
-              </p>
-              <div className="flex items-center gap-10">
-                {[
-                  { icon: <Instagram className="w-5 h-5" />, href: '/', label: 'Instagram' },
-                  { icon: <Facebook className="w-5 h-5" />, href: '/', label: 'Facebook' },
-                  { icon: <Twitter className="w-5 h-5" />, href: '/', label: 'Twitter' },
-                ].map(({ icon, href, label }) => (
-                  <Link key={label} href={href} aria-label={label}
-                    className="w-14 h-14 rounded-full border border-[#1a1c24]/5 flex items-center justify-center text-[#1a1c24]/20 hover:border-[#ff4d6d] hover:text-[#ff4d6d] hover:bg-[#ff4d6d]/5 transition-all transform hover:rotate-12 hover:scale-110 active:scale-75">
-                    {icon}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* Nav Columns */}
-            {[
-              { heading: 'Ascend', links: [{ label: 'The Boutique', href: '/boutique' }, { label: 'The Bakery', href: '/bakery' }, { label: 'Handcrafted', href: '/homemade' }, { label: 'Gift Scrolls', href: '/gifts' }] },
-              { heading: 'The Tale', links: [{ label: 'Our Rituals', href: '/our-story' }, { label: 'The Masters', href: '/artisans' }, { label: 'Join Alliance', href: '/careers' }, { label: 'Whisper to Us', href: '/contact' }] },
-              { heading: 'The Pact', links: [{ label: 'Manifest Privacy', href: '/privacy' }, { label: 'User Terms', href: '/terms' }, { label: 'Returns', href: '/returns' }] },
-            ].map((col) => (
-              <div key={col.heading} className="space-y-8 md:space-y-12">
-                <h5 className="text-[10px] md:text-[11px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d]/40 italic">{col.heading}</h5>
-                <ul className="space-y-6 md:space-y-8">
-                  {col.links.map(({ label, href }) => (
-                    <li key={label}>
-                      <Link href={href} className="text-sm md:text-xl font-fraunces font-black italic text-[#1a1c24]/40 hover:text-[#ff4d6d] transition-all transform hover:-translate-x-2 block">
-                        {label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          {/* Newsletter strip refined */}
-          <div className="py-12 md:py-24 px-8 md:px-24 rounded-[3rem] md:rounded-[5rem] bg-[#1a1c24] flex flex-col lg:flex-row items-center justify-between gap-12 md:gap-20 mb-20 md:mb-32 shadow-2xl relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-[#ff4d6d]/5 to-transparent pointer-events-none" />
-            <div className="space-y-4 text-center lg:text-left relative z-10">
-              <h4 className="text-2xl md:text-5xl font-fraunces font-black text-white italic">Stay in the Sacred Loop</h4>
-              <p className="text-xs md:text-xl text-white/30 font-outfit italic">New arrivals, ritual menus & exclusive drops whispered to your inbox.</p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-6 w-full lg:w-auto relative z-10">
-              <input 
-                type="email" 
-                placeholder="whisper@your-ritual.com" 
-                className="w-full lg:w-[400px] px-8 md:px-12 py-6 md:py-8 rounded-full bg-white/5 text-white placeholder-white/20 text-sm md:text-base font-outfit border border-white/10 focus:outline-none focus:border-[#ff4d6d]/50 focus:bg-white/10 transition-all italic shadow-inner"
-              />
-              <button className="w-full sm:w-auto px-12 md:px-20 py-6 md:py-8 bg-[#ff4d6d] text-white rounded-full text-xs md:text-sm font-black uppercase tracking-[0.4em] hover:scale-110 active:scale-95 transition-all shadow-2xl italic">
-                Subscribe
-              </button>
-            </div>
-          </div>
-
-          {/* Bottom strip refined */}
-          <div className="flex flex-col md:flex-row justify-between items-center gap-10 md:gap-16 pt-12 md:pt-20 border-t border-[#1a1c24]/5">
-            <p className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#1a1c24]/15 italic text-center md:text-left leading-relaxed">
-               © 2026 PRANAVIKA'S · Sweet & Chic · Crafted in Tirunelveli Sanctum
-            </p>
-            <div className="flex flex-wrap justify-center gap-8 md:gap-12">
-              {['Ritual Privacy', 'Manifest Terms', 'Artifact Cookies'].map((item) => (
-                <Link key={item} href={`/${item.toLowerCase()}`} className="text-[10px] font-outfit font-black uppercase tracking-[0.4em] text-[#1a1c24]/20 hover:text-[#ff4d6d] transition-all italic">
-                  {item}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

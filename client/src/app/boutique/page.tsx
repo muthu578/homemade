@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Heart, Search, ChevronRight, SlidersHorizontal, X } from 'lucide-react';
 import { Navbar } from '../../components/sections/Navbar';
+import { Footer } from '../../components/sections/Footer';
 
 const categories = ['All', 'Sarees', 'Ethnic Wear', 'Gowns', 'Salwar Suits', 'Designer Blouses', 'Lehengas', 'Fabrics'];
 
@@ -158,7 +159,7 @@ export default function BoutiquePage() {
                   <div className="hidden md:block h-px w-16 bg-[#ff4d6d]" />
                   <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d]">Artisan Boutique</span>
                 </div>
-                <h1 className="text-4xl md:text-7xl lg:text-8xl font-fraunces font-black text-[#1a1c24] leading-[1.1] md:leading-tight italic">
+                <h1 className="text-3xl md:text-5xl lg:text-6xl font-fraunces font-black text-[#1a1c24] leading-[1.1] md:leading-tight italic">
                   Wear Your <br className="hidden sm:block" /><span className="text-[#bfa37e] font-normal italic">Story.</span>
                 </h1>
                 <p className="text-sm md:text-xl text-[#1a1c24]/40 font-outfit leading-relaxed max-w-xl mx-auto lg:mx-0 italic">
@@ -418,73 +419,28 @@ export default function BoutiquePage() {
       </section>
 
       {/* ── CUSTOM ORDER CTA UPDATED ── */}
-      <section className="py-24 md:py-48 bg-[#1a1c24] relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/silk.png')" }} />
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#ff4d6d]/10 rounded-full blur-[150px] -z-0" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#bfa37e]/10 rounded-full blur-[120px] -z-0" />
-
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-32 items-center">
-            <div className="space-y-10 md:space-y-16 text-center lg:text-left">
-              <div className="space-y-6 md:space-y-8">
-                 <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">Private Atelier</span>
-                 <h2 className="text-4xl md:text-7xl lg:text-8xl font-fraunces font-black text-white leading-[1.1] md:leading-tight italic">
-                   Bespoke <br className="hidden md:block" /><span className="text-[#bfa37e] font-normal italic">Visionaries.</span>
-                 </h2>
-                 <p className="text-sm md:text-xl text-white/40 font-outfit leading-relaxed max-w-xl mx-auto lg:mx-0 italic">
-                   "We invite you to the ritual of creation. Share your dreams, and our master artisans will manifest them into artifacts of pure grace."
-                 </p>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start pt-6 md:pt-10">
-                <Link href="/contact" className="group inline-flex items-center justify-center gap-6 px-12 md:px-16 py-6 md:py-8 bg-[#ff4d6d] text-white rounded-full font-black text-xs md:text-sm uppercase tracking-[0.4em] hover:scale-105 transition-all shadow-[0_20px_60px_rgba(255,77,109,0.3)] active:scale-95">
-                  Launch Custom Ritual <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
-                </Link>
-                <Link href="/our-story" className="inline-flex items-center justify-center gap-6 px-12 md:px-16 py-6 md:py-8 border-2 border-white/5 text-white/40 hover:text-white hover:border-white/20 rounded-full font-black text-xs md:text-sm uppercase tracking-[0.4em] transition-all active:scale-95 backdrop-blur-sm">
-                  Meet the Masters
-                </Link>
-              </div>
+      <section className="py-24 md:py-48 bg-[#1a1c24] relative overflow-hidden flex flex-col items-center">
+         <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/silk.png')" }} />
+         <div className="absolute top-0 right-0 w-[400px] h-[400px] md:w-[600px] md:h-[600px] bg-[#ff4d6d]/10 rounded-full blur-[150px] md:blur-[200px]" />
+         
+         <div className="max-w-[1400px] mx-auto px-6 md:px-10 text-center space-y-10 md:space-y-16 relative z-10 flex flex-col items-center">
+            <div className="space-y-6 text-center">
+               <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">Private Atelier</span>
+               <h2 className="text-3xl md:text-5xl lg:text-6xl font-fraunces font-black text-white leading-tight italic">
+                  Bespoke <br className="md:hidden" /><span className="italic font-normal text-[#bfa37e]">Visionaries.</span>
+               </h2>
+               <p className="text-sm md:text-2xl text-white/30 font-outfit max-w-2xl mx-auto leading-relaxed italic">
+                  "We invite you to the ritual of creation. Share your dreams, and our master artisans will manifest them into artifacts of pure grace."
+               </p>
             </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10">
-              {[
-                { emoji: '📐', title: 'Legacy Sizing', desc: 'Precise measurements for an immortal fit' },
-                { emoji: '🧵', title: 'Soul Fabrics', desc: 'Hand-picked Kanchi silks & celestial blends' },
-                { emoji: '✨', title: 'Gold Motifs', desc: 'Intricate hand embroidery by master craftsmen' },
-                { emoji: '🚚', title: 'Palace Delivery', desc: 'Secured transport to your private domain' },
-              ].map((f, i) => (
-                <div key={i} className="p-10 md:p-14 rounded-[3rem] md:rounded-[4rem] bg-white/5 border border-white/5 hover:bg-white/10 hover:border-white/10 transition-all duration-700 space-y-6 group text-center sm:text-left relative overflow-hidden flex flex-col items-center sm:items-start">
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-full blur-3xl -z-0 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="w-20 h-20 md:w-24 md:h-24 bg-white/5 rounded-[2rem] flex items-center justify-center text-4xl md:text-5xl group-hover:bg-[#ff4d6d] transition-all transform group-hover:rotate-12 group-hover:scale-110 shadow-inner">
-                    <span className="relative z-10">{f.emoji}</span>
-                  </div>
-                  <div className="space-y-3">
-                     <h4 className="font-fraunces font-black text-xl md:text-3xl text-white italic">{f.title}</h4>
-                     <p className="text-[10px] md:text-xs text-white/30 font-outfit font-medium uppercase tracking-[0.2em] leading-relaxed italic">{f.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+            <Link href="/contact" className="group relative inline-flex items-center justify-center gap-6 px-12 md:px-16 py-6 md:py-8 bg-[#ff4d6d] text-white rounded-full font-black text-xs md:text-sm uppercase tracking-[0.5em] hover:scale-105 active:scale-95 transition-all shadow-2xl italic overflow-hidden">
+               <div className="absolute inset-0 bg-[#1a1c24]/10 -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
+               <span className="relative z-10 flex items-center justify-center gap-4 text-center">Design Custom Outfit 👗</span>
+            </Link>
+         </div>
       </section>
 
-      {/* Footer refined for mobile */}
-      <footer className="py-16 md:py-24 bg-[#fbf9f6] border-t border-[#1a1c24]/5 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.02] pointer-events-none" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/natural-paper.png')" }} />
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16 relative z-10">
-          <div className="flex flex-col items-center md:items-start gap-4">
-             <p className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#1a1c24]/15 text-center md:text-left leading-relaxed italic">
-               © 2026 PRANAVIKA'S · Bespoke Couture · Crafted with Honor
-             </p>
-             <div className="h-px w-20 bg-[#1a1c24]/5" />
-          </div>
-          <Link href="/" className="group flex items-center gap-4 text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.5em] text-[#1a1c24]/20 hover:text-[#ff4d6d] transition-all transform hover:-translate-x-2">
-            <ArrowRight className="w-5 h-5 rotate-180 group-hover:scale-125 transition-transform" />
-            <span className="italic">Ascend to Home</span>
-          </Link>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }
