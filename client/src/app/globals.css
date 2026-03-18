@@ -2,56 +2,56 @@
 
 @layer base {
   :root {
-    --background: #FFFDF9; /* Cream */
-    --foreground: #2D1B08; /* Dark Cocoa */
+    --background: #fbf9f6; /* Warm Pearl Background */
+    --foreground: #2d241c; /* Deep Bronze */
     
-    --card: #FFFFFF;
-    --card-foreground: #2D1B08;
+    --card: #ffffff;
+    --card-foreground: #2d241c;
     
-    --popover: #FFFFFF;
-    --popover-foreground: #2D1B08;
+    --popover: #ffffff;
+    --popover-foreground: #2d241c;
     
-    --primary: #F4C2C2; /* Blush Pink */
-    --primary-foreground: #2D1B08;
+    --primary: #dcb0af; /* Dusty Rose Pink */
+    --primary-foreground: #ffffff;
     
-    --secondary: #6C541E; /* Cocoa Brown */
-    --secondary-foreground: #FFFDF9;
+    --secondary: #bfa37e; /* Artisan Gold/Bronze */
+    --secondary-foreground: #ffffff;
     
-    --muted: #F3EFEA;
-    --muted-foreground: #6B5E4F;
+    --muted: #f5f0eb;
+    --muted-foreground: #7d6e5d;
     
-    --accent: #E8D5C4; /* Soft Beige/Tan */
-    --accent-foreground: #2D1B08;
+    --accent: #e8dcc4; /* Pale Champagne */
+    --accent-foreground: #2d241c;
     
-    --destructive: #EF4444;
-    --destructive-foreground: #F8FAFC;
+    --destructive: #cc4c4c;
+    --destructive-foreground: #ffffff;
     
-    --border: #E8E2D6;
-    --input: #E8E2D6;
-    --ring: #F4C2C2;
+    --border: #e8ded3;
+    --input: #e8ded3;
+    --ring: #dcb0af;
     
-    --radius: 1rem;
+    --radius: 1.5rem;
   }
 
   .dark {
-    --background: #1A120B;
-    --foreground: #F5EBE0;
+    --background: #1a140f;
+    --foreground: #fbf9f6;
     
-    --card: #2D241C;
-    --card-foreground: #F5EBE0;
+    --card: #2d241c;
+    --card-foreground: #fbf9f6;
     
-    --primary: #E5A9A9;
-    --primary-foreground: #1A120B;
+    --primary: #c28787;
+    --primary-foreground: #1a140f;
     
-    --secondary: #D4B483;
-    --secondary-foreground: #1A120B;
+    --secondary: #a69e94;
+    --secondary-foreground: #1a140f;
     
-    --muted: #3D3329;
-    --muted-foreground: #A69E94;
+    --muted: #3d3329;
+    --muted-foreground: #a69e94;
     
-    --border: #3D3329;
-    --input: #3D3329;
-    --ring: #E5A9A9;
+    --border: #3d3329;
+    --input: #3d3329;
+    --ring: #c28787;
   }
 }
 
@@ -76,16 +76,38 @@ body {
   font-feature-settings: "rlig" 1, "calt" 1;
 }
 
-/* Glassmorphism Utility */
+/* Artisan UI Effects */
 .glass {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 10px 40px -10px rgba(125, 110, 93, 0.1);
 }
 
 .dark .glass {
-  background: rgba(45, 36, 28, 0.7);
+  background: rgba(45, 36, 28, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.shadow-artisan {
+  box-shadow: 0 30px 100px -20px rgba(125, 110, 93, 0.12), 0 20px 50px -25px rgba(0, 0, 0, 0.05);
+}
+
+.hover-lift {
+  transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-12px) scale(1.02);
+}
+
+@keyframes slow-drift {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(1deg); }
+}
+
+.animate-drift {
+  animation: slow-drift 8s ease-in-out infinite;
 }
 
