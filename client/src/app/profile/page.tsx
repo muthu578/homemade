@@ -56,15 +56,19 @@ export default function ProfilePage() {
                 </div>
               </motion.div>
 
-              <div className="bg-white rounded-[2.5rem] overflow-hidden shadow-soft border border-[#1a1c24]/5">
+               <div className="bg-white rounded-[2.5rem] overflow-hidden shadow-soft border border-[#1a1c24]/5">
                  {[
-                   { icon: Package, label: 'Order History', href: '/account' },
+                   { icon: Package, label: 'Order History', href: '/orders' },
                    { icon: Heart, label: 'My Wishlist', href: '/wishlist' },
                    { icon: Bell, label: 'Notifications', count: 3 },
                    { icon: Shield, label: 'Account Security' },
-                   { icon: LogOut, label: 'Sign Out', danger: true },
+                   { icon: LogOut, label: 'Sign Out', danger: true, action: () => window.location.href = '/login' },
                  ].map((item, i) => (
-                   <button key={i} className={`w-full px-8 py-5 flex items-center justify-between hover:bg-[#fbf9f6] transition-all border-b border-[#1a1c24]/5 last:border-0 ${item.danger ? 'text-[#ff4d6d]' : 'text-[#1a1c24]/60'}`}>
+                   <button 
+                     key={i} 
+                     onClick={() => item.action ? item.action() : item.href && (window.location.href = item.href)}
+                     className={`w-full px-8 py-5 flex items-center justify-between hover:bg-[#fbf9f6] transition-all border-b border-[#1a1c24]/5 last:border-0 ${item.danger ? 'text-[#ff4d6d]' : 'text-[#1a1c24]/60'}`}
+                   >
                       <div className="flex items-center gap-4">
                         <item.icon className="w-4 h-4" />
                         <span className="text-[10px] font-outfit font-black uppercase tracking-widest">{item.label}</span>

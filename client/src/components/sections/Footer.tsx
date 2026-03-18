@@ -9,7 +9,7 @@ export const Footer = () => {
     <footer className="bg-white pt-24 pb-12 overflow-hidden border-t border-[#1a1c24]/5">
       <div className="max-w-[1800px] mx-auto px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
-          
+
           {/* Brand Col */}
           <div className="space-y-8">
             <Logo />
@@ -48,13 +48,13 @@ export const Footer = () => {
             <ul className="space-y-4">
               {['Our Story', 'Customer FAQ', 'Shipping Policy', 'Terms of Service', 'Privacy Policy'].map((item) => (
                 <li key={item}>
-                  <Link 
+                  <Link
                     href={
-                      item === 'Our Story' ? '/our-story' : 
-                      item === 'Customer FAQ' ? '/faq' : 
-                      item === 'Terms of Service' ? '/legal#terms' :
-                      item === 'Privacy Policy' ? '/legal#privacy' : '#'
-                    } 
+                      item === 'Our Story' ? '/our-story' :
+                        item === 'Customer FAQ' ? '/faq' :
+                          item === 'Terms of Service' ? '/legal#terms' :
+                            item === 'Privacy Policy' ? '/legal#privacy' : '#'
+                    }
                     className="text-sm font-outfit font-bold text-[#1a1c24]/50 hover:text-[#ff4d6d] hover:translate-x-1 transition-all flex items-center gap-2 group"
                   >
                     {item}
@@ -69,16 +69,16 @@ export const Footer = () => {
             <h4 className="text-[10px] font-outfit font-black uppercase tracking-[0.4em] text-[#ff4d6d]">Studio Contact</h4>
             <div className="space-y-6">
               <div className="flex gap-4 group">
-                 <MapPin className="w-5 h-5 text-[#ff4d6d]/40 flex-shrink-0 group-hover:text-[#ff4d6d] transition-colors" />
-                 <p className="text-sm font-outfit text-[#1a1c24]/50 group-hover:text-[#1a1c24] transition-colors">No. 42, Gandhi Street, Coimbatore, TN 641001</p>
+                <MapPin className="w-5 h-5 text-[#ff4d6d]/40 flex-shrink-0 group-hover:text-[#ff4d6d] transition-colors" />
+                <p className="text-sm font-outfit text-[#1a1c24]/50 group-hover:text-[#1a1c24] transition-colors">No. 02, MGR Street, Tirunelveli, TN 627001</p>
               </div>
               <div className="flex gap-4 group">
-                 <Phone className="w-5 h-5 text-[#ff4d6d]/40 flex-shrink-0 group-hover:text-[#ff4d6d] transition-colors" />
-                 <p className="text-sm font-outfit text-[#1a1c24]/50 group-hover:text-[#1a1c24] transition-colors">+91 98765 43210</p>
+                <Phone className="w-5 h-5 text-[#ff4d6d]/40 flex-shrink-0 group-hover:text-[#ff4d6d] transition-colors" />
+                <p className="text-sm font-outfit text-[#1a1c24]/50 group-hover:text-[#1a1c24] transition-colors">+91 98765 43210</p>
               </div>
               <div className="flex gap-4 group">
-                 <Mail className="w-5 h-5 text-[#ff4d6d]/40 flex-shrink-0 group-hover:text-[#ff4d6d] transition-colors" />
-                 <p className="text-sm font-outfit text-[#1a1c24]/50 group-hover:text-[#1a1c24] transition-colors">hello@pranavika.in</p>
+                <Mail className="w-5 h-5 text-[#ff4d6d]/40 flex-shrink-0 group-hover:text-[#ff4d6d] transition-colors" />
+                <p className="text-sm font-outfit text-[#1a1c24]/50 group-hover:text-[#1a1c24] transition-colors">hello@pranavika.in</p>
               </div>
             </div>
           </div>

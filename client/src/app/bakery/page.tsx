@@ -319,11 +319,10 @@ export default function BakeryPage() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-5 py-2 rounded-full text-[10px] font-outfit font-bold tracking-[0.2em] uppercase transition-all ${
-                  activeCategory === cat
+                className={`px-5 py-2 rounded-full text-[10px] font-outfit font-bold tracking-[0.2em] uppercase transition-all ${activeCategory === cat
                     ? 'bg-[#1a1c24] text-white shadow-md'
                     : 'text-[#1a1c24]/40 border border-[#1a1c24]/10 hover:border-[#1a1c24]/30 hover:text-[#1a1c24]'
-                }`}
+                  }`}
               >
                 {cat}
               </button>
@@ -413,7 +412,7 @@ export default function BakeryPage() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { name: 'Priya R.', location: 'Chennai', text: 'The Lotus Biscoff cake was absolutely divine! Every layer was perfect — the caramel drip, the biscoff crumble… it disappeared within minutes at the party!', stars: 5 },
-              { name: 'Ananya S.', location: 'Coimbatore', text: 'Ordered a custom birthday cake with very specific design requirements. The team delivered exactly what I envisioned — and it tasted even better than it looked!', stars: 5 },
+              { name: 'Ananya S.', location: 'Tirunelveli', text: 'Ordered a custom birthday cake with very specific design requirements. The team delivered exactly what I envisioned — and it tasted even better than it looked!', stars: 5 },
               { name: 'Meera K.', location: 'Bangalore', text: 'The Rasamalai fusion cake was a revelation. Perfect blend of traditional Indian flavours in an elegant modern presentation. Will definitely order again!', stars: 5 },
             ].map((t, i) => (
               <motion.div

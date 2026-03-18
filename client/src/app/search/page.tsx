@@ -6,9 +6,9 @@ import { Search, ArrowRight, ShoppingBag, Filter, X } from 'lucide-react';
 import { Navbar } from '../../components/sections/Navbar';
 
 const mockResults = [
-  { id: 1, name: 'Lotus Biscoff Cake', category: 'Bakery', price: 1200, img: 'https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg?auto=compress&cs=tinysrgb&w=400' },
-  { id: 2, name: 'Kanchi Silk Saree', category: 'Boutique', price: 7960, img: 'https://anyaonline.in/cdn/shop/files/10_91061a4c-2853-4728-b38d-e10d8f038c4d_400x.jpg?v=1771048393' },
-  { id: 3, name: 'Mango Thokku Pickle', category: 'Homemade', price: 220, img: 'https://vellankifoods.com/cdn/shop/files/allam_mamidi_ginger_mango_pickle_a1459065-18d2-461b-9fc7-f82febc74c5c_1024x1024.jpg?v=1689761372' },
+  { id: 1, name: 'Lotus Biscoff Cake', category: 'Bakery', price: 1200, img: 'https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg?auto=compress&cs=tinysrgb&w=800' },
+  { id: 2, name: 'Kanchi Silk Saree', category: 'Boutique', price: 7960, img: 'https://images.pexels.com/photos/1721558/pexels-photo-1721558.jpeg?auto=compress&cs=tinysrgb&w=800' },
+  { id: 3, name: 'Mango Thokku Pickle', category: 'Homemade', price: 220, img: 'https://images.pexels.com/photos/6152261/pexels-photo-6152261.jpeg?auto=compress&cs=tinysrgb&w=800' },
 ];
 
 export default function SearchPage() {

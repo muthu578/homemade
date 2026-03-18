@@ -51,7 +51,7 @@ export default function ContactPage() {
                   {[
                     { Icon: Phone, label: 'Call / WhatsApp', value: '+91 98765 43210', sub: 'Mon–Sat, 9 AM – 8 PM', href: 'tel:+919876543210' },
                     { Icon: Mail, label: 'Email Us', value: 'hello@pranavika.in', sub: 'We reply within 24h', href: 'mailto:hello@pranavika.in' },
-                    { Icon: MapPin, label: 'Visit Us', value: 'No. 42, Gandhi Street', sub: 'Coimbatore, Tamil Nadu 641001', href: '#' },
+                    { Icon: MapPin, label: 'Visit Us', value: 'No. 02, MGR Street', sub: 'Tirunelveli, Tamil Nadu 627001', href: '#' },
                     { Icon: Clock, label: 'Working Hours', value: 'Mon – Sat: 9 AM – 8 PM', sub: 'Sunday: 10 AM – 5 PM', href: '#' },
                   ].map(({ Icon, label, value, sub, href }) => (
                     <a key={label} href={href} className="group flex items-start gap-4 p-6 rounded-[1.5rem] bg-white border border-[#1a1c24]/5 hover:border-[#ff4d6d]/20 hover:shadow-[0_10px_40px_rgba(0,0,0,0.06)] transition-all">
@@ -153,8 +153,8 @@ export default function ContactPage() {
         <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/silk.png')" }} />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center space-y-4 z-10">
           <MapPin className="w-8 h-8 text-[#ff4d6d]" />
-          <h3 className="font-fraunces font-bold text-white text-2xl">No. 42, Gandhi Street</h3>
-          <p className="font-outfit text-white/40">Coimbatore, Tamil Nadu 641001</p>
+          <h3 className="font-fraunces font-bold text-white text-2xl">No. 02, MGR Street</h3>
+          <p className="font-outfit text-white/40">Tirunelveli, Tamil Nadu 627001</p>
           <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer"
             className="px-8 py-3 bg-[#ff4d6d] text-white rounded-full text-xs font-outfit font-bold uppercase tracking-widest hover:scale-105 transition-all">
             Open in Maps

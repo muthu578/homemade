@@ -6,7 +6,7 @@ import {
 } from 'recharts';
 import { 
   TrendingUp, Users, ShoppingBag, Package, AlertTriangle, 
-  ArrowUpRight, ArrowDownRight, Calendar, Filter, Download
+  ArrowUpRight, ArrowDownRight, Calendar, Filter, Download, LogOut
 } from 'lucide-react';
 import { cn } from "@/lib/utils";
 
@@ -57,6 +57,12 @@ export default function Dashboard() {
             <button className="px-6 py-3 bg-secondary text-background rounded-2xl flex items-center gap-2 font-bold text-sm hover:shadow-2xl transition-all active:scale-95 group">
               <Download className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
               <span>Export Report</span>
+            </button>
+            <button 
+              onClick={() => window.location.href = '/login'}
+              className="w-12 h-12 glass rounded-2xl border border-border flex items-center justify-center text-destructive hover:bg-destructive hover:text-white transition-all shadow-sm"
+            >
+              <LogOut className="w-5 h-5" />
             </button>
           </div>
         </div>
