@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #FFFDF9; /* Cream */
+    --foreground: #2D1B08; /* Dark Cocoa */
+    
+    --card: #FFFFFF;
+    --card-foreground: #2D1B08;
+    
+    --popover: #FFFFFF;
+    --popover-foreground: #2D1B08;
+    
+    --primary: #F4C2C2; /* Blush Pink */
+    --primary-foreground: #2D1B08;
+    
+    --secondary: #6C541E; /* Cocoa Brown */
+    --secondary-foreground: #FFFDF9;
+    
+    --muted: #F3EFEA;
+    --muted-foreground: #6B5E4F;
+    
+    --accent: #E8D5C4; /* Soft Beige/Tan */
+    --accent-foreground: #2D1B08;
+    
+    --destructive: #EF4444;
+    --destructive-foreground: #F8FAFC;
+    
+    --border: #E8E2D6;
+    --input: #E8E2D6;
+    --ring: #F4C2C2;
+    
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: #1A120B;
+    --foreground: #F5EBE0;
+    
+    --card: #2D241C;
+    --card-foreground: #F5EBE0;
+    
+    --primary: #E5A9A9;
+    --primary-foreground: #1A120B;
+    
+    --secondary: #D4B483;
+    --secondary-foreground: #1A120B;
+    
+    --muted: #3D3329;
+    --muted-foreground: #A69E94;
+    
+    --border: #3D3329;
+    --input: #3D3329;
+    --ring: #E5A9A9;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --border-radius-xl: var(--radius);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* Glassmorphism Utility */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark .glass {
+  background: rgba(45, 36, 28, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
