@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { ShoppingBag, ArrowRight, Heart, Star, ChevronRight, Scissors, Instagram, Facebook, Twitter } from 'lucide-react';
 import { Navbar } from '../components/sections/Navbar';
+import { Footer } from '../components/sections/Footer';
 import { Logo } from '../components/ui/Logo';
 
 export default function Home() {

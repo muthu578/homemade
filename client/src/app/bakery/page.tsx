@@ -81,7 +81,7 @@ const products = [
     price: 280,
     tag: '🫐 No-Bake',
     desc: 'Mixed berry compote · Cream cheese · Biscuit base',
-    img: 'https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg?auto=compress&cs=tinysrgb&w=600',
+    img: 'https://images.pexels.com/photos/1410235/pexels-photo-1410235.jpeg?auto=compress&cs=tinysrgb&w=600',
     serves: '1 slice',
     time: 'Same day',
   },
@@ -114,7 +114,7 @@ const products = [
     price: 1650,
     tag: '🥭 Seasonal',
     desc: 'Mirror glaze · Alphonso mango mousse · Coconut dacquoise',
-    img: 'https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg?auto=compress&cs=tinysrgb&w=600',
+    img: 'https://images.pexels.com/photos/9708317/pexels-photo-9708317.jpeg?auto=compress&cs=tinysrgb&w=600',
     serves: '8–10',
     time: '48h notice',
   },
@@ -224,7 +224,7 @@ export default function BakeryPage() {
               {/* Main big card */}
               <div className="absolute top-0 right-0 w-[380px] h-[480px] rounded-[3rem] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.15)] group">
                 <img
-                  src="/bakery-hero.jpg"
+                  src="https://images.pexels.com/photos/205961/pexels-photo-205961.jpeg?auto=compress&cs=tinysrgb&w=800"
                   alt="Lotus Biscoff Cake"
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
@@ -237,7 +237,7 @@ export default function BakeryPage() {
               {/* Mini floating card */}
               <div className="absolute bottom-4 left-4 w-[240px] h-[200px] rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.12)] border-4 border-white group">
                 <img
-                  src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&q=80&w=400"
+                  src="https://images.pexels.com/photos/808941/pexels-photo-808941.jpeg?auto=compress&cs=tinysrgb&w=400"
                   alt="Cupcakes"
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
@@ -349,7 +349,7 @@ export default function BakeryPage() {
                   className="group relative bg-white rounded-[2.5rem] overflow-hidden shadow-[0_6px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2"
                 >
                   {/* Image */}
-                  <div className="relative aspect-square overflow-hidden">
+                  <Link href={`/bakery/${item.id}`} className="relative aspect-square overflow-hidden block">
                     <img
                       src={item.img}
                       alt={item.name}
@@ -365,19 +365,21 @@ export default function BakeryPage() {
 
                     {/* Wishlist */}
                     <button
-                      onClick={() => toggleWishlist(item.id)}
+                      onClick={(e) => { e.preventDefault(); toggleWishlist(item.id); }}
                       className="absolute top-4 right-4 w-9 h-9 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all hover:bg-[#ff4d6d] hover:text-white shadow-lg"
                     >
                       <Heart className={`w-3.5 h-3.5 transition-colors ${wishlist.includes(item.id) ? 'fill-[#ff4d6d] text-[#ff4d6d]' : 'text-[#1a1c24]'}`} />
                     </button>
-                  </div>
+                  </Link>
 
                   {/* Info */}
                   <div className="p-6 space-y-3">
                     <div className="flex items-start justify-between gap-2">
-                      <h3 className="text-base font-fraunces font-bold text-[#1a1c24] leading-snug group-hover:text-[#ff4d6d] transition-colors">
-                        {item.name}
-                      </h3>
+                      <Link href={`/bakery/${item.id}`}>
+                        <h3 className="text-base font-fraunces font-bold text-[#1a1c24] leading-snug group-hover:text-[#ff4d6d] transition-colors line-clamp-2">
+                          {item.name}
+                        </h3>
+                      </Link>
                       <span className="text-sm font-fraunces font-bold text-[#bfa37e] whitespace-nowrap">₹{item.price}</span>
                     </div>
                     <p className="text-xs font-outfit text-[#1a1c24]/40 leading-relaxed">{item.desc}</p>

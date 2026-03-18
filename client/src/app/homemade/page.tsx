@@ -249,22 +249,24 @@ export default function HomemadePage() {
                   initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: i * 0.05 }}
                   className="group bg-[#fbf9f6] rounded-[2rem] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_16px_50px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 border border-[#1a1c24]/5">
                   {/* Image */}
-                  <div className="relative aspect-square overflow-hidden" style={{ background: '#f0ede8' }}>
-                    <img src={item.img} alt={item.name} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" loading="lazy" onError={(e) => fallback(e, item.emoji, item.bg)} />
+                  <Link href={`/homemade/${item.id}`} className="relative aspect-square overflow-hidden block" style={{ background: '#f0ede8' }}>
+                    <img src={item.img} alt={item.name} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" loading="lazy" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                     <div className="absolute top-3 left-3 px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full">
                       <span className="text-[8px] font-outfit font-black">{item.tag}</span>
                     </div>
-                    <button onClick={() => toggleWishlist(item.id)}
+                    <button onClick={(e) => { e.preventDefault(); toggleWishlist(item.id); }}
                       className="absolute top-3 right-3 w-8 h-8 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all hover:bg-[#ff4d6d] shadow-md">
                       <Heart className={`w-3 h-3 transition-colors ${wishlist.includes(item.id) ? 'fill-[#ff4d6d] text-[#ff4d6d]' : 'text-[#1a1c24]'}`} />
                     </button>
-                  </div>
+                  </Link>
 
                   {/* Info */}
                   <div className="p-5 space-y-2">
                     <p className="text-[8px] font-outfit font-black uppercase tracking-[0.3em] text-[#bfa37e]">{item.category}</p>
-                    <h3 className="text-sm font-fraunces font-bold text-[#1a1c24] leading-snug group-hover:text-[#ff4d6d] transition-colors">{item.name}</h3>
+                    <Link href={`/homemade/${item.id}`}>
+                      <h3 className="text-sm font-fraunces font-bold text-[#1a1c24] leading-snug group-hover:text-[#ff4d6d] transition-colors">{item.name}</h3>
+                    </Link>
                     <p className="text-[10px] font-outfit text-[#1a1c24]/35 leading-relaxed line-clamp-2">{item.desc}</p>
                     <div className="flex items-center justify-between pt-2">
                       <div>

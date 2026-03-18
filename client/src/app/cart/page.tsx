@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Trash2, Plus, Minus, ShoppingBag, Tag } from 'lucide-react';
 import { Navbar } from '../../components/sections/Navbar';
+import { Footer } from '../../components/sections/Footer';
 
 type CartItem = {
   id: number; name: string; category: string; price: number;
@@ -11,9 +12,9 @@ type CartItem = {
 };
 
 const initialCart: CartItem[] = [
-  { id: 1, name: 'Lotus Biscoff Caramel Cake', category: 'Gourmet Cakes', price: 1200, qty: 1, img: 'https://images.pexels.com/photos/205961/pexels-photo-205961.jpeg?auto=compress&cs=tinysrgb&w=400' },
-  { id: 2, name: 'Off White Kanchi Silk Saree', category: 'Sarees', price: 7960, qty: 1, img: 'https://anyaonline.in/cdn/shop/files/10_91061a4c-2853-4728-b38d-e10d8f038c4d_400x.jpg?v=1771048393' },
-  { id: 3, name: 'French Macarons Box', category: 'Desserts & Cupcakes', price: 480, qty: 2, img: 'https://images.pexels.com/photos/808941/pexels-photo-808941.jpeg?auto=compress&cs=tinysrgb&w=400' },
+  { id: 1, name: 'Lotus Biscoff Caramel Cake', category: 'Gourmet Cakes', price: 1200, qty: 1, img: 'https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg?auto=compress&cs=tinysrgb&w=800' },
+  { id: 2, name: 'Off White Kanchi Silk Saree', category: 'Sarees', price: 7960, qty: 1, img: 'https://images.pexels.com/photos/1721558/pexels-photo-1721558.jpeg?auto=compress&cs=tinysrgb&w=800' },
+  { id: 3, name: 'French Macarons Box', category: 'Desserts & Cupcakes', price: 480, qty: 2, img: 'https://images.pexels.com/photos/808941/pexels-photo-808941.jpeg?auto=compress&cs=tinysrgb&w=800' },
 ];
 
 export default function CartPage() {
@@ -165,9 +166,9 @@ export default function CartPage() {
                     </div>
                   </div>
 
-                  <button className="group w-full py-5 bg-[#1a1c24] text-white rounded-full font-bold text-sm hover:scale-[1.02] transition-all shadow-xl flex items-center justify-center gap-3">
+                  <Link href="/checkout" className="group w-full py-5 bg-[#1a1c24] text-white rounded-full font-bold text-sm hover:scale-[1.02] transition-all shadow-xl flex items-center justify-center gap-3">
                     Proceed to Checkout <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
-                  </button>
+                  </Link>
                   <p className="text-center text-[9px] font-outfit text-[#1a1c24]/30 uppercase tracking-widest">
                     Secure · Encrypted · Trusted
                   </p>
@@ -188,12 +189,7 @@ export default function CartPage() {
         </div>
       </section>
 
-      <footer className="py-8 bg-white border-t border-[#1a1c24]/5">
-        <div className="max-w-[1800px] mx-auto px-10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-[9px] font-outfit font-black uppercase tracking-[0.4em] text-[#1a1c24]/20">© 2026 PRANAVIKA'S Sweet & Chic</p>
-          <Link href="/" className="text-[9px] font-outfit font-black uppercase tracking-[0.4em] text-[#1a1c24]/20 hover:text-[#ff4d6d] transition-colors">← Back to Home</Link>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

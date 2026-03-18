@@ -315,13 +315,15 @@ export default function BoutiquePage() {
                 >
                   {/* Image */}
                   <div className="relative aspect-[3/4] overflow-hidden rounded-[2rem] bg-[#f0ece6] shadow-[0_8px_30px_rgba(0,0,0,0.07)] transition-all duration-700 group-hover:-translate-y-2 group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)]">
-                    <img
-                      src={product.img}
-                      alt={product.name}
-                      className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <Link href={`/boutique/${product.id}`} className="block w-full h-full">
+                      <img
+                        src={product.img}
+                        alt={product.name}
+                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                    </Link>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-500" />
 
                     {/* Tag */}
                     <div className="absolute top-4 left-4">
@@ -356,7 +358,9 @@ export default function BoutiquePage() {
                   <div className="mt-5 px-1">
                     <p className="text-[8px] font-outfit font-black uppercase tracking-[0.3em] text-[#bfa37e] mb-1">{product.category}</p>
                     <div className="flex items-start justify-between gap-2">
-                      <h3 className="text-sm font-fraunces font-bold text-[#1a1c24] group-hover:text-[#ff4d6d] transition-colors leading-snug">{product.name}</h3>
+                       <Link href={`/boutique/${product.id}`}>
+                          <h3 className="text-sm font-fraunces font-bold text-[#1a1c24] group-hover:text-[#ff4d6d] transition-colors leading-snug">{product.name}</h3>
+                       </Link>
                       <span className="text-sm font-fraunces font-bold text-[#1a1c24]/40 whitespace-nowrap">₹{product.price.toLocaleString()}</span>
                     </div>
                   </div>
