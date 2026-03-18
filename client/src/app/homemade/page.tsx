@@ -107,174 +107,183 @@ export default function HomemadePage() {
       <Navbar />
 
       {/* ── HERO ── */}
-      <section className="relative pt-28 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_60%_30%,rgba(191,163,126,0.18),transparent_60%)]" />
-        <div className="max-w-[1800px] mx-auto px-10 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
+      <section className="relative pt-32 md:pt-48 pb-16 md:pb-32 overflow-hidden bg-[radial-gradient(circle_at_50%_0%,rgba(191,163,126,0.15),transparent_70%)]">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-10 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
             {/* Left */}
-            <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9 }} className="space-y-8">
-              <div className="flex items-center gap-4">
-                <div className="h-px w-12 bg-[#ff4d6d]" />
-                <span className="text-[10px] font-outfit font-black uppercase tracking-[0.5em] text-[#ff4d6d]">Homemade Goodness</span>
+            <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9 }} className="space-y-8 md:space-y-12 text-center lg:text-left">
+              <div className="space-y-4">
+                <div className="flex items-center justify-center lg:justify-start gap-4">
+                  <div className="hidden sm:block h-px w-12 bg-[#ff4d6d]" />
+                  <span className="text-[10px] md:text-xs font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">The Sacred Kitchen</span>
+                </div>
+                <h1 className="text-4xl md:text-7xl lg:text-[84px] font-fraunces font-black text-[#1a1c24] leading-[1.05] tracking-tight italic">
+                  Made with <br /><span className="italic font-normal text-[#bfa37e]">Grandma's Rituals.</span>
+                </h1>
               </div>
-              <h1 className="text-5xl md:text-7xl font-fraunces font-black text-[#1a1c24] leading-tight">
-                Made with <br /><span className="italic font-normal text-[#bfa37e]">Grandma's Love.</span>
-              </h1>
-              <p className="text-lg text-[#1a1c24]/50 font-outfit leading-relaxed max-w-md">
-                Traditional Chettinad recipes passed through generations — sweets, snacks, pickles, spice powders, and curated hampers made fresh with no preservatives.
+              <p className="text-base md:text-2xl text-[#1a1c24]/30 font-outfit leading-relaxed max-w-xl mx-auto lg:mx-0 italic">
+                "Traditional Chettinad souls passed through generations — sweets, snacks, and sacred spices manifested fresh for your table."
               </p>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-3 md:gap-4">
                 {['🥭 Pickles', '🌶 Snacks', '🍬 Sweets', '🌿 Spices', '🎁 Hampers'].map(t => (
-                  <span key={t} className="px-5 py-2.5 rounded-full bg-white border border-[#bfa37e]/20 text-xs font-outfit font-bold text-[#bfa37e] shadow-sm">{t}</span>
+                  <span key={t} className="px-6 md:px-8 py-3 md:py-4 rounded-full bg-white border border-[#bfa37e]/10 text-[9px] md:text-[11px] font-outfit font-black text-[#bfa37e] shadow-sm uppercase tracking-widest italic">{t}</span>
                 ))}
               </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="#products" className="group inline-flex items-center gap-4 px-12 py-5 bg-[#1a1c24] text-white rounded-full font-bold text-sm hover:scale-105 transition-all shadow-2xl">
-                  Shop Homemade <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start pt-4">
+                <Link href="#products" className="group relative inline-flex items-center justify-center gap-6 px-12 md:px-16 py-6 md:py-8 bg-[#1a1c24] text-white rounded-full font-black text-xs md:text-sm uppercase tracking-[0.5em] hover:scale-105 active:scale-95 transition-all shadow-[0_40px_100px_rgba(0,0,0,0.2)] overflow-hidden italic">
+                   <div className="absolute inset-0 bg-[#ff4d6d]/10 -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
+                   <span className="relative z-10 flex items-center justify-center gap-4">Manifest Now <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" /></span>
                 </Link>
-                <Link href="/contact" className="inline-flex items-center gap-4 px-12 py-5 border-2 border-[#ff4d6d]/20 text-[#1a1c24] rounded-full font-bold text-sm hover:bg-[#ff4d6d]/5 hover:border-[#ff4d6d] transition-all">
+                <Link href="/contact" className="inline-flex items-center justify-center gap-6 px-12 md:px-16 py-6 md:py-8 border-2 border-[#1a1c24]/5 bg-white text-[#1a1c24] rounded-full font-black text-xs md:text-sm uppercase tracking-[0.5em] hover:bg-[#ff4d6d]/5 hover:border-[#ff4d6d] transition-all hover:scale-105 italic">
                   Custom Hampers 🎁
                 </Link>
               </div>
             </motion.div>
 
-            {/* Right: 3 staggered images */}
-            <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9, delay: 0.2 }} className="relative h-[540px] hidden lg:block">
-              <div className="absolute top-0 right-0 w-[340px] h-[440px] rounded-[3rem] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.12)] group">
-                <img src="https://vellankifoods.com/cdn/shop/files/DryFruitChikki_1024x1024.jpg?v=1725097563" alt="Gift Hamper" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-                <div className="absolute bottom-8 left-8">
-                  <p className="text-[8px] font-outfit font-black uppercase tracking-[0.4em] text-white/60">Most Gifted</p>
-                  <h3 className="text-xl font-fraunces font-bold text-white mt-1">Celebration Hamper</h3>
+            {/* Right: 3 staggered images - Refined for mobile visibility */}
+            <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9, delay: 0.2 }} className="relative h-[450px] md:h-[650px] hidden sm:block">
+              <div className="absolute top-0 right-0 w-[80%] lg:w-[400px] h-[350px] md:h-[500px] rounded-[4rem] overflow-hidden shadow-[0_60px_120px_rgba(0,0,0,0.12)] border-[10px] border-white group z-0">
+                <img src="https://vellankifoods.com/cdn/shop/files/DryFruitChikki_1024x1024.jpg?v=1725097563" alt="Gift Hamper" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                <div className="absolute bottom-10 left-10">
+                  <p className="text-[10px] font-outfit font-black uppercase tracking-[0.4em] text-white/80 italic">Most Gifted</p>
+                  <h3 className="text-2xl md:text-3xl font-fraunces font-black text-white mt-1 italic">Celebration Hamper</h3>
                 </div>
               </div>
-              <div className="absolute bottom-0 left-0 w-[220px] h-[230px] rounded-[2.5rem] overflow-hidden border-4 border-white shadow-[0_20px_50px_rgba(0,0,0,0.1)] group">
+              <div className="absolute bottom-0 left-0 w-[60%] lg:w-[280px] h-[220px] md:h-[320px] rounded-[3rem] overflow-hidden border-[8px] border-white shadow-artisan group z-10 hover:-translate-y-2 transition-transform">
                 <img src="https://vellankifoods.com/cdn/shop/files/allam_mamidi_ginger_mango_pickle_a1459065-18d2-461b-9fc7-f82febc74c5c_1024x1024.jpg?v=1689761372" alt="Pickle" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
               </div>
-              <div className="absolute bottom-[30%] left-[25%] bg-white rounded-2xl px-6 py-4 shadow-[0_10px_40px_rgba(0,0,0,0.1)] z-10">
-                <p className="text-[9px] font-outfit font-black uppercase tracking-widest text-[#bfa37e]">36+ Products</p>
-                <p className="text-xl font-fraunces font-black text-[#1a1c24]">No Preservatives</p>
+              <div className="absolute top-[40%] left-[10%] bg-white/95 backdrop-blur-2xl rounded-[2rem] px-8 py-6 shadow-2xl z-20 border border-[#bfa37e]/10 animate-float">
+                <p className="text-[10px] font-outfit font-black uppercase tracking-widest text-[#ff4d6d] italic mb-1">Ritual Standard</p>
+                <p className="text-xl md:text-2xl font-fraunces font-black text-[#1a1c24] italic">Pure & Sacred</p>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* ── WHY HOMEMADE ── */}
-      <section className="py-16 bg-white">
-        <div className="max-w-[1800px] mx-auto px-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+      {/* ── WHY HOMEMADE ── Refined spacing */}
+      <section className="py-20 md:py-32 bg-white relative overflow-hidden">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
             {[
-              { emoji: '🫙', title: 'Small Batch', desc: 'Made in small quantities for freshness' },
-              { emoji: '🌿', title: 'Pure Ingredients', desc: 'No artificial colours, flavours or preservatives' },
-              { emoji: '👵', title: 'Traditional Recipes', desc: 'Time-tested Chettinad recipes' },
-              { emoji: '📦', title: 'Hygienic Packing', desc: 'Sealed fresh in tamper-proof containers' },
+              { emoji: '🫙', title: 'Small Batch', desc: 'Manifested in micro-quantities for divine freshness' },
+              { emoji: '🌿', title: 'Pure Soul', desc: 'No artificial whispers, colours or preservatives' },
+              { emoji: '👵', title: 'Ancestral Way', desc: 'Time-tested rituals passed down through hearts' },
+              { emoji: '📦', title: 'Sacred Seal', desc: 'Hygienically hand-packed in tamper-proof artifacts' },
             ].map((f, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-                className="p-8 rounded-[2rem] bg-[#fbf9f6] border border-[#1a1c24]/5 text-center space-y-3 hover:-translate-y-1 transition-transform">
-                <span className="text-4xl">{f.emoji}</span>
-                <h4 className="font-fraunces font-bold text-[#1a1c24]">{f.title}</h4>
-                <p className="text-xs font-outfit text-[#1a1c24]/40 leading-relaxed">{f.desc}</p>
+              <motion.div key={i} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+                className="p-10 md:p-12 rounded-[3.5rem] bg-[#fbf9f6] border border-[#1a1c24]/5 space-y-6 hover:bg-white hover:shadow-2xl hover:-translate-y-2 transition-all group text-center lg:text-left active:scale-95">
+                <span className="text-5xl md:text-6xl block group-hover:scale-125 group-hover:rotate-12 transition-transform duration-500">{f.emoji}</span>
+                <div className="space-y-3">
+                   <h4 className="font-fraunces font-black text-lg md:text-xl text-[#1a1c24] italic">{f.title}</h4>
+                   <p className="text-[11px] md:text-xs font-outfit text-[#1a1c24]/30 leading-relaxed font-medium italic">" {f.desc} "</p>
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── COLLECTION BANNERS ── */}
-      <section className="py-24 bg-[#fbf9f6]">
-        <div className="max-w-[1800px] mx-auto px-10">
-          <div className="text-center mb-14 space-y-4">
-            <span className="text-[10px] font-outfit font-black uppercase tracking-[0.5em] text-[#ff4d6d]">Shop By Category</span>
-            <h2 className="text-4xl md:text-5xl font-fraunces font-black text-[#1a1c24]">
-              Browse Our <span className="italic font-normal">Collections.</span>
+      {/* ── COLLECTION BANNERS ── Responsive grid */}
+      <section className="py-20 md:py-48 bg-[#fbf9f6] relative overflow-hidden">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+          <div className="text-center mb-16 md:mb-32 space-y-6 md:space-y-8">
+            <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">Scroll the Archives</span>
+            <h2 className="text-4xl md:text-7xl lg:text-8xl font-fraunces font-black text-[#1a1c24] leading-tight italic">
+              Browse the <br className="sm:hidden" /><span className="italic font-normal text-[#bfa37e]">Sacred Library.</span>
             </h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8">
             {collectionBanners.map((col, i) => (
               <motion.button key={col.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
                 onClick={() => setActiveCategory(col.name)}
-                className="group relative rounded-[2rem] overflow-hidden cursor-pointer">
-                <div className="aspect-square overflow-hidden">
-                  <img src={col.img} alt={col.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                className="group relative rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden cursor-pointer aspect-square shadow-xl active:scale-90 transition-transform">
+                <div className="w-full h-full">
+                  <img src={col.img} alt={col.name} className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110" />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-5 text-left space-y-0.5">
-                  <span className="text-xl">{col.icon}</span>
-                  <p className="text-sm font-fraunces font-bold text-white leading-tight">{col.name}</p>
-                  <p className="text-[8px] font-outfit text-white/50 uppercase tracking-wider">{col.count}</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a1c24]/90 via-[#1a1c24]/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-left space-y-1">
+                  <span className="text-2xl md:text-3xl">{col.icon}</span>
+                  <p className="text-xs md:text-base font-fraunces font-black text-white leading-tight italic">{col.name}</p>
+                  <p className="text-[8px] md:text-[10px] font-outfit font-black text-white/40 uppercase tracking-[0.2em] italic">{col.count}</p>
                 </div>
-                <div className={`absolute inset-0 border-2 rounded-[2rem] transition-all ${activeCategory === col.name ? 'border-[#ff4d6d]' : 'border-transparent group-hover:border-white/30'}`} />
+                <div className={`absolute inset-0 border-[3px] md:border-[5px] rounded-[2.5rem] md:rounded-[3.5rem] transition-all duration-500 ${activeCategory === col.name ? 'border-[#ff4d6d]' : 'border-transparent group-hover:border-white/30'}`} />
               </motion.button>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── PRODUCTS ── */}
-      <section id="products" className="py-20 bg-white relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-80 h-80 bg-[#ff4d6d]/4 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#bfa37e]/4 rounded-full blur-[100px]" />
-        <div className="max-w-[1800px] mx-auto px-10 relative z-10">
+      {/* ── PRODUCTS ── Responsive Grid refined */}
+      <section id="products" className="py-24 md:py-48 bg-white relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-96 md:w-[600px] h-96 md:h-[600px] bg-[#ff4d6d]/5 rounded-full blur-[150px] pointer-events-none" />
+        <div className="absolute bottom-0 right-0 w-96 md:w-[600px] h-96 md:h-[600px] bg-[#bfa37e]/5 rounded-full blur-[150px] pointer-events-none" />
+        
+        <div className="max-w-[1400px] mx-auto px-6 md:px-10 relative z-10">
           {/* Header */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8">
-            <div className="space-y-3">
-              <span className="text-[10px] font-outfit font-black uppercase tracking-[0.5em] text-[#ff4d6d]">Our Products</span>
-              <h2 className="text-4xl md:text-6xl font-fraunces font-black text-[#1a1c24] leading-tight">
-                {activeCategory === 'All' ? <>Homemade <span className="italic font-normal">Favorites.</span></> : <>{activeCategory} <span className="italic font-normal">Collection.</span></>}
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 md:mb-24 gap-10 md:gap-16">
+            <div className="space-y-6 text-center lg:text-left">
+              <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">The Full Manifestation</span>
+              <h2 className="text-4xl md:text-7xl lg:text-8xl font-fraunces font-black text-[#1a1c24] leading-tight italic">
+                {activeCategory === 'All' ? <>Our Favorite <span className="italic font-normal text-[#bfa37e]">Rituals.</span></> : <>{activeCategory} <span className="italic font-normal text-[#bfa37e]">Series.</span></>}
               </h2>
             </div>
-            <p className="text-sm font-outfit text-[#1a1c24]/30">
-              Showing <span className="font-bold text-[#ff4d6d]">{filtered.length}</span> products
+            <p className="text-[10px] md:text-[12px] font-outfit font-black text-[#1a1c24]/20 text-center lg:text-right uppercase tracking-[0.4em] italic">
+              Manifesting <span className="text-[#ff4d6d]">{filtered.length}</span> unique creations
             </p>
           </div>
 
-          {/* Filter Pills */}
-          <div className="flex flex-wrap gap-2 mb-14">
+          {/* Filter Pills refined */}
+          <div className="flex items-center gap-3 overflow-x-auto no-scrollbar pb-12 md:pb-20 -mx-6 px-6 lg:flex-wrap lg:justify-center">
             {categories.map(cat => (
               <button key={cat} onClick={() => setActiveCategory(cat)}
-                className={`px-5 py-2 rounded-full text-[10px] font-outfit font-bold tracking-[0.2em] uppercase transition-all ${activeCategory === cat ? 'bg-[#1a1c24] text-white shadow-md' : 'text-[#1a1c24]/40 border border-[#1a1c24]/10 hover:border-[#1a1c24]/30 hover:text-[#1a1c24]'}`}>
+                className={`flex-shrink-0 px-8 py-3.5 md:py-4 rounded-full text-[9px] md:text-[11px] font-outfit font-black tracking-[0.3em] uppercase transition-all italic ${activeCategory === cat ? 'bg-[#1a1c24] text-white shadow-2xl' : 'text-[#1a1c24]/30 border border-[#1a1c24]/5 bg-[#fbf9f6] hover:border-[#ff4d6d]/50 hover:text-[#ff4d6d]'}`}>
                 {cat}
               </button>
             ))}
           </div>
 
-          {/* Grid */}
+          {/* Grid refined for mobile 2-cols */}
           <AnimatePresence mode="wait">
             <motion.div key={activeCategory}
               initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.35 }}
-              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-8 md:gap-12">
               {filtered.map((item, i) => (
                 <motion.div key={item.id}
                   initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: i * 0.05 }}
-                  className="group bg-[#fbf9f6] rounded-[2rem] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_16px_50px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2 border border-[#1a1c24]/5">
+                  className="group bg-[#fbf9f6] rounded-[3rem] overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.05)] hover:shadow-[0_60px_120px_rgba(0,0,0,0.12)] transition-all duration-700 hover:-translate-y-4 border border-[#1a1c24]/5 active:scale-95">
                   {/* Image */}
-                  <Link href={`/homemade/${item.id}`} className="relative aspect-square overflow-hidden block" style={{ background: '#f0ede8' }}>
-                    <img src={item.img} alt={item.name} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" loading="lazy" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <div className="absolute top-3 left-3 px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full">
-                      <span className="text-[8px] font-outfit font-black">{item.tag}</span>
+                  <Link href={`/homemade/${item.id}`} className="relative aspect-square overflow-hidden block bg-[#f0ede8]">
+                    <img src={item.img} alt={item.name} className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110" loading="lazy" />
+                    <div className="absolute top-6 left-6 px-4 py-2 bg-white/95 backdrop-blur-2xl rounded-full shadow-lg">
+                      <span className="text-[9px] font-outfit font-black text-[#1a1c24] uppercase tracking-widest italic">{item.tag}</span>
                     </div>
                     <button onClick={(e) => { e.preventDefault(); toggleWishlist(item.id); }}
-                      className="absolute top-3 right-3 w-8 h-8 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all hover:bg-[#ff4d6d] shadow-md">
-                      <Heart className={`w-3 h-3 transition-colors ${wishlist.includes(item.id) ? 'fill-[#ff4d6d] text-[#ff4d6d]' : 'text-[#1a1c24]'}`} />
+                      className="absolute top-6 right-6 w-12 h-12 bg-white/95 backdrop-blur-2xl rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all hover:bg-[#ff4d6d] hover:text-white shadow-2xl transform active:scale-75">
+                      <Heart className={`w-5 h-5 transition-colors ${wishlist.includes(item.id) ? 'fill-current text-white' : 'text-[#1a1c24]'}`} />
                     </button>
+                    <div className="absolute inset-x-0 bottom-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-gradient-to-t from-[#1a1c24]/80 to-transparent">
+                       <div className="w-full py-4 bg-white text-[#1a1c24] text-center rounded-full text-[10px] font-black uppercase tracking-[0.3em] italic">Swift Manifest</div>
+                    </div>
                   </Link>
 
                   {/* Info */}
-                  <div className="p-5 space-y-2">
-                    <p className="text-[8px] font-outfit font-black uppercase tracking-[0.3em] text-[#bfa37e]">{item.category}</p>
-                    <Link href={`/homemade/${item.id}`}>
-                      <h3 className="text-sm font-fraunces font-bold text-[#1a1c24] leading-snug group-hover:text-[#ff4d6d] transition-colors">{item.name}</h3>
-                    </Link>
-                    <p className="text-[10px] font-outfit text-[#1a1c24]/35 leading-relaxed line-clamp-2">{item.desc}</p>
-                    <div className="flex items-center justify-between pt-2">
-                      <div>
-                        <span className="text-base font-fraunces font-bold text-[#1a1c24]">₹{item.price}</span>
-                        <span className="text-[8px] font-outfit text-[#1a1c24]/30 ml-2">{item.unit}</span>
+                  <div className="p-8 space-y-4">
+                    <div className="space-y-1">
+                      <p className="text-[9px] font-outfit font-black uppercase tracking-[0.4em] text-[#bfa37e] italic">{item.category}</p>
+                      <Link href={`/homemade/${item.id}`}>
+                        <h3 className="text-base md:text-xl font-fraunces font-black text-[#1a1c24] leading-tight group-hover:text-[#ff4d6d] transition-colors line-clamp-1 italic">{item.name}</h3>
+                      </Link>
+                    </div>
+                    <p className="text-[11px] md:text-xs font-outfit text-[#1a1c24]/30 leading-relaxed font-medium italic line-clamp-2 h-10">" {item.desc} "</p>
+                    <div className="flex items-center justify-between pt-4 border-t border-[#1a1c24]/5">
+                      <div className="flex flex-col">
+                        <span className="text-xl md:text-2xl font-fraunces font-black text-[#1a1c24] italic">₹{item.price}</span>
+                        <span className="text-[9px] font-outfit font-black text-[#1a1c24]/20 tracking-widest uppercase italic">{item.unit}</span>
                       </div>
-                      <button className="flex items-center gap-1 px-4 py-2 bg-[#1a1c24] text-white rounded-full text-[9px] font-outfit font-black uppercase tracking-wider hover:bg-[#ff4d6d] transition-colors">
-                        <ShoppingBag className="w-3 h-3" /> Add
+                      <button className="flex items-center justify-center w-14 h-14 bg-[#1a1c24] text-white rounded-full hover:bg-[#ff4d6d] transition-all shadow-xl active:scale-90">
+                        <ShoppingBag className="w-5 h-5" />
                       </button>
                     </div>
                   </div>
@@ -285,40 +294,45 @@ export default function HomemadePage() {
         </div>
       </section>
 
-      {/* ── CUSTOM HAMPER CTA ── */}
-      <section className="py-28 bg-[#1a1c24] relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/silk.png')" }} />
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#ff4d6d]/10 rounded-full blur-[150px]" />
-        <div className="max-w-[1800px] mx-auto px-10 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            <div className="space-y-8">
-              <span className="text-[10px] font-outfit font-black uppercase tracking-[0.5em] text-[#ff4d6d]">Custom Gift Hampers</span>
-              <h2 className="text-5xl md:text-6xl font-fraunces font-black text-white leading-tight">
-                Create Your Own <span className="italic text-[#bfa37e]">Gift Hamper.</span>
-              </h2>
-              <p className="text-lg text-white/40 font-outfit leading-relaxed">
-                Build a custom hamper with your favourite sweets, snacks, pickles, and spices. We'll pack them beautifully in a premium gift box — perfect for any occasion.
+      {/* ── CUSTOM HAMPER CTA ── Refined stacking */}
+      <section className="py-24 md:py-48 bg-[#1a1c24] relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/silk.png')" }} />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#ff4d6d]/10 rounded-full blur-[200px] pointer-events-none" />
+        
+        <div className="max-w-[1400px] mx-auto px-6 md:px-10 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-32 items-center">
+            <div className="space-y-10 md:space-y-16 text-center lg:text-left">
+              <div className="space-y-6">
+                <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">The Gifting Protocol</span>
+                <h2 className="text-4xl md:text-8xl font-fraunces font-black text-white leading-[1.1] italic">
+                  Craft Your Own <br /><span className="italic font-normal text-[#bfa37e]">Gift Scroll.</span>
+                </h2>
+              </div>
+              <p className="text-sm md:text-2xl text-white/30 font-outfit leading-relaxed max-w-xl mx-auto lg:mx-0 italic">
+                "Weave your own ritual box with divine sweets, snacks, and sacred threads. Hand-packed in premium artifacts for your most celestial celebrations."
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/contact" className="group inline-flex items-center gap-4 px-12 py-5 bg-[#ff4d6d] text-white rounded-full font-bold text-sm hover:scale-105 transition-all shadow-2xl">
-                  Build My Hamper <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start pt-4">
+                <Link href="/contact" className="group relative inline-flex items-center justify-center gap-6 px-12 md:px-16 py-6 md:py-8 bg-[#ff4d6d] text-white rounded-full font-black text-xs md:text-sm uppercase tracking-[0.5em] hover:scale-110 active:scale-95 transition-all shadow-2xl italic">
+                   Manifest Custom Hamper <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
                 </Link>
-                <Link href="/contact" className="inline-flex items-center gap-4 px-12 py-5 border border-white/10 text-white/60 rounded-full font-bold text-sm hover:border-white/30 hover:text-white transition-all">
-                  Bulk / Corporate Orders
+                <Link href="/contact" className="inline-flex items-center justify-center gap-6 px-12 md:px-20 py-6 md:py-8 border-2 border-white/5 bg-white/5 text-white/50 rounded-full font-black text-xs md:text-sm uppercase tracking-[0.5em] hover:bg-white/10 hover:text-white transition-all hover:scale-105 italic">
+                  Bulk / Ritual Orders
                 </Link>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
               {[
-                { emoji: '🎁', title: 'Custom Selection', desc: 'Pick any items from our full range' },
-                { emoji: '🎀', title: 'Premium Packaging', desc: 'Gift-wrapped in beautiful boxes with ribbon' },
-                { emoji: '🚚', title: 'Pan-India Delivery', desc: 'Safely shipped anywhere in India' },
-                { emoji: '🏢', title: 'Corporate Orders', desc: 'Bulk discounts for offices & events' },
+                { emoji: '🎁', title: 'Curated Selection', desc: 'Manifest any item from our sacred archives' },
+                { emoji: '🎀', title: 'Premium Artifact', desc: 'Sacredly wrapped in designer boxes with silk ribbons' },
+                { emoji: '🚚', title: 'Celestial Reach', desc: 'Safely shipped to any soul across the sub-continent' },
+                { emoji: '🏢', title: 'Gifting Guild', desc: 'Custom artifacts for your corporate rituals' },
               ].map((f, i) => (
-                <div key={i} className="p-7 rounded-[2rem] bg-white/5 border border-white/5 hover:bg-white/10 transition-all space-y-3">
-                  <span className="text-3xl">{f.emoji}</span>
-                  <h4 className="font-fraunces font-bold text-white">{f.title}</h4>
-                  <p className="text-xs text-white/30 font-outfit leading-relaxed">{f.desc}</p>
+                <div key={i} className="p-10 md:p-12 rounded-[3.5rem] bg-white/[0.03] border border-white/5 hover:bg-white/[0.08] transition-all space-y-6 group text-center lg:text-left active:scale-95">
+                  <span className="text-5xl block group-hover:scale-125 group-hover:rotate-12 transition-transform duration-500">{f.emoji}</span>
+                  <div className="space-y-3">
+                     <h4 className="font-fraunces font-black text-xl text-white italic">{f.title}</h4>
+                     <p className="text-[11px] md:text-xs text-white/20 font-outfit leading-relaxed font-medium italic">" {f.desc} "</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -326,10 +340,14 @@ export default function HomemadePage() {
         </div>
       </section>
 
-      <footer className="py-8 bg-[#fbf9f6] border-t border-[#1a1c24]/5">
-        <div className="max-w-[1800px] mx-auto px-10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-[9px] font-outfit font-black uppercase tracking-[0.4em] text-[#1a1c24]/20">© 2026 PRANAVIKA'S Sweet & Chic</p>
-          <Link href="/" className="text-[9px] font-outfit font-black uppercase tracking-[0.4em] text-[#1a1c24]/20 hover:text-[#ff4d6d] transition-colors">← Back to Home</Link>
+      <footer className="py-12 md:py-20 bg-[#fbf9f6] border-t border-[#1a1c24]/5">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-10 flex flex-col sm:flex-row items-center justify-between gap-10">
+          <p className="text-[10px] md:text-[11px] font-outfit font-black uppercase tracking-[0.5em] text-[#1a1c24]/20 text-center sm:text-left italic leading-relaxed">
+             © 2026 PRANAVIKA'S · Sweet & Chic · Manifesting Pure Homemade Artistry
+          </p>
+          <Link href="/" className="group flex items-center gap-4 text-[10px] font-outfit font-black uppercase tracking-[0.4em] text-[#1a1c24]/20 hover:text-[#ff4d6d] transition-all italic">
+            <ArrowRight className="w-4 h-4 rotate-180 group-hover:-translate-x-2 transition-transform" /> Back to Home
+          </Link>
         </div>
       </footer>
     </main>

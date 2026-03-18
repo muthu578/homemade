@@ -33,29 +33,30 @@ export default function ProductDetailPage() {
     <main className="min-h-screen bg-[#fbf9f6] text-[#1a1c24]">
       <Navbar />
 
-      <section className="pt-32 pb-20">
-        <div className="max-w-[1500px] mx-auto px-10">
+      <section className="pt-24 md:pt-32 pb-16 md:pb-24">
+        <div className="max-w-[1500px] mx-auto px-6 md:px-10">
           
-          <Link href="/boutique" className="inline-flex items-center gap-2 text-[10px] font-outfit font-black uppercase tracking-[0.3em] text-[#1a1c24]/30 hover:text-[#ff4d6d] transition-colors mb-12">
-            <ArrowLeft className="w-4 h-4" /> Back to Boutique
+          <Link href="/boutique" className="inline-flex items-center gap-2 text-[10px] md:text-xs font-outfit font-black uppercase tracking-[0.4em] text-[#1a1c24]/30 hover:text-[#ff4d6d] transition-colors mb-8 md:mb-12 italic">
+            <ArrowLeft className="w-4 h-4 md:w-5 md:h-5" /> Back to Boutique
           </Link>
 
-          <div className="grid lg:grid-cols-2 gap-20">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-24">
             {/* Gallery */}
-            <div className="space-y-6">
+            <div className="space-y-4 md:space-y-6">
                <motion.div 
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-soft border border-border/5"
+                  initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  transition={{ duration: 0.8 }}
+                  className="aspect-[4/5] rounded-[3rem] md:rounded-[4rem] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.06)] border border-[#1a1c24]/5"
                >
-                  <img src={product.images[activeImg]} alt={product.name} className="w-full h-full object-cover" />
+                  <img src={product.images[activeImg]} alt={product.name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" />
                </motion.div>
-               <div className="flex gap-4">
+               <div className="flex gap-3 md:gap-4 overflow-x-auto no-scrollbar pb-2">
                   {product.images.map((img, i) => (
                     <button 
                        key={i} 
                        onClick={() => setActiveImg(i)}
-                       className={`w-24 h-32 rounded-2xl overflow-hidden border-2 transition-all ${activeImg === i ? 'border-[#ff4d6d]' : 'border-transparent opacity-60 hover:opacity-100'}`}
+                       className={`w-20 h-28 md:w-28 md:h-36 flex-shrink-0 rounded-[1.5rem] md:rounded-[2rem] overflow-hidden border-2 transition-all duration-300 ${activeImg === i ? 'border-[#ff4d6d] shadow-[0_10px_30px_rgba(255,77,109,0.2)]' : 'border-transparent opacity-60 hover:opacity-100 bg-[#fbf9f6]'}`}
                     >
                        <img src={img} alt="Thumb" className="w-full h-full object-cover" />
                     </button>
@@ -64,35 +65,38 @@ export default function ProductDetailPage() {
             </div>
 
             {/* Content */}
-            <div className="space-y-12 py-6">
-               <div className="space-y-4">
-                  <div className="flex items-center gap-3">
+            <div className="space-y-10 md:space-y-12 py-4 md:py-6">
+               <div className="space-y-4 md:space-y-6">
+                  <div className="flex items-center gap-4">
                      <div className="flex gap-1 text-[#ff4d6d]">
-                        {[...Array(5)].map((_, i) => <Star key={i} className={`w-3 h-3 ${i < 4 ? 'fill-current' : 'fill-none opacity-30'}`} />)}
+                        {[...Array(5)].map((_, i) => <Star key={i} className={`w-3 h-3 md:w-4 md:h-4 ${i < 4 ? 'fill-current' : 'fill-none opacity-30'}`} />)}
                      </div>
-                     <span className="text-[10px] font-outfit font-black uppercase tracking-widest text-[#1a1c24]/30">{product.rating} ({product.reviews} reviews)</span>
+                     <span className="text-[10px] md:text-xs font-outfit font-black uppercase tracking-[0.4em] text-[#1a1c24]/50 italic">{product.rating} ({product.reviews} reviews)</span>
                   </div>
-                  <h1 className="text-5xl md:text-7xl font-fraunces font-black leading-tight">{product.name}</h1>
-                  <p className="text-3xl font-fraunces font-black text-[#ff4d6d]">₹{product.price.toLocaleString()}</p>
+                  <h1 className="text-4xl md:text-6xl lg:text-7xl font-fraunces font-black leading-tight italic">{product.name}</h1>
+                  <p className="text-3xl md:text-5xl font-fraunces font-black text-[#ff4d6d] italic flex items-baseline gap-4">
+                     ₹{product.price.toLocaleString()}
+                     <span className="text-[10px] md:text-xs font-outfit font-black uppercase tracking-[0.4em] text-[#1a1c24]/30 not-italic">Taxes Included</span>
+                  </p>
                </div>
 
-               <p className="text-lg font-outfit text-[#1a1c24]/60 leading-relaxed max-w-xl italic">
+               <p className="text-base md:text-xl font-outfit text-[#1a1c24]/60 leading-relaxed max-w-xl italic font-medium">
                   "{product.description}"
                </p>
 
-               <div className="space-y-6">
-                  <div className="flex justify-between items-center">
-                     <h4 className="text-[10px] font-outfit font-black uppercase tracking-widest text-[#1a1c24]/30">Select Blouse Size</h4>
-                     <button className="flex items-center gap-2 text-[10px] font-outfit font-black uppercase tracking-widest text-[#ff4d6d] hover:underline">
-                        <Ruler className="w-3 h-3" /> Size Guide
+               <div className="space-y-6 md:space-y-8 bg-white p-6 md:p-8 rounded-[2rem] md:rounded-[3rem] border border-[#1a1c24]/5 shadow-sm">
+                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                     <h4 className="text-[10px] md:text-xs font-outfit font-black uppercase tracking-[0.4em] text-[#1a1c24]/40 italic">Select Blouse Size</h4>
+                     <button className="flex items-center gap-2 text-[10px] md:text-xs font-outfit font-black uppercase tracking-[0.4em] text-[#ff4d6d] hover:text-[#1a1c24] transition-colors italic">
+                        <Ruler className="w-3 h-3 md:w-4 md:h-4" /> Size Guide
                      </button>
                   </div>
-                  <div className="flex gap-4">
+                  <div className="flex flex-wrap gap-3 md:gap-4">
                      {['S', 'M', 'L', 'XL', 'Custom'].map(size => (
                         <button 
                            key={size}
                            onClick={() => setSelectedSize(size)}
-                           className={`px-8 py-4 rounded-2xl text-xs font-outfit font-bold transition-all ${selectedSize === size ? 'bg-[#1a1c24] text-white shadow-xl translate-y-[-2px]' : 'bg-white border border-[#1a1c24]/5 text-[#1a1c24]/40 hover:border-[#ff4d6d]/40'}`}
+                           className={`px-6 md:px-8 py-3 md:py-4 rounded-xl md:rounded-2xl text-[10px] md:text-xs font-outfit font-black uppercase tracking-widest transition-all ${selectedSize === size ? 'bg-[#1a1c24] text-white shadow-[0_15px_30px_rgba(26,28,36,0.2)] -translate-y-1' : 'bg-[#fbf9f6] border border-[#1a1c24]/5 text-[#1a1c24]/40 hover:border-[#ff4d6d]/40 hover:bg-white'}`}
                         >
                            {size}
                         </button>
@@ -100,31 +104,37 @@ export default function ProductDetailPage() {
                   </div>
                </div>
 
-               <div className="flex gap-4 pt-6">
-                  <button className="flex-[2] py-6 bg-[#1a1c24] text-white rounded-full font-bold text-sm hover:scale-[1.02] transition-all shadow-2xl flex items-center justify-center gap-3">
-                     Add to Palace <ShoppingBag className="w-5 h-5" />
+               <div className="flex flex-col sm:flex-row gap-4 pt-4 md:pt-6">
+                  <button className="flex-[2] py-5 md:py-6 bg-[#1a1c24] text-white rounded-full font-black text-[10px] md:text-xs uppercase tracking-[0.4em] hover:bg-[#ff4d6d] hover:scale-[1.02] transition-all shadow-[0_20px_50px_rgba(26,28,36,0.15)] hover:shadow-[#ff4d6d]/40 flex items-center justify-center gap-3 active:scale-95 italic">
+                     Add to Palace <ShoppingBag className="w-4 h-4 md:w-5 md:h-5" />
                   </button>
-                  <button className="flex-1 py-6 border-2 border-[#1a1c24]/5 text-[#1a1c24]/40 rounded-full font-bold text-sm hover:bg-[#ff4d6d]/5 hover:border-[#ff4d6d] hover:text-[#ff4d6d] transition-all flex items-center justify-center gap-3">
-                     <Heart className="w-5 h-5" />
-                  </button>
-                  <button className="w-16 h-16 border-2 border-[#1a1c24]/5 text-[#1a1c24]/40 rounded-full flex items-center justify-center hover:bg-white transition-all">
-                     <Share2 className="w-5 h-5" />
-                  </button>
+                  <div className="flex gap-4 sm:flex-[1]">
+                     <button className="flex-1 py-5 md:py-6 border-2 border-[#1a1c24]/5 bg-white text-[#1a1c24]/40 rounded-full font-black text-sm hover:bg-[#ff4d6d]/5 hover:border-[#ff4d6d] hover:text-[#ff4d6d] transition-all flex items-center justify-center shadow-sm active:scale-95 group">
+                        <Heart className="w-5 h-5 md:w-6 md:h-6 group-hover:scale-110 transition-transform" />
+                     </button>
+                     <button className="flex-1 py-5 md:py-6 border-2 border-[#1a1c24]/5 bg-white text-[#1a1c24]/40 rounded-full flex items-center justify-center hover:bg-[#1a1c24] hover:border-[#1a1c24] hover:text-white transition-all shadow-sm active:scale-95 group">
+                        <Share2 className="w-5 h-5 md:w-6 md:h-6 group-hover:scale-110 transition-transform" />
+                     </button>
+                  </div>
                </div>
 
-               <div className="grid grid-cols-2 gap-8 pt-12 border-t border-[#1a1c24]/5">
-                  <div className="flex gap-4 items-start">
-                     <Truck className="w-5 h-5 text-[#bfa37e] mt-1" />
-                     <div className="space-y-1">
-                        <h5 className="text-[10px] font-outfit font-black uppercase tracking-widest text-[#1a1c24]">Artisan Shipping</h5>
-                        <p className="text-[10px] font-outfit text-[#1a1c24]/40 leading-relaxed uppercase tracking-widest">Handled with custom care • 3-5 Days</p>
+               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10 pt-10 md:pt-14 border-t border-[#1a1c24]/5">
+                  <div className="flex gap-5 items-start bg-white p-6 rounded-[2rem] border border-[#1a1c24]/5">
+                     <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#bfa37e]/10 flex items-center justify-center flex-shrink-0">
+                        <Truck className="w-5 h-5 md:w-6 md:h-6 text-[#bfa37e]" />
+                     </div>
+                     <div className="space-y-1.5 md:space-y-2">
+                        <h5 className="text-[10px] md:text-[11px] font-outfit font-black uppercase tracking-[0.3em] md:tracking-[0.4em] text-[#1a1c24] italic">Artisan Shipping</h5>
+                        <p className="text-[9px] md:text-[10px] font-outfit text-[#1a1c24]/40 leading-relaxed uppercase tracking-[0.2em] md:tracking-[0.3em] font-medium">Handled with custom care • 3-5 Lunar Days</p>
                      </div>
                   </div>
-                  <div className="flex gap-4 items-start">
-                     <ShieldCheck className="w-5 h-5 text-green-500 mt-1" />
-                     <div className="space-y-1">
-                        <h5 className="text-[10px] font-outfit font-black uppercase tracking-widest text-[#1a1c24]">Authentic Silk</h5>
-                        <p className="text-[10px] font-outfit text-[#1a1c24]/40 leading-relaxed uppercase tracking-widest">Silk Mark certified • Pure Zari Guaranteed</p>
+                  <div className="flex gap-5 items-start bg-white p-6 rounded-[2rem] border border-[#1a1c24]/5">
+                     <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0">
+                        <ShieldCheck className="w-5 h-5 md:w-6 md:h-6 text-green-500" />
+                     </div>
+                     <div className="space-y-1.5 md:space-y-2">
+                        <h5 className="text-[10px] md:text-[11px] font-outfit font-black uppercase tracking-[0.3em] md:tracking-[0.4em] text-[#1a1c24] italic">Authentic Silk</h5>
+                        <p className="text-[9px] md:text-[10px] font-outfit text-[#1a1c24]/40 leading-relaxed uppercase tracking-[0.2em] md:tracking-[0.3em] font-medium">Silk Mark certified • Pure Zari Guaranteed</p>
                      </div>
                   </div>
                </div>
@@ -134,24 +144,29 @@ export default function ProductDetailPage() {
       </section>
 
       {/* Details Tabs */}
-      <section className="py-24 bg-white border-y border-[#1a1c24]/5">
-         <div className="max-w-[1500px] mx-auto px-10">
-            <div className="max-w-3xl mx-auto space-y-12">
-               <h3 className="text-3xl font-fraunces font-bold text-center">Artisan Specifications</h3>
-               <div className="grid md:grid-cols-2 gap-10">
-                  <div className="space-y-6">
-                     <h4 className="text-[10px] font-outfit font-black uppercase tracking-wider text-[#ff4d6d]">Fabric & Craft</h4>
-                     <ul className="space-y-4">
+      <section className="py-20 md:py-32 bg-white border-y border-[#1a1c24]/5 relative overflow-hidden">
+         <div className="absolute inset-0 opacity-[0.02] pointer-events-none" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/silk.png')" }} />
+         <div className="max-w-[1500px] mx-auto px-6 md:px-10 relative z-10">
+            <div className="max-w-4xl mx-auto space-y-12 md:space-y-16">
+               <h3 className="text-4xl md:text-5xl lg:text-6xl font-fraunces font-black text-center italic">Artisan <span className="italic font-normal text-[#bfa37e]">Specifications.</span></h3>
+               <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+                  <div className="space-y-6 md:space-y-8 bg-[#fbf9f6] p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] border border-[#1a1c24]/5">
+                     <h4 className="text-[10px] md:text-xs font-outfit font-black uppercase tracking-[0.4em] text-[#ff4d6d] italic flex items-center gap-4">
+                        <span className="w-8 h-px bg-[#ff4d6d]/30" /> Fabric & Craft
+                     </h4>
+                     <ul className="space-y-4 md:space-y-6">
                         {product.details.map((d, i) => (
-                           <li key={i} className="flex gap-3 text-sm font-outfit text-[#1a1c24]/60 italic">
-                              <span className="text-[#bfa37e]">✦</span> {d}
+                           <li key={i} className="flex gap-4 text-sm md:text-base font-outfit text-[#1a1c24]/60 italic font-medium leading-relaxed">
+                              <span className="text-[#bfa37e] text-lg leading-none">✦</span> {d}
                            </li>
                         ))}
                      </ul>
                   </div>
-                  <div className="space-y-6">
-                     <h4 className="text-[10px] font-outfit font-black uppercase tracking-wider text-[#ff4d6d]">Artist's Note</h4>
-                     <p className="text-sm font-outfit text-[#1a1c24]/40 leading-relaxed font-medium">
+                  <div className="space-y-6 md:space-y-8 bg-[#1a1c24] text-white p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl">
+                     <h4 className="text-[10px] md:text-xs font-outfit font-black uppercase tracking-[0.4em] text-[#bfa37e] italic flex items-center gap-4">
+                        <span className="w-8 h-px bg-[#bfa37e]/30" /> Artist's Note
+                     </h4>
+                     <p className="text-base md:text-xl font-outfit text-white/50 leading-relaxed font-medium italic">
                         "Each thread in this Kanchipuram silk is chosen for its luster. The ruby red is achieved through traditional botanical dyes, ensuring a hue that deepens with character over generations."
                      </p>
                   </div>

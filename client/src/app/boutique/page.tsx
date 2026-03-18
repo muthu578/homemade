@@ -139,35 +139,39 @@ export default function BoutiquePage() {
       <Navbar />
 
       {/* ── HERO BANNER ── */}
-      <section className="relative pt-28 pb-20 overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[150px] -z-0" />
-        <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-[#bfa37e]/10 rounded-full blur-[100px] -z-0" />
+      <section className="relative pt-32 md:pt-48 pb-16 md:pb-32 overflow-hidden bg-[#fbf9f6]">
+        {/* Subtle decorative elements with artisan blur */}
+        <div className="absolute top-0 right-0 w-[400px] md:w-[800px] h-[400px] md:h-[800px] bg-[#ff4d6d]/5 rounded-full blur-[100px] md:blur-[180px] -z-0" />
+        <div className="absolute bottom-0 left-0 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-[#bfa37e]/5 rounded-full blur-[80px] md:blur-[150px] -z-0" />
 
-        <div className="max-w-[1800px] mx-auto px-10 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-10 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
             {/* Left: Text */}
             <motion.div
-              initial={{ opacity: 0, x: -40 }}
+              initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.9 }}
-              className="space-y-8"
+              transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+              className="space-y-8 md:space-y-12 text-center lg:text-left"
             >
-              <div className="flex items-center gap-4">
-                <div className="h-px w-12 bg-[#ff4d6d]" />
-                <span className="text-[10px] font-outfit font-black uppercase tracking-[0.5em] text-[#ff4d6d]">The Boutique</span>
+              <div className="space-y-6 md:space-y-8">
+                <div className="flex items-center justify-center lg:justify-start gap-4">
+                  <div className="hidden md:block h-px w-16 bg-[#ff4d6d]" />
+                  <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d]">Artisan Boutique</span>
+                </div>
+                <h1 className="text-4xl md:text-7xl lg:text-8xl font-fraunces font-black text-[#1a1c24] leading-[1.1] md:leading-tight italic">
+                  Wear Your <br className="hidden sm:block" /><span className="text-[#bfa37e] font-normal italic">Story.</span>
+                </h1>
+                <p className="text-sm md:text-xl text-[#1a1c24]/40 font-outfit leading-relaxed max-w-xl mx-auto lg:mx-0 italic">
+                  Handcrafted Kanchi silks, designer sarees, artisan blouses, and ethnic ensembles — curated for every chapter of your life.
+                </p>
               </div>
-              <h1 className="text-5xl md:text-7xl font-fraunces font-black text-[#1a1c24] leading-tight">
-                Wear Your <br /><span className="italic font-normal text-[#bfa37e]">Story.</span>
-              </h1>
-              <p className="text-lg text-[#1a1c24]/50 font-outfit leading-relaxed max-w-md">
-                Handcrafted Kanchi silks, designer sarees, artisan blouses, and ethnic ensembles — curated for every chapter of your life.
-              </p>
-              <div className="flex flex-wrap gap-3">
+
+              <div className="flex flex-wrap justify-center lg:justify-start gap-3 md:gap-4 pt-4 md:pt-6">
                 {['Sarees', 'Lehengas', 'Gowns', 'Fabrics'].map(tag => (
                   <button
                     key={tag}
                     onClick={() => setActiveCategory(tag)}
-                    className="px-6 py-2.5 rounded-full border border-[#bfa37e]/30 text-xs font-outfit font-bold tracking-widest text-[#bfa37e] hover:bg-[#bfa37e]/10 transition-colors"
+                    className="px-6 md:px-10 py-3 md:py-4 rounded-full border-2 border-[#bfa37e]/10 text-[10px] md:text-xs font-outfit font-black tracking-[0.3em] uppercase text-[#bfa37e] hover:bg-[#bfa37e] hover:text-white hover:border-[#bfa37e] transition-all transform hover:-translate-y-1 active:scale-95"
                   >
                     {tag}
                   </button>
@@ -175,38 +179,38 @@ export default function BoutiquePage() {
               </div>
             </motion.div>
 
-            {/* Right: Staggered Images */}
+            {/* Right: Staggered Images - Improved for mobile with better spacing */}
             <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.9, delay: 0.2 }}
-              className="relative h-[480px] hidden lg:block"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+              className="relative h-[300px] sm:h-[450px] md:h-[550px]"
             >
-              <div className="absolute top-0 left-0 w-[260px] h-[370px] rounded-[2.5rem] overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.12)] rotate-[-3deg]">
+              <div className="absolute top-0 left-0 w-[160px] sm:w-[220px] md:w-[280px] h-[220px] sm:h-[320px] md:h-[400px] rounded-[2.5rem] md:rounded-[4rem] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.12)] rotate-[-6deg] z-0 group">
                 <img
                   src="https://anyaonline.in/cdn/shop/files/5_4e137679-25e0-4fec-94de-0661134b06ad_400x.jpg?v=1770902247"
                   alt="Bridal Collection"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                 />
               </div>
-              <div className="absolute top-[10%] left-[36%] w-[230px] h-[310px] rounded-[2.5rem] overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.1)] z-10 border-4 border-white">
+              <div className="absolute top-[10%] left-[25%] w-[150px] sm:w-[200px] md:w-[260px] h-[200px] sm:h-[280px] md:h-[350px] rounded-[2.5rem] md:rounded-[4rem] overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.15)] z-20 border-[6px] md:border-[10px] border-white group">
                 <img
                   src="https://anyaonline.in/cdn/shop/files/1_f604d26e-5258-405f-a4c1-5fe659b6febb_400x.jpg?v=1771045647"
                   alt="Sarees"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                 />
               </div>
-              <div className="absolute bottom-0 right-0 w-[200px] h-[270px] rounded-[2.5rem] overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.1)] rotate-[2deg] border-4 border-white">
+              <div className="absolute bottom-0 right-0 w-[140px] sm:w-[180px] md:w-[240px] h-[180px] sm:h-[250px] md:h-[320px] rounded-[2.5rem] md:rounded-[4rem] overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.12)] rotate-[4deg] z-10 border-[6px] md:border-[10px] border-white group">
                 <img
                   src="https://anyaonline.in/cdn/shop/files/10_91061a4c-2853-4728-b38d-e10d8f038c4d_400x.jpg?v=1771048393"
                   alt="Silk Sarees"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                 />
               </div>
-              {/* Stats bubble */}
-              <div className="absolute bottom-[30%] left-[22%] bg-white rounded-2xl px-6 py-4 shadow-[0_10px_40px_rgba(0,0,0,0.1)] z-20">
-                <p className="text-[9px] font-outfit font-black uppercase tracking-widest text-[#bfa37e]">Collections</p>
-                <p className="text-3xl font-fraunces font-black text-[#1a1c24]">980+</p>
+              {/* Stats bubble updated for mobile */}
+              <div className="absolute bottom-[10%] left-[10%] md:bottom-[20%] md:left-[15%] bg-white rounded-3xl px-6 md:px-10 py-4 md:py-6 shadow-[0_20px_60px_rgba(0,0,0,0.1)] z-30 transform -rotate-3 hover:rotate-0 transition-transform">
+                <p className="text-[8px] md:text-[10px] font-outfit font-black uppercase tracking-[0.4em] text-[#bfa37e]">Collections</p>
+                <p className="text-2xl md:text-5xl font-fraunces font-black text-[#1a1c24] italic">980+</p>
               </div>
             </motion.div>
           </div>
@@ -220,23 +224,23 @@ export default function BoutiquePage() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="bg-white border-b border-[#1a1c24]/5 overflow-hidden"
+            className="bg-white border-b border-[#1a1c24]/5 overflow-hidden sticky top-16 z-50 shadow-xl"
           >
-            <div className="max-w-[1800px] mx-auto px-10 py-4">
-              <div className="relative">
-                <Search className="absolute left-5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#1a1c24]/30" />
+            <div className="max-w-[1400px] mx-auto px-6 md:px-10 py-6">
+              <div className="relative group">
+                <Search className="absolute left-6 top-1/2 -translate-y-1/2 w-5 h-5 text-[#1a1c24]/20 group-focus-within:text-[#ff4d6d] transition-colors" />
                 <input
                   autoFocus
                   type="text"
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}
-                  placeholder="Search sarees, blouses, lehengas..."
-                  className="w-full pl-12 pr-12 py-4 rounded-full bg-[#fbf9f6] text-sm font-outfit text-[#1a1c24] placeholder-[#1a1c24]/30 border border-[#1a1c24]/10 focus:outline-none focus:border-[#ff4d6d]/40 transition-all"
+                  placeholder="Seach sarees, blouses, gowns..."
+                  className="w-full pl-16 pr-16 py-5 md:py-7 rounded-full bg-[#fbf9f6] text-sm md:text-lg font-outfit text-[#1a1c24] placeholder-[#1a1c24]/20 border-2 border-transparent focus:border-[#ff4d6d]/10 focus:bg-white outline-none transition-all shadow-inner"
                 />
                 {searchQuery && (
-                  <button onClick={() => setSearchQuery('')} className="absolute right-5 top-1/2 -translate-y-1/2 text-[#1a1c24]/30 hover:text-[#ff4d6d]">
-                    <X className="w-4 h-4" />
-                  </button>
+                   <button onClick={() => setSearchQuery('')} className="absolute right-6 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-[#1a1c24]/5 flex items-center justify-center text-[#1a1c24]/30 hover:bg-[#ff4d6d] hover:text-white transition-all">
+                     <X className="w-4 h-4" />
+                   </button>
                 )}
               </div>
             </div>
@@ -245,18 +249,18 @@ export default function BoutiquePage() {
       </AnimatePresence>
 
       {/* ── CATEGORY FILTER BAR ── */}
-      <section className="sticky top-16 z-40 bg-white/90 backdrop-blur-md border-b border-[#1a1c24]/5 py-4">
-        <div className="max-w-[1800px] mx-auto px-10 flex items-center justify-between gap-6">
-          {/* Category tabs — no scrollbar, wrapped */}
-          <div className="flex items-center flex-wrap gap-2">
+      <section className="sticky top-16 z-40 bg-white/80 backdrop-blur-2xl border-b border-[#1a1c24]/5 py-4 md:py-6">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-10 flex items-center justify-between gap-6 overflow-hidden">
+          {/* Category tabs — horizontally scrollable refined */}
+          <div className="flex items-center gap-3 overflow-x-auto no-scrollbar -mx-6 px-6 md:mx-0 md:px-0 scroll-smooth flex-1">
             {categories.map(cat => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`whitespace-nowrap px-5 py-2 rounded-full text-[10px] font-outfit font-bold tracking-[0.2em] uppercase transition-all ${
+                className={`whitespace-nowrap px-6 md:px-8 py-3 rounded-full text-[10px] md:text-[11px] font-outfit font-black tracking-[0.2em] uppercase transition-all transform active:scale-95 ${
                   activeCategory === cat
-                    ? 'bg-[#1a1c24] text-white shadow-md'
-                    : 'text-[#1a1c24]/40 hover:text-[#1a1c24] border border-[#1a1c24]/10 hover:border-[#1a1c24]/30'
+                    ? 'bg-[#1a1c24] text-white shadow-[0_10px_30px_rgba(26,28,36,0.3)]'
+                    : 'bg-[#fbf9f6] text-[#1a1c24]/30 hover:text-[#1a1c24] border border-transparent hover:border-[#1a1c24]/10 hover:bg-white'
                 }`}
               >
                 {cat}
@@ -264,157 +268,200 @@ export default function BoutiquePage() {
             ))}
           </div>
 
-          {/* Right actions */}
+          {/* Right actions improved for mobile touch */}
           <div className="flex items-center gap-3 flex-shrink-0">
             <button
               onClick={() => setSearchOpen(o => !o)}
-              className={`w-9 h-9 rounded-full border flex items-center justify-center transition-all ${searchOpen ? 'bg-[#ff4d6d] border-[#ff4d6d] text-white' : 'border-[#1a1c24]/10 text-[#1a1c24]/40 hover:text-[#ff4d6d] hover:border-[#ff4d6d]/30'}`}
+              className={`w-10 h-10 md:w-14 md:h-14 rounded-full flex items-center justify-center transition-all shadow-sm active:scale-90 ${searchOpen ? 'bg-[#ff4d6d] text-white rotate-90 shadow-[0_10px_30px_rgba(255,77,109,0.3)]' : 'bg-[#fbf9f6] text-[#1a1c24]/40 hover:bg-white hover:text-[#ff4d6d] border border-transparent hover:border-[#ff4d6d]/20'}`}
             >
-              <Search className="w-3.5 h-3.5" />
+              {searchOpen ? <X className="w-5 h-5 md:w-7 md:h-7" /> : <Search className="w-5 h-5 md:w-6 md:h-6" />}
             </button>
-            <button className="flex items-center gap-2 px-5 py-2 rounded-full border border-[#1a1c24]/10 text-[10px] font-outfit font-bold text-[#1a1c24]/40 hover:text-[#ff4d6d] hover:border-[#ff4d6d]/30 transition-all uppercase tracking-widest">
-              <SlidersHorizontal className="w-3.5 h-3.5" />
-              Filter
+            <button className="flex items-center gap-3 pl-6 pr-8 md:pl-10 md:pr-12 h-10 md:h-14 rounded-full bg-[#fbf9f6] border border-transparent hover:border-[#ff4d6d]/20 text-[10px] md:text-[11px] font-outfit font-black text-[#1a1c24]/30 hover:text-[#ff4d6d] hover:bg-white transition-all uppercase tracking-widest shadow-sm active:scale-95">
+              <SlidersHorizontal className="w-4 h-4 md:w-5 md:h-5" />
+              <span className="hidden sm:inline">Advanced Filter</span>
+              <span className="sm:hidden">Filter</span>
             </button>
           </div>
         </div>
       </section>
 
       {/* ── PRODUCT GRID ── */}
-      <section className="py-20">
-        <div className="max-w-[1800px] mx-auto px-10">
-          <div className="flex items-center justify-between mb-12">
-            <p className="text-sm font-outfit text-[#1a1c24]/30">
-              Showing <span className="font-bold text-[#1a1c24]">{filtered.length}</span> designs
-              {activeCategory !== 'All' && <span className="text-[#ff4d6d]"> · {activeCategory}</span>}
-            </p>
-            <select className="text-[10px] font-outfit font-bold uppercase tracking-widest text-[#1a1c24]/40 bg-transparent border-none outline-none cursor-pointer">
-              <option>Sort: Featured</option>
-              <option>Price: Low to High</option>
-              <option>Price: High to Low</option>
-              <option>New Arrivals</option>
-            </select>
+      <section className="py-16 md:py-32 bg-white relative">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+          <div className="flex flex-col md:flex-row items-center justify-between mb-12 md:mb-20 gap-8">
+            <div className="space-y-1 text-center md:text-left">
+               <p className="text-[10px] md:text-xs font-outfit font-black text-[#1a1c24]/30 tracking-[0.4em] uppercase">
+                 Artisan Selection
+               </p>
+               <h3 className="text-xl md:text-3xl font-fraunces font-black text-[#1a1c24] italic">
+                 {activeCategory} <span className="text-[#1a1c24]/10 font-normal">({filtered.length} Designs)</span>
+               </h3>
+            </div>
+            <div className="relative group">
+               <select className="appearance-none text-[10px] md:text-[11px] font-outfit font-black uppercase tracking-[0.3em] text-[#1a1c24]/40 bg-[#fbf9f6] hover:bg-white hover:text-[#1a1c24] px-10 py-4 rounded-full border border-transparent hover:border-[#1a1c24]/10 transition-all cursor-pointer outline-none shadow-sm pr-12 group-hover:shadow-md">
+                 <option>Sort: Royal Featured</option>
+                 <option>Price: Ascent</option>
+                 <option>Price: Descent</option>
+                 <option>Latest Arrivals</option>
+               </select>
+               <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-[#1a1c24]/20 group-hover:text-[#ff4d6d] transition-colors">
+                  <ChevronRight className="w-4 h-4 rotate-90" />
+               </div>
+            </div>
           </div>
 
           <AnimatePresence mode="wait">
             <motion.div
               key={activeCategory + searchQuery}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.4 }}
-              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+              initial={{ opacity: 0, scale: 0.98 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.98 }}
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-12"
             >
               {filtered.length > 0 ? filtered.map((product, i) => (
                 <motion.div
                   key={product.id}
                   initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: i * 0.06 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.7, delay: i * 0.08 }}
                   className="group relative"
                 >
-                  {/* Image */}
-                  <div className="relative aspect-[3/4] overflow-hidden rounded-[2rem] bg-[#f0ece6] shadow-[0_8px_30px_rgba(0,0,0,0.07)] transition-all duration-700 group-hover:-translate-y-2 group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)]">
+                  {/* Image Card updated for mobile touch */}
+                  <div className="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] md:rounded-[3.5rem] bg-[#fbf9f6] shadow-[0_20px_60px_rgba(0,0,0,0.04)] transition-all duration-700 hover:-translate-y-3 hover:shadow-[0_40px_100px_rgba(0,0,0,0.1)] border border-[#1a1c24]/5">
                     <Link href={`/boutique/${product.id}`} className="block w-full h-full">
                       <img
                         src={product.img}
                         alt={product.name}
-                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                        className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"
                         loading="lazy"
                       />
                     </Link>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1a1c24]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
-                    {/* Tag */}
-                    <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-[8px] font-outfit font-black uppercase tracking-[0.3em] text-[#ff4d6d]">
+                    {/* Tag refined */}
+                    <div className="absolute top-5 left-5 md:top-8 md:left-8">
+                      <div className="px-4 py-2 md:px-5 md:py-2.5 bg-white/95 backdrop-blur-2xl rounded-full text-[8px] md:text-[10px] font-outfit font-black uppercase tracking-[0.3em] text-[#ff4d6d] shadow-xl border border-white/20">
                         {product.tag}
-                      </span>
+                      </div>
                     </div>
 
-                    {/* Color dot */}
-                    <div className="absolute top-4 right-4 px-3 py-1.5 bg-black/30 backdrop-blur-sm rounded-full">
-                      <span className="text-[8px] font-outfit font-bold text-white/80 uppercase tracking-wider">{product.color}</span>
+                    {/* Quick Info dot */}
+                    <div className="absolute top-5 right-5 md:top-8 md:right-8 group/dot">
+                       <div className="px-4 py-2 md:px-5 md:py-2.5 bg-black/30 backdrop-blur-xl rounded-full border border-white/10 flex items-center gap-3 group-hover/dot:bg-[#ff4d6d] transition-all cursor-pointer">
+                          <span className="text-[8px] md:text-[10px] font-outfit font-black text-white/90 uppercase tracking-widest">{product.color}</span>
+                          <div className="w-2 h-2 rounded-full bg-white shadow-lg animate-pulse" />
+                       </div>
                     </div>
 
-                    {/* Wishlist */}
+                    {/* Wishlist Button - accessible */}
                     <button
-                      onClick={() => toggleWishlist(product.id)}
-                      className="absolute bottom-14 right-4 w-9 h-9 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-all hover:bg-[#ff4d6d] hover:text-white"
+                      onClick={(e) => { e.preventDefault(); toggleWishlist(product.id); }}
+                      className={`absolute bottom-20 md:bottom-28 right-6 md:right-8 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center backdrop-blur-2xl shadow-2xl transition-all duration-500 active:scale-75 ${wishlist.includes(product.id) ? 'bg-[#ff4d6d] text-white' : 'bg-white/90 text-[#1a1c24]/20 hover:bg-white hover:text-[#ff4d6d]'}`}
                     >
-                      <Heart className={`w-3.5 h-3.5 transition-colors ${wishlist.includes(product.id) ? 'fill-[#ff4d6d] text-[#ff4d6d]' : 'text-[#1a1c24]'}`} />
+                      <Heart className={`w-5 h-5 md:w-7 md:h-7 transition-all ${wishlist.includes(product.id) ? 'fill-current scale-110' : 'group-hover:scale-110'}`} />
                     </button>
 
-                    {/* Quick View */}
+                    {/* Quick Discovery Button - perfect for touch */}
                     <Link
                       href={`/boutique/${product.id}`}
-                      className="absolute bottom-4 left-4 right-4 py-2.5 bg-white/90 backdrop-blur-sm text-[#1a1c24] rounded-full font-outfit font-bold text-[10px] tracking-widest uppercase flex items-center justify-center gap-1.5 hover:bg-[#1a1c24] hover:text-white transition-all opacity-0 group-hover:opacity-100 translate-y-3 group-hover:translate-y-0 transition-transform duration-500"
+                      className="absolute bottom-6 left-6 right-6 md:bottom-8 md:left-8 md:right-8 py-5 md:py-7 bg-white/95 backdrop-blur-2xl text-[#1a1c24] rounded-full font-outfit font-black text-[10px] md:text-xs tracking-[0.4em] uppercase flex items-center justify-center gap-4 hover:bg-[#ff4d6d] hover:text-white transition-all shadow-2xl translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 duration-500 active:scale-95 border border-white/20"
                     >
-                      Quick View <ChevronRight className="w-3 h-3" />
+                      Discovery Design <ChevronRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                     </Link>
                   </div>
 
-                  {/* Info */}
-                  <div className="mt-5 px-1">
-                    <p className="text-[8px] font-outfit font-black uppercase tracking-[0.3em] text-[#bfa37e] mb-1">{product.category}</p>
-                    <div className="flex items-start justify-between gap-2">
-                       <Link href={`/boutique/${product.id}`}>
-                          <h3 className="text-sm font-fraunces font-bold text-[#1a1c24] group-hover:text-[#ff4d6d] transition-colors leading-snug">{product.name}</h3>
+                  {/* Info refined */}
+                  <div className="mt-8 md:mt-10 px-4 md:px-6">
+                    <div className="flex items-center gap-4 mb-3">
+                       <div className="h-px w-8 bg-[#bfa37e]/30" />
+                       <p className="text-[10px] md:text-xs font-outfit font-black uppercase tracking-[0.4em] text-[#bfa37e] italic">{product.category}</p>
+                    </div>
+                    <div className="space-y-4">
+                       <Link href={`/boutique/${product.id}`} className="block">
+                          <h3 className="text-sm md:text-xl font-fraunces font-black text-[#1a1c24] group-hover:text-[#ff4d6d] transition-colors leading-snug line-clamp-1 italic group-hover:translate-x-1 duration-500">{product.name}</h3>
                        </Link>
-                      <span className="text-sm font-fraunces font-bold text-[#1a1c24]/40 whitespace-nowrap">₹{product.price.toLocaleString()}</span>
+                       <div className="flex items-center justify-between py-1 border-t border-[#1a1c24]/5">
+                          <span className="text-base md:text-2xl font-fraunces font-black text-[#1a1c24] italic">₹{product.price.toLocaleString()}<span className="text-[10px] md:text-xs font-outfit font-black text-[#1a1c24]/20 tracking-tighter ml-1">TRIBUTE</span></span>
+                          <Link href={`/boutique/${product.id}`} className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#fbf9f6] flex items-center justify-center text-[#1a1c24]/10 group-hover:bg-[#1a1c24] group-hover:text-white transition-all transform hover:rotate-45">
+                             <ArrowRight className="w-4 h-4" />
+                          </Link>
+                       </div>
                     </div>
                   </div>
                 </motion.div>
               )) : (
-                <div className="col-span-4 py-32 text-center">
-                  <p className="text-2xl font-fraunces italic text-[#1a1c24]/20">No designs found.</p>
+                <div className="col-span-full py-40 md:py-64 text-center space-y-10">
+                  <motion.div initial={{ scale: 0.8 }} animate={{ scale: 1 }} className="w-32 h-32 md:w-48 md:h-48 bg-[#fbf9f6] rounded-full flex items-center justify-center mx-auto shadow-inner relative overflow-hidden group">
+                     <div className="absolute inset-0 bg-[#ff4d6d]/5 scale-0 group-hover:scale-100 transition-transform duration-1000 rounded-full" />
+                     <Search className="w-10 h-10 md:w-16 md:h-16 text-[#1a1c24]/5 group-hover:text-[#ff4d6d]/20 transition-colors" />
+                  </motion.div>
+                  <div className="space-y-4">
+                     <h3 className="text-2xl md:text-5xl font-fraunces font-black text-[#1a1c24]/20 italic">No designs found <br />in the archive.</h3>
+                     <p className="text-sm md:text-xl font-outfit text-[#1a1c24]/30 italic">Try resetting the ritual or explore other domains.</p>
+                  </div>
+                  <button onClick={() => { setActiveCategory('All'); setSearchQuery(''); }} className="px-10 md:px-14 py-4 md:py-6 bg-[#1a1c24] text-white rounded-full text-[10px] md:text-xs font-outfit font-black uppercase tracking-[0.4em] hover:bg-[#ff4d6d] transition-all shadow-2xl active:scale-95">Purify Ritual Filters</button>
                 </div>
               )}
             </motion.div>
           </AnimatePresence>
 
-          {/* Load More */}
-          <div className="text-center mt-20">
-            <button className="group px-14 py-5 border-2 border-[#1a1c24]/10 rounded-full text-sm font-outfit font-bold tracking-widest uppercase text-[#1a1c24]/40 hover:border-[#ff4d6d] hover:text-[#ff4d6d] transition-all hover:scale-105">
-              Load More Designs
+          {/* Load More Refined */}
+          <div className="text-center mt-24 md:mt-40">
+            <button className="group relative px-14 md:px-24 py-6 md:py-8 border-2 border-[#1a1c24]/5 rounded-full text-[10px] md:text-xs font-outfit font-black tracking-[0.5em] uppercase text-[#1a1c24]/20 hover:text-[#1a1c24] hover:border-[#1a1c24]/20 transition-all transform hover:scale-[1.02] active:scale-95 shadow-sm hover:shadow-2xl overflow-hidden">
+               <div className="absolute inset-0 bg-white/50 -translate-x-full group-hover:translate-x-0 transition-transform duration-700 italic" />
+               <span className="relative z-10 flex items-center gap-6">Explore More Archive <ChevronRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" /></span>
             </button>
           </div>
         </div>
       </section>
 
-      {/* ── CUSTOM ORDER CTA ── */}
-      <section className="py-32 bg-[#1a1c24] relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/silk.png')" }} />
-        <div className="max-w-[1800px] mx-auto px-10 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            <div className="space-y-8">
-              <span className="text-[10px] font-outfit font-black uppercase tracking-[0.5em] text-[#ff4d6d]">Bespoke Service</span>
-              <h2 className="text-5xl md:text-6xl font-fraunces font-black text-white leading-tight">
-                Don't See What <br />You're Looking For?
-              </h2>
-              <p className="text-lg text-white/40 font-outfit leading-relaxed">
-                We take custom orders — share your vision and our artisans will craft the perfect ensemble just for you.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/contact" className="group inline-flex items-center gap-4 px-12 py-5 bg-[#ff4d6d] text-white rounded-full font-bold text-sm hover:scale-105 transition-all shadow-2xl">
-                  Place Custom Order <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+      {/* ── CUSTOM ORDER CTA UPDATED ── */}
+      <section className="py-24 md:py-48 bg-[#1a1c24] relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/silk.png')" }} />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#ff4d6d]/10 rounded-full blur-[150px] -z-0" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#bfa37e]/10 rounded-full blur-[120px] -z-0" />
+
+        <div className="max-w-[1400px] mx-auto px-6 md:px-10 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-32 items-center">
+            <div className="space-y-10 md:space-y-16 text-center lg:text-left">
+              <div className="space-y-6 md:space-y-8">
+                 <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">Private Atelier</span>
+                 <h2 className="text-4xl md:text-7xl lg:text-8xl font-fraunces font-black text-white leading-[1.1] md:leading-tight italic">
+                   Bespoke <br className="hidden md:block" /><span className="text-[#bfa37e] font-normal italic">Visionaries.</span>
+                 </h2>
+                 <p className="text-sm md:text-xl text-white/40 font-outfit leading-relaxed max-w-xl mx-auto lg:mx-0 italic">
+                   "We invite you to the ritual of creation. Share your dreams, and our master artisans will manifest them into artifacts of pure grace."
+                 </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start pt-6 md:pt-10">
+                <Link href="/contact" className="group inline-flex items-center justify-center gap-6 px-12 md:px-16 py-6 md:py-8 bg-[#ff4d6d] text-white rounded-full font-black text-xs md:text-sm uppercase tracking-[0.4em] hover:scale-105 transition-all shadow-[0_20px_60px_rgba(255,77,109,0.3)] active:scale-95">
+                  Launch Custom Ritual <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
                 </Link>
-                <Link href="/our-story" className="inline-flex items-center gap-4 px-12 py-5 border border-white/10 text-white/60 rounded-full font-bold text-sm hover:border-white/30 hover:text-white transition-all">
-                  Meet Our Artisans
+                <Link href="/our-story" className="inline-flex items-center justify-center gap-6 px-12 md:px-16 py-6 md:py-8 border-2 border-white/5 text-white/40 hover:text-white hover:border-white/20 rounded-full font-black text-xs md:text-sm uppercase tracking-[0.4em] transition-all active:scale-95 backdrop-blur-sm">
+                  Meet the Masters
                 </Link>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-6">
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10">
               {[
-                { emoji: '📐', title: 'Custom Sizing', desc: 'Tailored to your exact measurements' },
-                { emoji: '🧵', title: 'Fabric Choice', desc: 'Premium Kanchi silks, cottons & blends' },
-                { emoji: '✨', title: 'Hand Embroidery', desc: 'Intricate motifs by skilled artisans' },
-                { emoji: '🚚', title: 'Home Delivery', desc: 'Safely delivered to your doorstep' },
+                { emoji: '📐', title: 'Legacy Sizing', desc: 'Precise measurements for an immortal fit' },
+                { emoji: '🧵', title: 'Soul Fabrics', desc: 'Hand-picked Kanchi silks & celestial blends' },
+                { emoji: '✨', title: 'Gold Motifs', desc: 'Intricate hand embroidery by master craftsmen' },
+                { emoji: '🚚', title: 'Palace Delivery', desc: 'Secured transport to your private domain' },
               ].map((f, i) => (
-                <div key={i} className="p-8 rounded-[2rem] bg-white/5 border border-white/5 hover:bg-white/10 transition-all space-y-3">
-                  <span className="text-3xl">{f.emoji}</span>
-                  <h4 className="font-fraunces font-bold text-white">{f.title}</h4>
-                  <p className="text-xs text-white/30 font-outfit leading-relaxed">{f.desc}</p>
+                <div key={i} className="p-10 md:p-14 rounded-[3rem] md:rounded-[4rem] bg-white/5 border border-white/5 hover:bg-white/10 hover:border-white/10 transition-all duration-700 space-y-6 group text-center sm:text-left relative overflow-hidden flex flex-col items-center sm:items-start">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-full blur-3xl -z-0 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="w-20 h-20 md:w-24 md:h-24 bg-white/5 rounded-[2rem] flex items-center justify-center text-4xl md:text-5xl group-hover:bg-[#ff4d6d] transition-all transform group-hover:rotate-12 group-hover:scale-110 shadow-inner">
+                    <span className="relative z-10">{f.emoji}</span>
+                  </div>
+                  <div className="space-y-3">
+                     <h4 className="font-fraunces font-black text-xl md:text-3xl text-white italic">{f.title}</h4>
+                     <p className="text-[10px] md:text-xs text-white/30 font-outfit font-medium uppercase tracking-[0.2em] leading-relaxed italic">{f.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -422,14 +469,19 @@ export default function BoutiquePage() {
         </div>
       </section>
 
-      {/* Footer mini */}
-      <footer className="py-8 bg-[#fbf9f6] border-t border-[#1a1c24]/5">
-        <div className="max-w-[1800px] mx-auto px-10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-[9px] font-outfit font-black uppercase tracking-[0.4em] text-[#1a1c24]/20">
-            © 2026 PRANAVIKA'S Sweet & Chic · All Rights Reserved
-          </p>
-          <Link href="/" className="text-[9px] font-outfit font-black uppercase tracking-[0.4em] text-[#1a1c24]/20 hover:text-[#ff4d6d] transition-colors">
-            ← Back to Home
+      {/* Footer refined for mobile */}
+      <footer className="py-16 md:py-24 bg-[#fbf9f6] border-t border-[#1a1c24]/5 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/natural-paper.png')" }} />
+        <div className="max-w-[1400px] mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16 relative z-10">
+          <div className="flex flex-col items-center md:items-start gap-4">
+             <p className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#1a1c24]/15 text-center md:text-left leading-relaxed italic">
+               © 2026 PRANAVIKA'S · Bespoke Couture · Crafted with Honor
+             </p>
+             <div className="h-px w-20 bg-[#1a1c24]/5" />
+          </div>
+          <Link href="/" className="group flex items-center gap-4 text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.5em] text-[#1a1c24]/20 hover:text-[#ff4d6d] transition-all transform hover:-translate-x-2">
+            <ArrowRight className="w-5 h-5 rotate-180 group-hover:scale-125 transition-transform" />
+            <span className="italic">Ascend to Home</span>
           </Link>
         </div>
       </footer>
