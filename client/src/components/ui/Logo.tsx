@@ -26,7 +26,7 @@ export const Logo = ({ className = "" }: { className?: string }) => {
           </span>
         </div>
         <div className="mt-1 px-1">
-          <span className="text-[8px] md:text-[8px] font-outfit font-black text-[#efb5b5] tracking-[0.45em] md:tracking-[0.6em] uppercase block group-hover:text-[#ff4d6d] transition-colors">
+          <span className="text-[6px] md:text-[8px] font-outfit font-black text-[#efb5b5] tracking-[0.45em] md:tracking-[0.6em] uppercase block group-hover:text-[#ff4d6d] transition-colors">
             Boutique · Bakery · Gifts · Homemade
           </span>
         </div>
