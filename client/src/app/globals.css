@@ -68,6 +68,11 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
   --border-radius-xl: var(--radius);
+
+  /* Font Families */
+  --font-dancing-script: var(--font-dancing-script);
+  --font-fraunces: var(--font-fraunces);
+  --font-outfit: var(--font-outfit);
 }
 
 body {
