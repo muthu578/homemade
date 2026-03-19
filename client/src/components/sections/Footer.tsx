@@ -10,13 +10,12 @@ export const Footer = () => {
       <div className="max-w-[1800px] mx-auto px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
 
-          {/* Brand Col */}
-          <div className="space-y-8">
+          {/* Brand Col - Hidden on mobile */}
+          <div className="hidden md:flex flex-col space-y-8">
             <Logo />
             <p className="text-sm font-outfit text-[#1a1c24]/40 leading-relaxed max-w-xs">
               Handcrafting elegance in fashion and artisan mastery in baking. From our home atelier to yours.
             </p>
-
           </div>
 
           {/* Combined Links Column */}
