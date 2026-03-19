@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Fraunces, Outfit } from "next/font/google";
+import { Geist, Geist_Mono, Fraunces, Outfit, Dancing_Script } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -23,11 +23,16 @@ const outfit = Outfit({
   subsets: ["latin"],
 });
 
+const dancingScript = Dancing_Script({
+  variable: "--font-dancing-script",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   title: "Pranavika's | Bakery, Sweets, Silk & Gifts",
   description: "Exquisite Artisan Bakery, Authentic Sweets, Premium Silk Boutique, and Curated Gifts.",
   icons: {
-    icon: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="20" fill="%231a1c24"/><text x="50" y="70" font-family="serif" font-size="65" font-weight="bold" fill="%23bfa37e" text-anchor="middle">P</text></svg>',
+    icon: '/favicon.png',
   },
 };
 
@@ -39,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable} ${outfit.variable} antialiased font-sans`}
+        className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable} ${outfit.variable} ${dancingScript.variable} antialiased font-sans`}
         suppressHydrationWarning
       >
         {children}

@@ -8,7 +8,7 @@ import { Navbar } from '../../components/sections/Navbar';
 const milestones = [
   { year: '2018', title: 'A Kitchen & A Dream', desc: `Pranavika started baking from her home kitchen, sharing cakes with neighbours and family. What began as a passion quickly became everyone's favourite indulgence.` },
   { year: '2020', title: 'The Boutique Is Born', desc: `Combining a love for fashion and artisan craftsmanship, the first boutique collection launched — handcrafted ethnic wear inspired by Indian heritage.` },
-  { year: '2022', title: 'Going Online', desc: `PRANAVIKA'S Sweet & Chic went digital, bringing the artisan bakery and boutique experience to customers across Tamil Nadu and beyond.` },
+  { year: '2022', title: 'Going Online', desc: `PRANAVIKA'S Creations went digital, bringing the artisan bakery and boutique experience to customers across Tamil Nadu and beyond.` },
   { year: '2024', title: 'Homemade Line Launches', desc: `Expanding into traditional homemade delicacies — pickles, laddoos, snacks and hampers — rooted in grandma's secret recipes.` },
   { year: '2026', title: 'Growing Together', desc: `12,000+ happy customers and counting. The journey continues with new collections, custom orders, and a deep commitment to artisan quality.` },
 ];
@@ -37,7 +37,7 @@ export default function OurStoryPage() {
               From a Kitchen<br /><span className="italic font-normal text-[#bfa37e]"> to a Craft.</span>
             </h1>
             <p className="text-base md:text-2xl text-[#1a1c24]/30 font-outfit leading-relaxed max-w-3xl mx-auto italic">
-              "PRANAVIKA'S Sweet & Chic is more than a brand — it's a celebration of ancestral artistry, tradition, and the joy of creating something pure with your bare hands."
+              "PRANAVIKA'S Creations is more than a brand — it's a celebration of ancestral artistry, tradition, and the joy of creating something pure with your bare hands."
             </p>
           </motion.div>
         </div>
@@ -47,10 +47,10 @@ export default function OurStoryPage() {
       <section className="py-24 md:py-48 bg-white relative overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-center">
-            <motion.div 
-              initial={{ opacity: 0, x: -40 }} 
-              whileInView={{ opacity: 1, x: 0 }} 
-              viewport={{ once: true }} 
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.9 }}
               className="relative h-[450px] md:h-[700px] group order-2 lg:order-1"
             >
@@ -64,28 +64,28 @@ export default function OurStoryPage() {
                 <p className="text-[11px] md:text-sm font-outfit italic text-[#1a1c24]/30 font-medium mt-1">"Artistry Manifested"</p>
               </div>
             </motion.div>
-            
-            <motion.div 
-              initial={{ opacity: 0, x: 40 }} 
-              whileInView={{ opacity: 1, x: 0 }} 
-              viewport={{ once: true }} 
-              transition={{ duration: 0.9 }} 
+
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.9 }}
               className="space-y-8 md:space-y-12 text-center lg:text-left order-1 lg:order-2"
             >
               <div className="space-y-4">
-                 <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">The Creator</span>
-                 <h2 className="text-4xl md:text-6xl lg:text-7xl font-fraunces font-black text-[#1a1c24] leading-tight italic">
-                   A Passion for <br className="hidden lg:block" /><span className="italic font-normal text-[#bfa37e]">Sacred Beauty.</span>
-                 </h2>
+                <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">The Creator</span>
+                <h2 className="text-4xl md:text-6xl lg:text-7xl font-fraunces font-black text-[#1a1c24] leading-tight italic">
+                  A Passion for <br className="hidden lg:block" /><span className="italic font-normal text-[#bfa37e]">Sacred Beauty.</span>
+                </h2>
               </div>
               <div className="space-y-6 md:space-y-8 text-[#1a1c24]/40 font-outfit leading-relaxed text-sm md:text-lg max-w-2xl mx-auto lg:mx-0 italic font-medium">
                 <p>"Pranavika grew up enveloped in the ancient aromas of her grandmother's kitchen and the vibrant, woven colours of handloom fabrics at local artisan markets. These two realms — the sacredness of food and the art of fashion — never felt separate to her soul."</p>
-                <p>"In 2018, she manifested celebration cakes for her inner circle, and the resonance was overwhelming. Within two planetary cycles, the vision for a boutique that braided artisan fashion with homemade culinary artistry was born — and PRANAVIKA'S Sweet & Chic descended into reality."</p>
+                <p>"In 2018, she manifested celebration cakes for her inner circle, and the resonance was overwhelming. Within two planetary cycles, the vision for a boutique that braided artisan fashion with homemade culinary artistry was born — and PRANAVIKA'S Creations descended into reality."</p>
                 <p className="text-[#1a1c24] font-black tracking-wide">"Create with devotion, deliver with grace, and never compromise on the purity of the craft."</p>
               </div>
               <div className="pt-6">
                 <Link href="/contact" className="group inline-flex items-center justify-center gap-6 px-12 md:px-16 py-6 md:py-8 bg-[#1a1c24] text-white rounded-full font-black text-xs md:text-sm uppercase tracking-[0.5em] hover:bg-[#ff4d6d] hover:scale-105 transition-all shadow-2xl active:scale-95 w-full sm:w-auto italic">
-                   Consult the Artisan <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                  Consult the Artisan <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                 </Link>
               </div>
             </motion.div>
@@ -100,34 +100,34 @@ export default function OurStoryPage() {
             <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">The Evolution</span>
             <h2 className="text-4xl md:text-7xl lg:text-8xl font-fraunces font-black text-[#1a1c24] leading-tight italic">The Milestones <br className="sm:hidden" /><span className="italic font-normal text-[#bfa37e]">That Made Us.</span></h2>
           </div>
-          
+
           <div className="relative">
             {/* Vertical line - hidden on very small screens, responsive width */}
             <div className="absolute left-[24px] md:left-[40px] lg:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#1a1c24]/10 to-transparent" />
-            
+
             <div className="space-y-16 md:space-y-24 lg:space-y-32 relative z-10">
               {milestones.map((m, i) => (
-                <motion.div key={i} 
-                  initial={{ opacity: 0, y: 40 }} 
-                  whileInView={{ opacity: 1, y: 0 }} 
-                  viewport={{ once: true, margin: "-100px" }} 
+                <motion.div key={i}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.8, delay: i * 0.1 }}
                   className={`relative flex flex-col lg:flex-row items-start lg:items-center gap-8 md:gap-12 lg:gap-24 ${i % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}
                 >
                   {/* Visual Connector Dot */}
                   <div className="absolute left-[24px] md:left-[40px] lg:left-1/2 top-8 lg:top-1/2 -translate-x-1/2 lg:-translate-y-1/2 w-8 h-8 md:w-10 md:h-10 bg-[#fbf9f6] rounded-full border-[10px] border-[#ff4d6d]/20 flex items-center justify-center z-10">
-                     <div className="w-3 h-3 md:w-4 md:h-4 bg-[#ff4d6d] rounded-full" />
+                    <div className="w-3 h-3 md:w-4 md:h-4 bg-[#ff4d6d] rounded-full" />
                   </div>
-                  
+
                   {/* Content Card */}
                   <div className={`w-full lg:w-1/2 pl-16 md:pl-24 lg:pl-0 ${i % 2 !== 0 ? 'lg:pr-24 lg:text-right' : 'lg:pl-24 lg:text-left'}`}>
-                     <div className="p-8 md:p-14 rounded-[3rem] md:rounded-[4rem] bg-white shadow-[0_40px_100px_rgba(0,0,0,0.03)] border border-[#1a1c24]/5 space-y-6 md:space-y-8 group hover:shadow-[0_60px_120px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-700">
-                       <div className={`flex flex-col lg:flex-row lg:items-end gap-3 md:gap-6 ${i % 2 !== 0 ? 'lg:flex-row-reverse lg:text-right' : ''}`}>
-                          <span className="text-6xl md:text-[100px] font-fraunces font-black text-[#ff4d6d]/5 group-hover:text-[#ff4d6d]/10 transition-colors leading-none italic">{m.year}</span>
-                          <h3 className="text-2xl md:text-4xl font-fraunces font-black text-[#1a1c24] leading-tight pb-2 italic">{m.title}</h3>
-                       </div>
-                       <p className="text-[11px] md:text-sm text-[#1a1c24]/30 font-outfit leading-relaxed italic font-medium">" {m.desc} "</p>
-                     </div>
+                    <div className="p-8 md:p-14 rounded-[3rem] md:rounded-[4rem] bg-white shadow-[0_40px_100px_rgba(0,0,0,0.03)] border border-[#1a1c24]/5 space-y-6 md:space-y-8 group hover:shadow-[0_60px_120px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-700">
+                      <div className={`flex flex-col lg:flex-row lg:items-end gap-3 md:gap-6 ${i % 2 !== 0 ? 'lg:flex-row-reverse lg:text-right' : ''}`}>
+                        <span className="text-6xl md:text-[100px] font-fraunces font-black text-[#ff4d6d]/5 group-hover:text-[#ff4d6d]/10 transition-colors leading-none italic">{m.year}</span>
+                        <h3 className="text-2xl md:text-4xl font-fraunces font-black text-[#1a1c24] leading-tight pb-2 italic">{m.title}</h3>
+                      </div>
+                      <p className="text-[11px] md:text-sm text-[#1a1c24]/30 font-outfit leading-relaxed italic font-medium">" {m.desc} "</p>
+                    </div>
                   </div>
                 </motion.div>
               ))}
@@ -138,7 +138,7 @@ export default function OurStoryPage() {
 
       {/* VALUES */}
       <section className="py-24 md:py-48 bg-white overflow-hidden relative">
-         <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-[#bfa37e]/5 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-[#bfa37e]/5 rounded-full blur-[100px] pointer-events-none" />
         <div className="max-w-[1400px] mx-auto px-6 md:px-10 relative z-10">
           <div className="text-center mb-20 md:mb-32 space-y-6">
             <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">What We Breathe</span>
@@ -146,10 +146,10 @@ export default function OurStoryPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
             {values.map((v, i) => (
-              <motion.div key={i} 
-                initial={{ opacity: 0, scale: 0.9 }} 
-                whileInView={{ opacity: 1, scale: 1 }} 
-                viewport={{ once: true }} 
+              <motion.div key={i}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.6 }}
                 className="p-10 md:p-14 rounded-[3.5rem] bg-[#fbf9f6] border border-[#1a1c24]/5 text-center space-y-8 hover:-translate-y-4 hover:bg-white hover:border-[#ff4d6d]/20 hover:shadow-[0_40px_100px_rgba(0,0,0,0.08)] transition-all duration-700 group active:scale-95"
               >
@@ -180,15 +180,15 @@ export default function OurStoryPage() {
               Be Part of Our <span className="italic font-normal text-[#bfa37e]">Scroll.</span>
             </h2>
           </motion.div>
-          
+
           <p className="text-sm md:text-2xl text-white/30 font-outfit max-w-3xl mx-auto leading-relaxed italic">
             "Whether you're celebrating a celestial moment or simply breathing in the beauty — let us weave a piece of art for your soul."
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-6 md:gap-8 justify-center pt-8">
             <Link href="/boutique" className="group relative inline-flex items-center justify-center gap-6 px-12 md:px-16 py-6 md:py-8 bg-[#ff4d6d] text-white rounded-full font-black text-xs md:text-sm uppercase tracking-[0.5em] hover:scale-110 active:scale-95 transition-all shadow-2xl italic overflow-hidden">
-               <div className="absolute inset-0 bg-[#1a1c24]/10 -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
-               <span className="relative z-10 flex items-center justify-center gap-4 text-center">Manifest Boutique <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" /></span>
+              <div className="absolute inset-0 bg-[#1a1c24]/10 -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
+              <span className="relative z-10 flex items-center justify-center gap-4 text-center">Manifest Boutique <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" /></span>
             </Link>
             <Link href="/bakery" className="inline-flex items-center justify-center gap-6 px-12 md:px-16 py-6 md:py-8 border-2 border-white/5 bg-white/5 text-white/50 rounded-full font-black text-xs md:text-sm uppercase tracking-[0.5em] hover:bg-white/10 hover:text-white hover:scale-105 transition-all active:scale-95 italic">
               Explore the Bakery 🎂
@@ -202,7 +202,7 @@ export default function OurStoryPage() {
         <div className="max-w-[1400px] mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-10">
           <div className="text-center md:text-left">
             <p className="text-[10px] md:text-[11px] font-outfit font-black uppercase tracking-[0.5em] text-[#1a1c24]/20 leading-loose italic">
-              © 2026 PRANAVIKA'S · Sweet & Chic · Artistry Manifested
+              © 2026 PRANAVIKA'S · Creations · Artistry Manifested
             </p>
           </div>
           <Link href="/" className="group flex items-center gap-4 text-[10px] font-outfit font-black uppercase tracking-[0.4em] text-[#1a1c24]/20 hover:text-[#ff4d6d] transition-all italic">

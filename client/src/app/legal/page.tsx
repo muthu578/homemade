@@ -76,7 +76,7 @@ export default function LegalPage() {
                         </div>
                         <div className="space-y-8 md:space-y-12 text-sm md:text-lg font-outfit text-[#1a1c24]/60 leading-relaxed max-w-4xl">
                            <p className="italic text-lg md:text-2xl font-fraunces text-[#1a1c24]/80 leading-snug">"At PRANAVIKA'S, we value your trust. Your artisan journey with us is protected by the highest standards of digital security."</p>
-                           
+
                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 not-italic">
                               <div className="space-y-4 md:space-y-5 p-10 bg-white rounded-[3rem] shadow-sm border border-[#1a1c24]/5">
                                  <h4 className="font-fraunces font-black text-[#1a1c24] text-xl md:text-2xl italic">Data Rituals</h4>
@@ -97,7 +97,7 @@ export default function LegalPage() {
                            <h2 className="text-3xl md:text-5xl font-fraunces font-black text-[#1a1c24] leading-tight">Terms of Use</h2>
                         </div>
                         <div className="space-y-8 text-sm md:text-lg font-outfit text-[#1a1c24]/60 leading-relaxed max-w-4xl">
-                           <p className="italic text-base md:text-xl font-medium">By engaging with PRANAVIKA'S Sweet & Chic, you agree to the following artisan governance:</p>
+                           <p className="italic text-base md:text-xl font-medium">By engaging with PRANAVIKA'S Creations, you agree to the following artisan governance:</p>
                            <ul className="space-y-6 list-none italic">
                               {[
                                  'Boutique items are handcrafted and may have slight variations in weave and color, adding to their unique charm.',

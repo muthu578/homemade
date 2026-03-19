@@ -16,6 +16,9 @@ export const Footer = () => {
             <p className="text-sm font-outfit text-[#1a1c24]/40 leading-relaxed max-w-xs">
               Handcrafting elegance in fashion and artisan mastery in baking. From our home atelier to yours.
             </p>
+            <div className="pt-2">
+              <img src="/social_logo.png" alt="Pranavika Mascot" className="h-16 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+            </div>
             <div className="flex gap-4">
               {[
                 { icon: Instagram, href: '#' },
@@ -86,7 +89,7 @@ export const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-12 border-t border-[#1a1c24]/5 flex flex-col md:flex-row items-center justify-between gap-6 opacity-40">
-          <p className="text-[9px] font-outfit font-black uppercase tracking-[0.4em]">© 2026 PRANAVIKA'S Sweet & Chic. All Artisan Rights Reserved.</p>
+          <p className="text-[9px] font-outfit font-black uppercase tracking-[0.4em]">© 2026 PRANAVIKA'S Creations. All Artisan Rights Reserved.</p>
           <div className="flex gap-8">
             <Link href="#" className="text-[8px] font-outfit font-black uppercase tracking-[0.2em] hover:text-[#ff4d6d]">Instagram</Link>
             <Link href="#" className="text-[8px] font-outfit font-black uppercase tracking-[0.2em] hover:text-[#ff4d6d]">WhatsApp</Link>

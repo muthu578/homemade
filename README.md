@@ -1,4 +1,4 @@
-# Pranavika’s Sweet & Chic – Boutique, Bakery & Homemade
+# Pranavika’s Creations – Boutique, Bakery & Homemade
 
 **Fashion | Cakes | Homemade Delights**
 

@@ -38,7 +38,7 @@ export default function LoginPage() {
         </Link>
 
         {/* Card */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -46,21 +46,21 @@ export default function LoginPage() {
         >
           {/* Subtle noise pattern overlay */}
           <div className="absolute inset-0 opacity-[0.015] pointer-events-none" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/natural-paper.png')" }} />
-          
+
           <div className="text-center space-y-4 md:space-y-6 mb-10 md:mb-16 relative z-10">
             <div className="inline-block transform scale-90 md:scale-110">
               <Logo />
             </div>
             <div className="space-y-2">
-               <h1 className="text-3xl md:text-5xl font-fraunces font-black text-[#1a1c24] italic">Welcome Back.</h1>
-               <p className="text-sm md:text-base font-outfit text-[#1a1c24]/30 max-w-[280px] mx-auto">Sign in to your artisan account to savor your personal collection.</p>
+              <h1 className="text-3xl md:text-5xl font-fraunces font-black text-[#1a1c24] italic">Welcome Back.</h1>
+              <p className="text-sm md:text-base font-outfit text-[#1a1c24]/30 max-w-[280px] mx-auto">Sign in to your artisan account to savor your personal collection.</p>
             </div>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8 relative z-10">
             <AnimatePresence>
               {error && (
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: 'auto' }}
                   exit={{ opacity: 0, height: 0 }}
@@ -75,8 +75,8 @@ export default function LoginPage() {
               <label className="text-[10px] font-outfit font-black uppercase tracking-[0.4em] text-[#1a1c24]/30 block px-4">Artisan ID</label>
               <div className="relative group/input">
                 <Mail className="absolute left-6 top-1/2 -translate-y-1/2 w-4 h-4 text-[#1a1c24]/20 group-focus-within/input:text-[#ff4d6d] transition-colors" />
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   required
                   placeholder="name@artisan.com"
                   className="w-full pl-14 pr-6 py-4.5 md:py-6 rounded-full bg-[#fbf9f6] border border-[#1a1c24]/5 text-sm md:text-base font-outfit text-[#1a1c24] placeholder-[#1a1c24]/20 focus:outline-none focus:border-[#ff4d6d]/40 focus:bg-white transition-all shadow-inner"
@@ -92,14 +92,14 @@ export default function LoginPage() {
               </div>
               <div className="relative group/input">
                 <Lock className="absolute left-6 top-1/2 -translate-y-1/2 w-4 h-4 text-[#1a1c24]/20 group-focus-within/input:text-[#ff4d6d] transition-colors" />
-                <input 
-                  type={showPassword ? 'text' : 'password'} 
+                <input
+                  type={showPassword ? 'text' : 'password'}
                   required
                   placeholder="••••••••"
                   className="w-full pl-14 pr-16 py-4.5 md:py-6 rounded-full bg-[#fbf9f6] border border-[#1a1c24]/5 text-sm md:text-base font-outfit text-[#1a1c24] placeholder-[#1a1c24]/20 focus:outline-none focus:border-[#ff4d6d]/40 focus:bg-white transition-all shadow-inner"
                   onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                 />
-                <button 
+                <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
                   className="absolute right-6 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center text-[#1a1c24]/20 hover:text-[#ff4d6d] transition-colors"
@@ -109,8 +109,8 @@ export default function LoginPage() {
               </div>
             </div>
 
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               disabled={loading}
               className={`group w-full py-5 md:py-7 text-white rounded-full font-black text-xs md:text-sm uppercase tracking-[0.3em] transition-all shadow-2xl flex items-center justify-center gap-4 ${loading ? 'bg-black/20 cursor-not-allowed scale-[0.98]' : 'bg-[#1a1c24] hover:bg-[#ff4d6d] hover:scale-[1.02] active:scale-[0.98] shadow-[#1a1c24]/20'}`}
             >
@@ -138,7 +138,7 @@ export default function LoginPage() {
 
         {/* Footer */}
         <p className="mt-10 md:mt-16 text-center text-[9px] md:text-[10px] font-outfit font-black uppercase tracking-[0.5em] text-[#1a1c24]/10 leading-relaxed">
-          © 2026 PRANAVIKA'S Sweet & Chic · Artisan Collective
+          © 2026 PRANAVIKA'S Creations · Artisan Collective
         </p>
       </div>
     </main>

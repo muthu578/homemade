@@ -37,7 +37,7 @@ export default function SuccessPage() {
                         Artisan Journey<br /><span className="text-[#bfa37e] font-normal italic">Commenced.</span>
                      </h1>
                   </div>
-                  
+
                   <p className="text-[#1a1c24]/40 font-outfit max-w-lg mx-auto text-sm md:text-xl pt-6 md:pt-10 leading-relaxed italic border-t border-[#1a1c24]/5 px-6">
                      "Your artifact **#PC1024** has been entered into the royal ledger. Our artisans have begun the ritual of creation."
                   </p>
@@ -51,7 +51,7 @@ export default function SuccessPage() {
                   className="mt-16 md:mt-24 bg-white rounded-[3rem] md:rounded-[4rem] p-10 md:p-16 lg:p-24 shadow-[0_40px_100px_rgba(0,0,0,0.04)] border border-[#1a1c24]/5 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 text-left relative overflow-hidden group"
                >
                   <div className="absolute inset-0 opacity-[0.01] pointer-events-none" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/silk.png')" }} />
-                  
+
                   <div className="space-y-8 md:space-y-12 relative z-10 border-b lg:border-b-0 lg:border-r border-[#1a1c24]/5 pb-10 lg:pb-0 lg:pr-10">
                      <div className="space-y-3">
                         <p className="text-[10px] md:text-[11px] font-outfit font-black uppercase tracking-[0.4em] text-[#bfa37e] italic">Vault Identifier</p>
@@ -73,7 +73,7 @@ export default function SuccessPage() {
                            <p className="text-xs md:text-base font-outfit font-medium text-[#1a1c24]/60 italic">Check your digital courier</p>
                         </div>
                      </div>
-                     
+
                      <div className="flex items-center gap-6 group/link cursor-pointer">
                         <div className="w-14 h-14 md:w-20 md:h-20 bg-[#fbf9f6] rounded-[1.5rem] md:rounded-[2rem] flex items-center justify-center text-[#1a1c24]/20 group-hover/link:bg-[#1a1c24] group-hover/link:text-white transition-all transform group-hover/link:-translate-y-1 group-hover/link:shadow-xl group-hover/link:-rotate-6 flex-shrink-0">
                            <Package className="w-5 h-5 md:w-8 md:h-8" />
@@ -100,7 +100,7 @@ export default function SuccessPage() {
          <footer className="py-16 md:py-24 bg-white border-t border-[#1a1c24]/5 text-center px-6 relative overflow-hidden">
             <div className="absolute inset-0 opacity-[0.02] pointer-events-none" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/natural-paper.png')" }} />
             <p className="text-[9px] md:text-[10px] font-outfit font-black uppercase tracking-[0.5em] md:tracking-[0.6em] text-[#1a1c24]/20 leading-relaxed relative z-10 italic">
-               PRANAVIKA'S Artisan Order Confirmed · © 2026 PRANAVIKA'S Sweet & Chic · Crafted with Honor
+               PRANAVIKA'S Artisan Order Confirmed · © 2026 PRANAVIKA'S Creations · Crafted with Honor
             </p>
          </footer>
       </main>
