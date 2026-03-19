@@ -29,8 +29,8 @@ const dancingScript = Dancing_Script({
 });
 
 export const metadata: Metadata = {
-  title: "Pranavika's | Bakery, Sweets, Silk & Gifts",
-  description: "Exquisite Artisan Bakery, Authentic Sweets, Premium Silk Boutique, and Curated Gifts.",
+  title: "Pranvika Creations | Boutique, Bakery & Homemade",
+  description: "Exquisite boutique fashion, artisanal bakery delights, unique gifts, and traditional homemade products curated by Pranvika.",
   icons: {
     icon: '/favicon.png',
   },

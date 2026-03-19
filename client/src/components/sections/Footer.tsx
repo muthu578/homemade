@@ -17,7 +17,7 @@ export const Footer = () => {
               Handcrafting elegance in fashion and artisan mastery in baking. From our home atelier to yours.
             </p>
             <div className="pt-2">
-              <img src="/social_logo.png" alt="Pranavika Mascot" className="h-16 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+              <img src="/mascot.png" alt="Pranvika Creations Mascot" className="h-16 w-auto opacity-80 hover:opacity-100 transition-opacity rounded-full px-2" />
             </div>
             <div className="flex gap-4">
               {[
@@ -81,7 +81,7 @@ export const Footer = () => {
               </div>
               <div className="flex gap-4 group">
                 <Mail className="w-5 h-5 text-[#ff4d6d]/40 flex-shrink-0 group-hover:text-[#ff4d6d] transition-colors" />
-                <p className="text-sm font-outfit text-[#1a1c24]/50 group-hover:text-[#1a1c24] transition-colors">hello@pranavika.in</p>
+                <p className="text-sm font-outfit text-[#1a1c24]/50 group-hover:text-[#1a1c24] transition-colors">hello@pranvika.in</p>
               </div>
             </div>
           </div>
@@ -89,7 +89,7 @@ export const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-12 border-t border-[#1a1c24]/5 flex flex-col md:flex-row items-center justify-between gap-6 opacity-40">
-          <p className="text-[9px] font-outfit font-black uppercase tracking-[0.4em]">© 2026 PRANAVIKA'S Creations. All Artisan Rights Reserved.</p>
+          <p className="text-[9px] font-outfit font-black uppercase tracking-[0.4em]">© 2026 PRANVIKA CREATIONS. All Artisan Rights Reserved.</p>
           <div className="flex gap-8">
             <Link href="#" className="text-[8px] font-outfit font-black uppercase tracking-[0.2em] hover:text-[#ff4d6d]">Instagram</Link>
             <Link href="#" className="text-[8px] font-outfit font-black uppercase tracking-[0.2em] hover:text-[#ff4d6d]">WhatsApp</Link>
