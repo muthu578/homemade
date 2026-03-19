@@ -38,22 +38,22 @@ export const Navbar = () => {
           {/* Right: Actions */}
           <div className="flex items-center space-x-4 md:space-x-8 flex-shrink-0">
             <Link href="/search" className="text-secondary/60 hover:text-primary transition-all hover:scale-110">
-               <Search className="w-5 h-5 stroke-[1.5]" />
+              <Search className="w-5 h-5 stroke-[1.5]" />
             </Link>
             <Link href="/profile" className="hidden sm:block text-secondary/60 hover:text-primary transition-all hover:scale-110">
-               <User className="w-5 h-5 stroke-[1.5]" />
+              <User className="w-5 h-5 stroke-[1.5]" />
             </Link>
             <Link href="/cart" className="relative group p-2 transition-all hover:scale-110">
-               <ShoppingBag className="w-6 h-6 stroke-[1.2] text-secondary/60 group-hover:text-primary transition-colors" />
-               <span className="absolute top-0 right-1 w-4 h-4 bg-[#ff4d6d] text-[9px] font-black text-white rounded-full flex items-center justify-center border-2 border-background">
-                  2
-               </span>
+              <ShoppingBag className="w-6 h-6 stroke-[1.2] text-secondary/60 group-hover:text-primary transition-colors" />
+              <span className="absolute top-0 right-1 w-4 h-4 bg-[#ff4d6d] text-[9px] font-black text-white rounded-full flex items-center justify-center border-2 border-background">
+                2
+              </span>
             </Link>
-            <button 
+            <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="lg:hidden p-2 text-secondary hover:text-primary transition-colors"
             >
-               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
@@ -76,7 +76,7 @@ export const Navbar = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.1 }}
                 >
-                  <Link 
+                  <Link
                     href={link.href}
                     onClick={() => setIsMenuOpen(false)}
                     className="flex items-center justify-between py-4 group"
@@ -89,8 +89,8 @@ export const Navbar = () => {
             </div>
 
             <div className="grid grid-cols-2 gap-4 mt-auto">
-              <Link 
-                href="/profile" 
+              <Link
+                href="/profile"
                 onClick={() => setIsMenuOpen(false)}
                 className="flex items-center gap-3 p-4 bg-white rounded-2xl border border-[#1a1c24]/5"
               >
@@ -99,8 +99,8 @@ export const Navbar = () => {
                 </div>
                 <span className="font-outfit font-bold text-sm">Account</span>
               </Link>
-              <Link 
-                href="/support" 
+              <Link
+                href="/support"
                 onClick={() => setIsMenuOpen(false)}
                 className="flex items-center gap-3 p-4 bg-white rounded-2xl border border-[#1a1c24]/5"
               >

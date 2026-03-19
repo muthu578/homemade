@@ -8,117 +8,215 @@ import { Footer } from '../../components/sections/Footer';
 
 const occasions = [
   { id: 'all', label: 'All Occasions', icon: Sparkles },
-  { id: 'birthday', label: 'Birthday', icon: Cake },
   { id: 'anniversary', label: 'Anniversary', icon: Heart },
-  { id: 'wedding', label: 'Wedding', icon: CalendarDays },
-  { id: 'corporate', label: 'Corporate', icon: Users },
-  { id: 'decor', label: 'Home Decor', icon: Sparkles },
+  { id: 'birthday', label: 'Birthday', icon: Cake },
   { id: 'personalized', label: 'Personalized', icon: User },
+  { id: 'gifts', label: 'Premium Gifts', icon: Gift },
 ];
 
 const giftHampers = [
   {
     id: 1,
-    name: "The Royal Silk & Sweet Hamper",
+    name: "SHOW IT OFF",
     category: "Anniversary",
-    price: 15450,
-    tag: "Signature Collection",
-    img: "https://images.pexels.com/photos/1721558/pexels-photo-1721558.jpeg?auto=compress&cs=tinysrgb&w=800", // Saree
-    secondaryImg: "https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg?auto=compress&cs=tinysrgb&w=800", // Cake
-    desc: "A luxurious duo: A Kanchi Silk Saree paired with our signature Biscoff Celebration Cake.",
+    price: 4800,
+    tag: "Limelight Surprise",
+    img: "https://cdn.shopify.com/s/files/1/0647/4199/8783/files/showitoff3.jpg?v=1719503711",
+    desc: "A life-size banner reveal amidst a crowd to make your loved one feel like a star.",
     rating: 4.9
   },
   {
     id: 2,
-    name: "Artisan Sweetness Box",
-    category: "Birthday",
-    price: 3200,
-    tag: "Bestseller",
-    img: "https://images.pexels.com/photos/6152261/pexels-photo-6152261.jpeg?auto=compress&cs=tinysrgb&w=800", // Sweets
-    desc: "A handpicked selection of traditional sweets, spicy boondhi, and a custom greeting card.",
+    name: "Gifts From Strangers",
+    category: "Anniversary",
+    price: 7200,
+    tag: "Pyaar Play",
+    img: "https://cdn.shopify.com/s/files/1/0647/4199/8783/files/CopyofPyarplay-1.png?v=1713444660",
+    desc: "Random strangers wishing and gifting your loved one at intervals for a day to remember.",
     rating: 4.8
   },
   {
     id: 3,
-    name: "The Little Prince/Princess Set",
-    category: "Kids",
-    price: 4500,
-    tag: "New Arrival",
-    img: "https://images.pexels.com/photos/1619801/pexels-photo-1619801.jpeg?auto=compress&cs=tinysrgb&w=800", // Kids
-    desc: "A Mul Cotton Designer Frock paired with a box of assorted cupcakes for the little ones.",
+    name: "STOP OVER A DRIVE",
+    category: "Anniversary",
+    price: 10200,
+    tag: "Roadside Magic",
+    img: "https://cdn.shopify.com/s/files/1/0647/4199/8783/files/1.jpg?v=1719506234",
+    desc: "Hand-picked gifts at regular intervals during a drive, with a biker squad message reveal.",
     rating: 5.0
   },
   {
     id: 4,
-    name: "Corporate Executive Delight",
-    category: "Corporate",
-    price: 8500,
-    tag: "Premium",
-    img: "https://images.pexels.com/photos/1854652/pexels-photo-1854652.jpeg?auto=compress&cs=tinysrgb&w=800", // Hampers
-    desc: "A sophisticated wooden hamper containing homemade spice powders, premium dry fruits, and a silk scarf.",
+    name: "THE LIGHT STUDDED SURPRISE",
+    category: "Anniversary",
+    price: 21000,
+    tag: "Neon Glow",
+    img: "https://cdn.shopify.com/s/files/1/0647/4199/8783/files/Website_1X1-44.jpg?v=1717773820",
+    desc: "A series of neon lights turning on one by one to form a beautiful customized message.",
     rating: 4.7
   },
   {
     id: 5,
-    name: "Golden Bloom Brass Diya Set",
-    category: "Decor",
-    price: 4500,
-    tag: "Ethnic Gift",
-    img: "https://images.pexels.com/photos/10313835/pexels-photo-10313835.jpeg?auto=compress&cs=tinysrgb&w=800", // India Diya
-    desc: "A traditionally crafted set of handcrafted brass diyas, perfect for auspicious occasions and festivals.",
+    name: "THE TALE OF LOVE",
+    category: "Anniversary",
+    price: 10999,
+    tag: "Memory Lane",
+    img: "https://cdn.shopify.com/s/files/1/0647/4199/8783/files/Website_1X1-33.jpg?v=1717771724",
+    desc: "Walk through your romantic love story on the shore with a breezy, beautiful path of love.",
     rating: 4.9
   },
   {
     id: 6,
-    name: "Royal Peacock Wall Hanging",
-    category: "Decor",
-    price: 3800,
-    tag: "Handicraft",
-    img: "https://images.pexels.com/photos/716107/pexels-photo-716107.jpeg?auto=compress&cs=tinysrgb&w=800", // Wall Art/Embroidery
-    desc: "Exquisite hand-embroidered silk wall art featuring a vibrant peacock motif, an elegant addition to any home.",
+    name: "THE MUSICAL FLASHMOB",
+    category: "Birthday",
+    price: 15000,
+    tag: "Artistic Reveal",
+    img: "https://cdn.shopify.com/s/files/1/0647/4199/8783/files/Musicalflashmob_7.jpg?v=1715944053",
+    desc: "Live artists singing and playing instruments appearing out of the blue during a stroll.",
     rating: 4.8
   },
   {
     id: 7,
-    name: "Marble Finish Ganesha Idol",
-    category: "Decor",
-    price: 5400,
-    tag: "Auspicious",
-    img: "https://images.pexels.com/photos/2034335/pexels-photo-2034335.jpeg?auto=compress&cs=tinysrgb&w=800", // Sculpture
-    desc: "A divine Ganesha idol with a smooth marble finish, capturing grace and prosperity in fine detail.",
+    name: "THE FLUTTERING HEARTS",
+    category: "Birthday",
+    price: 8640,
+    tag: "Balloon Blast",
+    img: "https://cdn.shopify.com/s/files/1/0647/4199/8783/files/Copyofboxofballoons_1_copy.png?v=1713441107",
+    desc: "A huge box opened to witness love and happiness flying out in the form of balloons.",
     rating: 5.0
   },
   {
     id: 8,
-    name: "Monogrammed Royal Silk Scarf",
-    category: "Personalized",
-    price: 3450,
-    tag: "Bespoke",
-    img: "https://images.pexels.com/photos/1018911/pexels-photo-1018911.jpeg?auto=compress&cs=tinysrgb&w=800", // Scarf
-    desc: "A pure silk scarf featuring your hand-embroidered monogram, an ultimate symbol of artisan elegance.",
+    name: "Love By The Sea",
+    category: "Birthday",
+    price: 31200,
+    tag: "Ultra Luxury",
+    img: "https://cdn.shopify.com/s/files/1/0647/4199/8783/files/IMG_9866.jpg?v=1713348677",
+    desc: "An exemplary cabana set-up by the beach with yellow lighting pathways and glowing vibes.",
     rating: 4.9
   },
   {
     id: 9,
-    name: "Classic Photo Celebration Cake",
-    category: "Personalized",
-    price: 1850,
-    tag: "Artisan Bakes",
-    img: "https://images.pexels.com/photos/1702373/pexels-photo-1702373.jpeg?auto=compress&cs=tinysrgb&w=800", // Cake
-    desc: "A delicious gourmet cake topped with an edible photo of your most cherished memories, meticulously crafted.",
+    name: "THE LOVEY DOVEY ROOM DECOR",
+    category: "Birthday",
+    price: 9600,
+    tag: "Heavenly Room",
+    img: "https://cdn.shopify.com/s/files/1/0647/4199/8783/files/CopyofLoveydovey.jpg?v=1715242810",
+    desc: "Transforming a room with candles, balloons, rose petals, and pictures in a sinfully elegant way.",
     rating: 4.7
   },
   {
     id: 10,
-    name: "Custom Engraved Artisan Box",
+    name: "The Hidden Door",
+    category: "Birthday",
+    price: 11799,
+    tag: "Private Dining",
+    img: "https://cdn.shopify.com/s/files/1/0647/4199/8783/files/TheHiddenDoor3_2eb37332-a446-4582-a7ea-eb885094e3de.webp?v=1764583564",
+    desc: "An intimate, beautifully curated tea villa surprise with soft aesthetics and warm lighting.",
+    rating: 5.0
+  },
+  {
+    id: 11,
+    name: "CUSTOMIZED MAGAZINE",
     category: "Personalized",
-    price: 6800,
-    tag: "Premium Hamper",
-    img: "https://images.pexels.com/photos/1854652/pexels-photo-1854652.jpeg?auto=compress&cs=tinysrgb&w=800", // Hamper
-    desc: "A collection of assorted homemade sweets and boutique fabrics in a box engraved with your recipient's name.",
+    price: 1249,
+    tag: "Bespoke Read",
+    img: "https://cdn.shopify.com/s/files/1/0647/4199/8783/files/12x16Magazine.jpg?v=1717869848",
+    desc: "An entire magazine customized for your love story, making them the cover star.",
+    rating: 4.9
+  },
+  {
+    id: 12,
+    name: "CLIP YOUR LOVE",
+    category: "Personalized",
+    price: 1350,
+    tag: "Handmade Frame",
+    img: "https://cdn.shopify.com/s/files/1/0647/4199/8783/files/photoclipframemock.jpg?v=1717869706",
+    desc: "A beautiful handmade frame with clips showcasing all your cherished memories.",
+    rating: 4.8
+  },
+  {
+    id: 13,
+    name: "50 REASONS WHY",
+    category: "Personalized",
+    price: 1750,
+    tag: "Love Minimal",
+    img: "https://cdn.shopify.com/s/files/1/0647/4199/8783/files/1.-50-REASONS-WHY.jpg?v=1715314264",
+    desc: "Express the 50 fantabulous reasons why you have fallen for them in a minimal style.",
+    rating: 5.0
+  },
+  {
+    id: 14,
+    name: "KIT KAT BOX",
+    category: "Gifts",
+    price: 3500,
+    tag: "Chocoholic Delight",
+    img: "https://cdn.shopify.com/s/files/1/0647/4199/8783/files/Kit-kat-4.jpg?v=1715314715",
+    desc: "A mouth-watering chocolate package reminding them that they deserve a break.",
+    rating: 4.7
+  },
+  {
+    id: 15,
+    name: "IT’S OUT THERE",
+    category: "Personalized",
+    price: 2500,
+    tag: "Wanderlust Map",
+    img: "https://cdn.shopify.com/s/files/1/0647/4199/8783/files/5.-ITS-OUT-THERE.jpg?v=1715314566",
+    desc: "A world map portraying the travelogue moments of global traveling couples.",
+    rating: 4.9
+  },
+  {
+    id: 16,
+    name: "LOVE CONTRACT",
+    category: "Gifts",
+    price: 499,
+    tag: "Sacred Binding",
+    img: "https://cdn.shopify.com/s/files/1/0647/4199/8783/files/lovecontractmockup.jpg?v=1717870390",
+    desc: "A special binding contract for you and your loved one to sign your promises.",
+    rating: 4.8
+  },
+  {
+    id: 17,
+    name: "MOON AND BACK FRAME",
+    category: "Gifts",
+    price: 950,
+    tag: "Astro Love",
+    img: "https://cdn.shopify.com/s/files/1/0647/4199/8783/files/TOTHEMOONANDBACK.jpg?v=1717870884",
+    desc: "A lovely customized frame expressing love that reaches the moon and back.",
+    rating: 5.0
+  },
+  {
+    id: 18,
+    name: "LOVE CHEQUE",
+    category: "Gifts",
+    price: 899,
+    tag: "Ritual Tender",
+    img: "https://cdn.shopify.com/s/files/1/0647/4199/8783/files/lovechequemockup.jpg?v=1717870269",
+    desc: "A book of cheque leaves containing cute activities to redeem with your partner.",
+    rating: 4.9
+  },
+  {
+    id: 19,
+    name: "LOVE HAMPER BOX",
+    category: "Gifts",
+    price: 4999,
+    tag: "Artisan Box",
+    img: "https://cdn.shopify.com/s/files/1/0647/4199/8783/files/lovebox.jpg?v=1717870473",
+    desc: "A super cute, exclusively custom-made love hamper box for your dearie.",
+    rating: 4.7
+  },
+  {
+    id: 20,
+    name: "CLOSE TO HEART",
+    category: "Personalized",
+    price: 1050,
+    tag: "Location Lock",
+    img: "https://cdn.shopify.com/s/files/1/0647/4199/8783/files/2.-WHERE-I-MET-YOU-1.jpg?v=1715313957",
+    desc: "Cherish your special 'where I met you' location in a beautifully framed heart map.",
     rating: 5.0
   }
 ];
+
 
 export default function GiftsPage() {
   const [activeOccasion, setActiveOccasion] = useState('all');
@@ -164,16 +262,15 @@ export default function GiftsPage() {
       </section>
 
       {/* Occasion Selection */}
-      <section className="pb-16 md:pb-24">
+      <section className="pb-12 md:pb-20">
          <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-            <div className="flex flex-row flex-nowrap overflow-x-auto sm:flex-wrap items-center sm:justify-center gap-3 md:gap-4 pb-4 md:pb-0 no-scrollbar -mx-6 px-6 sm:mx-0 sm:px-0">
+            <div className="flex items-center gap-3 overflow-x-auto no-scrollbar pb-8 -mx-6 px-6 lg:flex-wrap lg:justify-center">
                {occasions.map((occ) => (
                   <button 
                      key={occ.id}
                      onClick={() => setActiveOccasion(occ.id)}
-                     className={`flex-shrink-0 flex items-center gap-2 md:gap-3 px-6 md:px-8 py-3.5 md:py-4 rounded-full text-[10px] md:text-xs font-outfit font-black uppercase tracking-widest transition-all italic active:scale-95 ${activeOccasion === occ.id ? 'bg-[#1a1c24] text-white shadow-2xl' : 'bg-white border border-[#1a1c24]/5 text-[#1a1c24]/30 hover:border-[#ff4d6d]/30 hover:text-[#ff4d6d]'}`}
+                     className={`flex-shrink-0 px-8 py-3.5 md:py-4 rounded-full text-[9px] md:text-[11px] font-outfit font-black tracking-[0.3em] uppercase transition-all italic ${activeOccasion === occ.id ? 'bg-[#1a1c24] text-white shadow-2xl' : 'text-[#1a1c24]/30 border border-[#1a1c24]/5 bg-white hover:border-[#ff4d6d]/50 hover:text-[#ff4d6d]'}`}
                   >
-                     <occ.icon className="w-3.5 h-3.5 md:w-4 md:h-4" />
                      {occ.label}
                   </button>
                ))}
@@ -184,52 +281,49 @@ export default function GiftsPage() {
       {/* Featured Combos */}
       <section className="pb-24 md:pb-48">
          <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 md:gap-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-10">
                <AnimatePresence mode="popLayout">
                  {filtered.map((hamper, i) => (
                    <motion.div 
                       key={hamper.id}
                       layout
-                      initial={{ opacity: 0, y: 30, scale: 0.95 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      initial={{ opacity: 0, y: 24 }}
+                      animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, scale: 0.95 }}
-                      transition={{ delay: i * 0.1, duration: 0.5 }}
-                      className="group bg-white rounded-[3rem] md:rounded-[4rem] overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.06)] border border-[#1a1c24]/5 flex flex-col hover:-translate-y-2 transition-transform active:scale-[0.98]"
+                      transition={{ delay: i * 0.05, duration: 0.45 }}
+                      className="group bg-white rounded-[2.5rem] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.04)] border border-[#1a1c24]/5 flex flex-col hover:-translate-y-3 transition-all duration-500 active:scale-[0.98]"
                    >
-                      {/* Visual Side */}
-                      <div className="w-full relative aspect-[4/3] md:aspect-auto md:h-[450px] overflow-hidden bg-[#f0ede8]">
+                      {/* Image Side */}
+                      <div className="relative aspect-square overflow-hidden bg-[#f0ede8]">
                          <img src={hamper.img} alt={hamper.name} className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110" />
-                         {hamper.secondaryImg && (
-                           <div className="absolute -bottom-6 -right-6 md:bottom-6 md:right-6 w-28 h-28 md:w-40 md:h-40 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border-4 md:border-[6px] border-white shadow-2xl rotate-6 md:rotate-3 group-hover:rotate-0 transition-transform duration-700">
-                              <img src={hamper.secondaryImg} alt="Secondary" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.5s]" />
-                           </div>
-                         )}
-                         <div className="absolute top-6 left-6 md:top-8 md:left-8 px-4 md:px-6 py-2 md:py-3 bg-white/95 backdrop-blur-2xl text-[#1a1c24] text-[9px] md:text-[10px] font-outfit font-black uppercase tracking-[0.3em] rounded-full shadow-lg italic">
+                         <div className="absolute top-5 left-5 px-4 py-2 bg-white/95 backdrop-blur-2xl text-[#1a1c24] text-[8px] md:text-[9px] font-outfit font-black uppercase tracking-[0.2em] rounded-full shadow-md italic">
                             {hamper.tag}
                          </div>
+                         <button className="absolute top-5 right-5 w-10 h-10 bg-white/95 backdrop-blur-2xl rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all hover:bg-[#ff4d6d] hover:text-white shadow-xl">
+                            <Heart className="w-4 h-4" />
+                         </button>
                       </div>
 
                       {/* Content Side */}
-                      <div className="w-full p-8 md:p-12 flex flex-col justify-between space-y-8 md:space-y-10 bg-[#fbf9f6]">
-                         <div className="space-y-4 md:space-y-6">
-                            <div className="flex items-center gap-3">
-                               <div className="flex gap-1 text-[#ff4d6d]">
-                                  {[...Array(5)].map((_, j) => <Star key={j} className="w-3.5 h-3.5 fill-current" />)}
+                      <div className="p-7 md:p-8 flex flex-col flex-1 justify-between gap-6 bg-[#fbf9f6]">
+                         <div className="space-y-4">
+                            <div className="flex items-center gap-2">
+                               <div className="flex gap-0.5 text-[#ff4d6d]">
+                                  {[...Array(5)].map((_, j) => <Star key={j} className="w-3 h-3 fill-current" />)}
                                </div>
-                               <span className="text-[9px] md:text-[10px] font-outfit font-black text-[#1a1c24]/20 uppercase tracking-[0.3em] italic">{hamper.rating} Rating</span>
+                               <span className="text-[8px] font-black text-[#1a1c24]/20 uppercase tracking-[0.2em] italic">{hamper.rating}</span>
                             </div>
-                            <h3 className="text-2xl md:text-4xl font-fraunces font-black leading-tight text-[#1a1c24] group-hover:text-[#ff4d6d] transition-colors italic">{hamper.name}</h3>
-                            <p className="text-sm md:text-base font-outfit text-[#1a1c24]/40 italic leading-relaxed">"{hamper.desc}"</p>
+                            <h3 className="text-lg md:text-xl font-fraunces font-black leading-tight text-[#1a1c24] group-hover:text-[#ff4d6d] transition-colors italic line-clamp-2">{hamper.name}</h3>
+                            <p className="text-[11px] font-outfit text-[#1a1c24]/40 italic leading-relaxed line-clamp-2">"{hamper.desc}"</p>
                          </div>
 
-                         <div className="flex flex-col sm:flex-row items-center justify-between border-t border-[#1a1c24]/5 pt-8 gap-6">
-                            <div className="w-full sm:w-auto flex items-center justify-between sm:flex-col sm:items-start space-y-1">
-                               <p className="text-[9px] md:text-[10px] font-outfit font-black uppercase tracking-[0.3em] text-[#ff4d6d] italic">Artisan Combo Price</p>
-                               <p className="text-2xl md:text-4xl font-fraunces font-black text-[#1a1c24] italic">₹{hamper.price.toLocaleString()}</p>
+                         <div className="flex items-center justify-between border-t border-[#1a1c24]/5 pt-6 mt-auto">
+                            <div className="flex flex-col">
+                               <span className="text-[8px] font-black uppercase tracking-[0.2em] text-[#ff4d6d] italic">Combo Value</span>
+                               <span className="text-xl md:text-2xl font-fraunces font-black text-[#1a1c24] italic">₹{hamper.price.toLocaleString()}</span>
                             </div>
-                            <button className="w-full sm:w-auto px-10 md:px-12 py-5 md:py-6 bg-[#1a1c24] text-white rounded-full flex items-center justify-center gap-4 hover:bg-[#ff4d6d] transition-all shadow-2xl active:scale-95 text-[10px] md:text-xs font-black uppercase tracking-[0.3em] italic">
-                               <ShoppingBag className="w-4 h-4 md:w-5 md:h-5" />
-                               <span className="sm:hidden">Add to Cart</span>
+                            <button className="w-12 h-12 bg-[#1a1c24] text-white rounded-full flex items-center justify-center hover:bg-[#ff4d6d] transition-all shadow-lg active:scale-90">
+                               <ShoppingBag className="w-4 h-4" />
                             </button>
                          </div>
                       </div>
@@ -240,33 +334,31 @@ export default function GiftsPage() {
          </div>
       </section>
 
-      {/* Recipient Sections - Inspired by Archies */}
-      <section className="py-24 md:py-48 bg-white border-y border-[#1a1c24]/5 relative overflow-hidden">
-         <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-[#ff4d6d]/5 rounded-full blur-[100px] pointer-events-none" />
+
+      {/* Recipient Sections */}
+      <section className="py-20 md:py-32 bg-white border-y border-[#1a1c24]/5 relative overflow-hidden">
+         <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-[#dcb0af]/5 rounded-full blur-[100px] pointer-events-none" />
          <div className="max-w-[1400px] mx-auto px-6 md:px-10 relative z-10">
-            <div className="text-center space-y-6 md:space-y-8 mb-16 md:mb-24">
-               <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">Personalized Curation</span>
-               <h2 className="text-4xl md:text-7xl lg:text-[84px] font-fraunces font-black text-[#1a1c24] leading-tight italic">
+            <div className="text-center space-y-4 md:space-y-6 mb-16 md:mb-20">
+               <span className="text-[9px] md:text-[10px] font-outfit font-black uppercase tracking-[0.5em] text-[#dcb0af] italic">The Curation Matrix</span>
+               <h2 className="text-3xl md:text-5xl lg:text-6xl font-fraunces font-black text-[#1a1c24] leading-tight italic">
                   Gifts by <span className="text-[#bfa37e] font-normal">Recipient.</span>
                </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
                {[
-                 { label: 'For Her', desc: 'Sarees, Cakes & Silks', icon: User, color: 'bg-[#ff4d6d]/5 text-[#ff4d6d]' },
+                 { label: 'For Her', desc: 'Sarees, Cakes & Silks', icon: User, color: 'bg-[#dcb0af]/5 text-[#dcb0af]' },
                  { label: 'For Him', desc: 'Homemade Spices & Artisanal Bakes', icon: User, color: 'bg-blue-50 text-blue-400' },
                  { label: 'For Little Ones', desc: 'Cute Frocks & Celebration Boxes', icon: Baby, color: 'bg-[#bfa37e]/10 text-[#bfa37e]' }
                ].map((item, i) => (
-                 <div key={i} className="group p-10 md:p-14 rounded-[3.5rem] bg-[#fbf9f6] border border-[#1a1c24]/5 hover:bg-white hover:border-[#ff4d6d]/20 transition-all cursor-pointer shadow-sm hover:shadow-[0_40px_100px_rgba(0,0,0,0.08)] text-center space-y-6 md:space-y-8 active:scale-95">
-                    <div className={`w-24 h-24 md:w-28 md:h-28 rounded-[2rem] ${item.color} flex items-center justify-center mx-auto transition-transform duration-500 group-hover:scale-110 group-hover:rotate-12`}>
-                       <item.icon className="w-10 h-10 md:w-12 md:h-12" />
+                 <div key={i} className="group p-8 md:p-10 rounded-[3rem] bg-[#fbf9f6] border border-[#1a1c24]/5 hover:bg-white hover:border-[#dcb0af]/20 transition-all cursor-pointer shadow-sm hover:shadow-2xl text-center space-y-6 active:scale-95">
+                    <div className={`w-20 h-20 md:w-24 md:h-24 rounded-[2rem] ${item.color} flex items-center justify-center mx-auto transition-transform duration-500 group-hover:scale-110 group-hover:rotate-12`}>
+                       <item.icon className="w-8 h-8 md:w-10 md:h-10" />
                     </div>
-                    <div className="space-y-3">
-                       <h4 className="text-2xl md:text-3xl font-fraunces font-black text-[#1a1c24] group-hover:text-[#ff4d6d] transition-colors italic">{item.label}</h4>
-                       <p className="text-[10px] md:text-[11px] font-outfit font-black uppercase tracking-[0.3em] text-[#1a1c24]/30 leading-relaxed italic">"{item.desc}"</p>
-                    </div>
-                    <div className="inline-flex items-center gap-3 text-[9px] md:text-[10px] font-outfit font-black uppercase tracking-[0.4em] text-[#ff4d6d] opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0 italic">
-                       Explore Palace <ChevronRight className="w-4 h-4 md:w-5 md:h-5" />
+                    <div className="space-y-2">
+                       <h4 className="text-xl md:text-2xl font-fraunces font-black text-[#1a1c24] group-hover:text-[#dcb0af] transition-colors italic">{item.label}</h4>
+                       <p className="text-[9px] md:text-[10px] font-outfit font-black uppercase tracking-[0.2em] text-[#1a1c24]/30 leading-relaxed italic">"{item.desc}"</p>
                     </div>
                  </div>
                ))}
@@ -274,14 +366,15 @@ export default function GiftsPage() {
          </div>
       </section>
 
+
       {/* Gift Concierge CTA */}
       <section className="py-24 md:py-48 bg-[#1a1c24] relative overflow-hidden">
          <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/silk.png')" }} />
-         <div className="absolute top-0 right-0 w-[400px] h-[400px] md:w-[600px] md:h-[600px] bg-[#ff4d6d]/10 rounded-full blur-[150px] md:blur-[200px]" />
+         <div className="absolute top-0 right-0 w-[400px] h-[400px] md:w-[600px] md:h-[600px] bg-[#dcb0af]/10 rounded-full blur-[150px] md:blur-[200px]" />
          
          <div className="max-w-[1400px] mx-auto px-6 md:px-10 text-center space-y-10 md:space-y-16 relative z-10">
             <div className="space-y-6 text-center">
-               <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">The Gifting Protocol</span>
+               <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#dcb0af] italic">The Gifting Protocol</span>
                <h2 className="text-4xl md:text-7xl lg:text-8xl font-fraunces font-black text-white leading-tight italic">
                   Build a Custom <br className="md:hidden" /><span className="italic font-normal text-[#bfa37e]">Artisan Box.</span>
                </h2>
@@ -289,12 +382,13 @@ export default function GiftsPage() {
                   "Can't find the perfect combo? Mix and match from our boutique and bakery to create a truly one-of-a-kind gift scroll."
                </p>
             </div>
-            <Link href="/contact" className="group relative inline-flex items-center justify-center gap-6 px-12 md:px-16 py-6 md:py-8 bg-[#ff4d6d] text-white rounded-full font-black text-xs md:text-sm uppercase tracking-[0.5em] hover:scale-110 active:scale-95 transition-all shadow-2xl italic overflow-hidden">
-               <div className="absolute inset-0 bg-[#1a1c24]/10 -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
-               <span className="relative z-10 flex items-center justify-center gap-4 text-center">Consult our Gift Artisan <Gift className="w-5 h-5 group-hover:-rotate-12 transition-transform" /></span>
+            <Link href="/gifts/builder" className="group relative inline-flex items-center justify-center gap-6 px-12 md:px-16 py-6 md:py-8 bg-[#dcb0af] text-white rounded-full font-black text-xs md:text-sm uppercase tracking-[0.5em] hover:scale-110 active:scale-95 transition-all shadow-2xl italic overflow-hidden">
+               <div className="absolute inset-0 bg-[#2d241c]/10 -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
+               <span className="relative z-10 flex items-center justify-center gap-4 text-center">Enter Gift Builder <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform" /></span>
             </Link>
          </div>
       </section>
+
 
       <Footer />
 

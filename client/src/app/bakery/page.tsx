@@ -7,149 +7,437 @@ import { ArrowRight, Heart, ChevronRight, ShoppingBag, Star, Clock, Phone } from
 import { Navbar } from '../../components/sections/Navbar';
 import { Footer } from '../../components/sections/Footer';
 
-const categories = ['All', 'Cakes', 'Gourmet Cakes', 'Desserts & Cupcakes', 'Pastries', 'Brownies', 'Homemade'];
+const categories = ['All', 'Cakes', 'Pastries', 'Snacks', 'Breads & Biscuits', 'Dry Cakes', 'Burgers & Pizzas'];
 
 const products = [
+  // ── CAKES (1KG / 500G) ──
   {
     id: 1,
-    name: 'Lotus Biscoff Caramel Cake',
-    category: 'Gourmet Cakes',
-    price: 1200,
-    tag: '⭐ Bestseller',
-    desc: 'Caramel drip · Biscoff crunch · Cream layers',
-    img: 'https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg?auto=compress&cs=tinysrgb&w=600',
-    serves: '6–8',
-    time: '24h notice',
+    name: "Choco Chips Cake (1 Kg)",
+    category: "Cakes",
+    price: 1289,
+    tag: "🍫 Bestseller",
+    img: "https://cdn.dotpe.in/reports/item/31338/Choco_Chips_Cake_Serves_12_1_KG_jpg",
+    desc: "A slice of dark chocolate and truffle layered and studded with premium choco chips.",
+    serves: "12",
+    time: "24h notice"
   },
   {
     id: 2,
-    name: 'Rose & Pistachio Cake',
-    category: 'Gourmet Cakes',
-    price: 1350,
-    tag: '🌹 Signature',
-    desc: 'Delicate rose essence · Crushed pistachios · Whipped cream',
-    img: 'https://images.pexels.com/photos/1702373/pexels-photo-1702373.jpeg?auto=compress&cs=tinysrgb&w=600',
-    serves: '6–8',
-    time: '24h notice',
+    name: "Eggless Red Velvet Cream Cheese (1 Kg)",
+    category: "Cakes",
+    price: 1400,
+    tag: "❤️ Signature",
+    img: "https://cdn.dotpe.in/reports/item/31338/Eggless_Red_Velvet_Cream_Cheese_Cake_Serves_12_1_KG_jpg",
+    desc: "Tender red velvet layers paired with our signature smooth cream cheese frosting.",
+    serves: "12",
+    time: "48h notice"
   },
   {
     id: 3,
-    name: 'Triple Chocolate Fudge',
-    category: 'Cakes',
-    price: 980,
-    tag: '🍫 Fan Fave',
-    desc: 'Dark, milk & white chocolate · Ganache drip',
-    img: 'https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=600',
-    serves: '4–6',
-    time: '12h notice',
+    name: "Pineapple Cake (1 Kg)",
+    category: "Cakes",
+    price: 840,
+    tag: "🍍 Tropical",
+    img: "https://cdn.dotpe.in/reports/item/31338/Pineapple_Cake_Serves_12_1_KG_jpg",
+    desc: "Sweet, tropical pineapple flavor in a moist, layered cake with fresh cream.",
+    serves: "12",
+    time: "12h notice"
   },
   {
     id: 4,
-    name: 'Rasamalai Fusion Cake',
-    category: 'Gourmet Cakes',
-    price: 1450,
-    tag: '🥛 Indian Fusion',
-    desc: 'Saffron cream · Cardamom sponge · Pistachio garnish',
-    img: 'https://images.pexels.com/photos/1028714/pexels-photo-1028714.jpeg?auto=compress&cs=tinysrgb&w=600',
-    serves: '8–10',
-    time: '48h notice',
+    name: "Black Forest Cake (1 Kg)",
+    category: "Cakes",
+    price: 840,
+    tag: "🍒 Classic",
+    img: "https://cdn.dotpe.in/reports/item/31338/Black_forest_jpg",
+    desc: "Classic layers of moist chocolate cake, whipped cream, and cherries.",
+    serves: "12",
+    time: "12h notice"
   },
   {
     id: 5,
-    name: 'Red Velvet Bliss',
-    category: 'Cakes',
-    price: 880,
-    tag: '❤️ Classic',
-    desc: 'Velvety red sponge · Cream cheese frosting',
-    img: 'https://images.pexels.com/photos/2035426/pexels-photo-2035426.jpeg?auto=compress&cs=tinysrgb&w=600',
-    serves: '4–6',
-    time: '12h notice',
+    name: "Almond Delight Cake (1 Kg)",
+    category: "Cakes",
+    price: 1190,
+    tag: "🌰 Nutty",
+    img: "https://cdn.dotpe.in/reports/item/31338/Almond_Delight_Cake_serves_12_1_KG_jpg",
+    desc: "Infused with the delicate flavor of roasted almonds and nutty textures.",
+    serves: "12",
+    time: "24h notice"
   },
   {
     id: 6,
-    name: 'Fudge Brownies (Box of 6)',
-    category: 'Brownies',
-    price: 380,
-    tag: '🍫 Homemade',
-    desc: 'Dense & gooey · Dark cocoa · Walnut topped',
-    img: 'https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=600',
-    serves: '6 pcs',
-    time: 'Same day',
+    name: "Caramel Delight Cake (1 Kg)",
+    category: "Cakes",
+    price: 1191,
+    tag: "🍯 Sweet",
+    img: "https://cdn.dotpe.in/reports/item/31338/Caramel_Delight_Cake_Serves_12_1_KG_jpg",
+    desc: "Rich caramel goodness in every slice with smooth glaze.",
+    serves: "12",
+    time: "24h notice"
   },
   {
     id: 7,
-    name: 'Berry Cheesecake Slice',
-    category: 'Pastries',
-    price: 280,
-    tag: '🫐 No-Bake',
-    desc: 'Mixed berry compote · Cream cheese · Biscuit base',
-    img: 'https://images.pexels.com/photos/1410235/pexels-photo-1410235.jpeg?auto=compress&cs=tinysrgb&w=600',
-    serves: '1 slice',
-    time: 'Same day',
+    name: "Belgium Chocolate Cake (500g)",
+    category: "Cakes",
+    price: 770,
+    tag: "🍫 Premium",
+    img: "https://cdn.dotpe.in/reports/item/31338/Belgium_Chocolate_Pastry_JPG",
+    desc: "Indulge in the rich and decadent flavor of premium imported Belgium chocolate.",
+    serves: "6",
+    time: "12h notice"
   },
   {
     id: 8,
-    name: 'French Macarons Box',
-    category: 'Desserts & Cupcakes',
-    price: 480,
-    tag: '🌈 Assorted',
-    desc: 'Rose · Pistachio · Chocolate · Salted Caramel',
-    img: 'https://images.pexels.com/photos/239578/pexels-photo-239578.jpeg?auto=compress&cs=tinysrgb&w=600',
-    serves: '12 pcs',
-    time: '24h notice',
+    name: "Honey Rose Cake (500g)",
+    category: "Cakes",
+    price: 650,
+    tag: "🌹 Floral",
+    img: "https://images.pexels.com/photos/1028714/pexels-photo-1028714.jpeg?auto=compress&cs=tinysrgb&w=600",
+    desc: "Delicate honey-infused sponge with rose essence ribbons.",
+    serves: "6",
+    time: "24h notice"
   },
+
+  // ── PASTRIES ──
   {
     id: 9,
-    name: 'Vanilla Whipped Cupcakes',
-    category: 'Desserts & Cupcakes',
-    price: 350,
-    tag: '🧁 Fresh Daily',
-    desc: 'Light vanilla sponge · Swiss meringue buttercream',
-    img: 'https://images.pexels.com/photos/913136/pexels-photo-913136.jpeg?auto=compress&cs=tinysrgb&w=600',
-    serves: '6 pcs',
-    time: 'Same day',
+    name: "Brazilian Coffee Pastry",
+    category: "Pastries",
+    price: 139,
+    tag: "☕ Intense",
+    img: "https://cdn.dotpe.in/reports/item/31338/brazellian_pastry_JPG",
+    desc: "Bold flavors of Brazilian coffee celebrate the depth of infused desserts.",
+    serves: "1",
+    time: "Instant"
   },
   {
     id: 10,
-    name: 'Mango Mousse Entremet',
-    category: 'Gourmet Cakes',
-    price: 1650,
-    tag: '🥭 Seasonal',
-    desc: 'Mirror glaze · Alphonso mango mousse · Coconut dacquoise',
-    img: 'https://images.pexels.com/photos/9708317/pexels-photo-9708317.jpeg?auto=compress&cs=tinysrgb&w=600',
-    serves: '8–10',
-    time: '48h notice',
+    name: "Swiss Rocher Pastry",
+    category: "Pastries",
+    price: 139,
+    tag: "🌰 Crispy",
+    img: "https://cdn.dotpe.in/reports/item/31338/Swiss_rocker_pastry_jpg",
+    desc: "Rich hazelnut and chocolate pastry inspired by Swiss chocolate truffles.",
+    serves: "1",
+    time: "Instant"
   },
   {
     id: 11,
-    name: 'Homemade Dates Laddoo',
-    category: 'Homemade',
-    price: 260,
-    tag: '🌿 Healthy',
-    desc: 'Seedless dates · Mixed nuts · No refined sugar',
-    img: 'https://vellankifoods.com/cdn/shop/products/dry_fruit_laddu_1024x1024.jpg?v=1680179856',
-    serves: '10 pcs',
-    time: 'Same day',
+    name: "Belgium Chocolate Pastry",
+    category: "Pastries",
+    price: 139,
+    tag: "🍫 Silk",
+    img: "https://cdn.dotpe.in/reports/item/31338/Belgium_Chocolate_Pastry_JPG",
+    desc: "Filled with smooth, creamy premium Belgian chocolate ganache.",
+    serves: "1",
+    time: "Instant"
   },
   {
     id: 12,
-    name: 'Croissant Platter',
-    category: 'Pastries',
-    price: 420,
-    tag: '🥐 Freshly Baked',
-    desc: 'Butter croissants · Almond & chocolate filled',
-    img: 'https://images.pexels.com/photos/1510682/pexels-photo-1510682.jpeg?auto=compress&cs=tinysrgb&w=600',
-    serves: '4 pcs',
-    time: 'Morning only',
+    name: "Rose Tres De Leche",
+    category: "Pastries",
+    price: 189,
+    tag: "🥛 Milky",
+    img: "https://cdn.dotpe.in/item/6690393/KSB_10191.jpg",
+    desc: "Rose-soaked sponge with a velvety mix of three milks.",
+    serves: "2",
+    time: "Instant"
   },
+  {
+    id: 13,
+    name: "Pineapple Pastry",
+    category: "Pastries",
+    price: 97,
+    tag: "🍍 Fresh",
+    img: "https://cdn.dotpe.in/reports/item/31338/Pineapple_Pastry_jpg",
+    desc: "Light, airy pastry infused with bold, tropical pineapple flavor.",
+    serves: "1",
+    time: "Instant"
+  },
+  {
+    id: 14,
+    name: "Butterscotch Pastry",
+    category: "Pastries",
+    price: 97,
+    tag: "🧈 Buttery",
+    img: "https://cdn.dotpe.in/reports/item/31338/Butterscotch_Pastry_jpg",
+    desc: "Creamy and buttery bakery style classic butterscotch delight.",
+    serves: "1",
+    time: "Instant"
+  },
+  {
+    id: 15,
+    name: "Blackforest Pastry",
+    category: "Pastries",
+    price: 97,
+    tag: "🍫 Classic",
+    img: "https://cdn.dotpe.in/reports/item/31338/BlackForest_Pastry_jpg",
+    desc: "Moist chocolate cake with whipped cream and cherry toppings.",
+    serves: "1",
+    time: "Instant"
+  },
+
+  // ── SNACKS ──
+  {
+    id: 16,
+    name: "Ginger Chicken Puff",
+    category: "Snacks",
+    price: 55,
+    tag: "🍗 Spicy",
+    img: "https://cdn.dotpe.in/reports/item/31338/Ginger_Chicken_Puff_jpg",
+    desc: "The perfect mix of tender chicken and ginger spice in flaky crust.",
+    serves: "1",
+    time: "Hot"
+  },
+  {
+    id: 17,
+    name: "Egg Puff",
+    category: "Snacks",
+    price: 39,
+    tag: "🥚 Protein",
+    img: "https://cdn.dotpe.in/reports/item/31338/Egg_Puff_jpg",
+    desc: "An all-time favorite snack with savory egg filling in a gold puff.",
+    serves: "1",
+    time: "Hot"
+  },
+  {
+    id: 18,
+    name: "Paneer Puff",
+    category: "Snacks",
+    price: 50,
+    tag: "🧀 Veggie",
+    img: "https://cdn.dotpe.in/reports/item/31338/Paneer_Puff_jpg",
+    desc: "A flaky puff filled with artisan paneer and aromatic spices.",
+    serves: "1",
+    time: "Hot"
+  },
+  {
+    id: 19,
+    name: "Veg. Samosa",
+    category: "Snacks",
+    price: 32,
+    tag: "🥟 Classic",
+    img: "https://cdn.dotpe.in/reports/item/31338/Veg_Samosa_jpg",
+    desc: "Indian classic appetizer made with spicy boiled potatoes.",
+    serves: "1",
+    time: "Hot"
+  },
+  {
+    id: 20,
+    name: "Veg Puff",
+    category: "Snacks",
+    price: 32,
+    tag: "🥦 Garden",
+    img: "https://cdn.dotpe.in/reports/item/31338/Veg_Puff_jpg",
+    desc: "A flaky puff with an aromatic mix of fresh vegetables.",
+    serves: "1",
+    time: "Hot"
+  },
+  {
+    id: 21,
+    name: "Chicken Cheese Roll",
+    category: "Snacks",
+    price: 125,
+    tag: "🍗 Cheesy",
+    img: "https://cdn.dotpe.in/reports/item/31338/Chicken_Cheese_Roll_jpg",
+    desc: "Zesty chicken filling wrapped in a golden cheesy bread roll.",
+    serves: "1",
+    time: "10 min"
+  },
+  {
+    id: 22,
+    name: "Veg. Hot Dog",
+    category: "Snacks",
+    price: 109,
+    tag: "🌭 Quick",
+    img: "https://cdn.dotpe.in/reports/item/31338/Veg_Hot_Dog_jpg",
+    desc: "Savory vegetable sausage nestled in a soft artisan long bun.",
+    serves: "1",
+    time: "10 min"
+  },
+
+  // ── BURGERS & PIZZAS ──
+  {
+    id: 23,
+    name: "Paneer Tikka Burger",
+    category: "Burgers & Pizzas",
+    price: 169,
+    tag: "🍔 Fusion",
+    img: "https://cdn.dotpe.in/reports/item/31338/Paneer_Tikka_Burger_jpg",
+    desc: "Melt-in-mouth paneer cubes marinated in Indian spiced yogurt.",
+    serves: "1",
+    time: "15 min"
+  },
+  {
+    id: 24,
+    name: "Chicken Tikka Burger",
+    category: "Burgers & Pizzas",
+    price: 189,
+    tag: "🍗 Bold",
+    img: "https://cdn.dotpe.in/reports/item/31338/Chicken_Tikka_Burger_jpg",
+    desc: "Lip-smacking burger stuffed with boneless tender chicken tikka.",
+    serves: "1",
+    time: "15 min"
+  },
+  {
+    id: 25,
+    name: "Paneer Tikka Pizza (7\")",
+    category: "Burgers & Pizzas",
+    price: 309,
+    tag: "🍕 Loaded",
+    img: "https://cdn.dotpe.in/reports/item/31338/PANEER_TIKKA_PIZZA_7_INCHES_SERVES_2_3_jpg",
+    desc: "Soft paneer cubes baked with loaded cheese on artisan crust.",
+    serves: "2",
+    time: "20 min"
+  },
+  {
+    id: 26,
+    name: "Veg. Supreme Pizza (7\")",
+    category: "Burgers & Pizzas",
+    price: 289,
+    tag: "🍕 Veggie",
+    img: "https://images.pexels.com/photos/1566837/pexels-photo-1566837.jpeg?auto=compress&cs=tinysrgb&w=600",
+    desc: "Bell peppers, corn, olives, and double cheese overload.",
+    serves: "2",
+    time: "20 min"
+  },
+
+  // ── BREADS & BISCUITS ──
+  {
+    id: 27,
+    name: "Osmania Biscuits Big (400g)",
+    category: "Breads & Biscuits",
+    price: 254,
+    tag: "🥨 Iconic",
+    img: "https://cdn.dotpe.in/reports/item/31338/Osmania_Biscuits_Big_400Gms_jpg",
+    desc: "Traditional Irani style sweet and salt biscuits, Hyderabadi legend.",
+    serves: "10 pcs",
+    time: "Ready"
+  },
+  {
+    id: 28,
+    name: "Brown Bread (300g)",
+    category: "Breads & Biscuits",
+    price: 74,
+    tag: "🍞 Healthy",
+    img: "https://cdn.dotpe.in/reports/item/31338/Brown_Bread_300Gms_jpg",
+    desc: "Fiber-rich whole wheat brown bread, baked fresh daily.",
+    serves: "Loaf",
+    time: "Ready"
+  },
+  {
+    id: 29,
+    name: "Small White Bread (300g)",
+    category: "Breads & Biscuits",
+    price: 54,
+    tag: "🍞 Staple",
+    img: "https://cdn.dotpe.in/reports/item/31338/Small_Bread_300Gms_jpg",
+    desc: "Super soft white bread loaf, perfect for sandwiches.",
+    serves: "Loaf",
+    time: "Ready"
+  },
+  {
+    id: 30,
+    name: "Pav Bhaji Bread (300g)",
+    category: "Breads & Biscuits",
+    price: 54,
+    tag: "🥯 Soft",
+    img: "https://cdn.dotpe.in/reports/item/31338/Pav_Bazi_Bread_300Gms_jpg",
+    desc: "Buttery soft pav buns designed for street-style pav bhaji.",
+    serves: "6 pcs",
+    time: "Ready"
+  },
+  {
+    id: 31,
+    name: "Fruit Bread (300g)",
+    category: "Breads & Biscuits",
+    price: 69,
+    tag: "🍒 Sweet",
+    img: "https://images.pexels.com/photos/1510682/pexels-photo-1510682.jpeg?auto=compress&cs=tinysrgb&w=600",
+    desc: "Studded with colorful tutti-frutti and sweet surprises.",
+    serves: "Loaf",
+    time: "Ready"
+  },
+
+  // ── DRY CAKE ──
+  {
+    id: 32,
+    name: "Plum Cake Medium (300g)",
+    category: "Dry Cakes",
+    price: 269,
+    tag: "🎄 Festive",
+    img: "https://cdn.dotpe.in/reports/item/31338/Plum_Cake_Medium_300_Grams_jpg",
+    desc: "Rich plum cake overloaded with traditional soaked dried fruits.",
+    serves: "4",
+    time: "Ready"
+  },
+  {
+    id: 33,
+    name: "Vanilla Muffins Pack",
+    category: "Dry Cakes",
+    price: 133,
+    tag: "🧁 Light",
+    img: "https://cdn.dotpe.in/reports/item/31338/Vanilla_Muffins_Pack_jpg",
+    desc: "Classic soft vanilla-infused muffins for a light tea-time snack.",
+    serves: "4 pcs",
+    time: "Ready"
+  },
+  {
+    id: 34,
+    name: "Hazelnut Mud Cake (340g)",
+    category: "Dry Cakes",
+    price: 490,
+    tag: "🍫 Intense",
+    img: "https://cdn.dotpe.in/item/6690385/KSB_1415.jpg",
+    desc: "Dense and rich hazelnut chocolate mud cake, a cocoa ritual.",
+    serves: "3",
+    time: "Ready"
+  },
+  {
+    id: 35,
+    name: "Honey Almond Cookies Box",
+    category: "Breads & Biscuits",
+    price: 280,
+    tag: "🍪 Crunchy",
+    img: "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=600",
+    desc: "Crispy cookies with golden honey and roasted almond slivers.",
+    serves: "Box",
+    time: "Ready"
+  },
+  // ── ADDITIONAL 20+ ITEMS TO REACH 55+ ──
+  { id: 36, name: "Tiramisu Pastry", category: "Pastries", price: 159, tag: "☕ Coffee", img: "https://images.pexels.com/photos/1028714/pexels-photo-1028714.jpeg?auto=compress&cs=tinysrgb&w=600", desc: "Italian ritual of coffee and mascarpone layers.", serves: "1", time: "Instant" },
+  { id: 37, name: "Blueberry Cheesecake", category: "Pastries", price: 179, tag: "🫐 Luxe", img: "https://images.pexels.com/photos/1410235/pexels-photo-1410235.jpeg?auto=compress&cs=tinysrgb&w=600", desc: "Creamy cheesecake with wild blueberry compote.", serves: "1", time: "Instant" },
+  { id: 38, name: "Red Velvet Pastry", category: "Pastries", price: 129, tag: "❤️ Lush", img: "https://images.pexels.com/photos/2035426/pexels-photo-2035426.jpeg?auto=compress&cs=tinysrgb&w=600", desc: "Velvety sponge with artisan cream cheese.", serves: "1", time: "Instant" },
+  { id: 39, name: "White Forest Cake (1 Kg)", category: "Cakes", price: 890, tag: "⚪ Pure", img: "https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg?auto=compress&cs=tinysrgb&w=600", desc: "Snowy white chocolate shavings and vanilla cream.", serves: "12", time: "12h notice" },
+  { id: 40, name: "Death By Chocolate (1 Kg)", category: "Cakes", price: 1450, tag: "💀 Intense", img: "https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=600", desc: "Layers of truffle, ganache, and chocolate chunks.", serves: "12", time: "24h notice" },
+  { id: 41, name: "Chicken Mayo Sandwich", category: "Burgers & Pizzas", price: 149, tag: "🥪 Creamy", img: "https://images.pexels.com/photos/1603901/pexels-photo-1603901.jpeg?auto=compress&cs=tinysrgb&w=600", desc: "Tender chicken bits in house-made creamy mayo.", serves: "1", time: "10 min" },
+  { id: 42, name: "Schezwan Veg Burger", category: "Burgers & Pizzas", price: 139, tag: "🔥 Spicy", img: "https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=600", desc: "Fiery Schezwan sauce with a crunchy veg patty.", serves: "1", time: "15 min" },
+  { id: 43, name: "Kaju Osmania (400g)", category: "Breads & Biscuits", price: 320, tag: "💎 Cashew", img: "https://cdn.dotpe.in/reports/item/31338/Osmania_Biscuits_Big_400Gms_jpg", desc: "Luxury Osmania biscuits loaded with premium cashews.", serves: "10 pcs", time: "Ready" },
+  { id: 44, name: "Butter Cookies Box", category: "Breads & Biscuits", price: 210, tag: "🧈 Melts", img: "https://images.pexels.com/photos/239578/pexels-photo-239578.jpeg?auto=compress&cs=tinysrgb&w=600", desc: "Rich butter cookies that melt away effortlessly.", serves: "Box", time: "Ready" },
+  { id: 45, name: "Choco Walnut Brownie", category: "Dry Cakes", price: 95, tag: "🍫 Gooey", img: "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=600", desc: "Dense brownie with toasted walnuts and cocoa.", serves: "1", time: "Ready" },
+  { id: 46, name: "Mango Entremet (1 Kg)", category: "Cakes", price: 1650, tag: "🥭 Seasonal", img: "https://images.pexels.com/photos/9708317/pexels-photo-9708317.jpeg?auto=compress&cs=tinysrgb&w=600", desc: "Mirror glaze mango with coconut dacquoise.", serves: "10", time: "48h notice" },
+  { id: 47, name: "Chicken Tikka Pizza (7\")", category: "Burgers & Pizzas", price: 349, tag: "🍕 Tandoori", img: "https://images.pexels.com/photos/1566837/pexels-photo-1566837.jpeg?auto=compress&cs=tinysrgb&w=600", desc: "Tandoori chicken chunks and mint mayo drizzle.", serves: "2", time: "20 min" },
+  { id: 48, name: "Fruit Rusk Pack", category: "Breads & Biscuits", price: 145, tag: "☕ Dip", img: "https://images.pexels.com/photos/1510682/pexels-photo-1510682.jpeg?auto=compress&cs=tinysrgb&w=600", desc: "Double-baked fruit bread rusks for tea-time.", serves: "Pack", time: "Ready" },
+  { id: 49, name: "Milk Bread (300g)", category: "Breads & Biscuits", price: 59, tag: "🥛 Sweet", img: "https://cdn.dotpe.in/reports/item/31338/Small_Bread_300Gms_jpg", desc: "Sweetened milk-based bread, soft as a cloud.", serves: "Loaf", time: "Ready" },
+  { id: 50, name: "Banana Walnut Dry Cake", category: "Dry Cakes", price: 299, tag: "🍌 Healthy", img: "https://cdn.dotpe.in/reports/item/31338/Plum_Cake_Medium_300_Grams_jpg", desc: "Overripe bananas with walnuts in moist loaf.", serves: "4", time: "Ready" },
+  { id: 51, name: "Chicken Club Sandwich", category: "Burgers & Pizzas", price: 199, tag: "🥪 Tower", img: "https://images.pexels.com/photos/1603901/pexels-photo-1603901.jpeg?auto=compress&cs=tinysrgb&w=600", desc: "Triple layers with chicken, egg, and fresh veggies.", serves: "1", time: "15 min" },
+  { id: 52, name: "Veg. Nuggets (10 pcs)", category: "Snacks", price: 120, tag: "🍗 Crunchy", img: "https://cdn.dotpe.in/reports/item/31338/Veg_Samosa_jpg", desc: "Bite-sized crispy vegetable nuggets.", serves: "10 pcs", time: "Hot" },
+  { id: 53, name: "Chocolate Macarons (6 pcs)", category: "Pastries", price: 350, tag: "🌈 French", img: "https://images.pexels.com/photos/239578/pexels-photo-239578.jpeg?auto=compress&cs=tinysrgb&w=600", desc: "Delicate French almond cookies with ganache.", serves: "6 pcs", time: "Ready" },
+  { id: 54, name: "Chicken Burger", category: "Burgers & Pizzas", price: 159, tag: "🍔 Juicy", img: "https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=600", desc: "Classic chicken patty burger with secret sauce.", serves: "1", time: "15 min" },
+  { id: 55, name: "Mixed Grain Bread", category: "Breads & Biscuits", price: 89, tag: "🌾 Super", img: "https://cdn.dotpe.in/reports/item/31338/Brown_Bread_300Gms_jpg", desc: "Loaded with flax, sunflower, and pumpkin seeds.", serves: "Loaf", time: "Ready" },
+  { id: 56, name: "Swiss Roll (Slice)", category: "Dry Cakes", price: 75, tag: "🌀 Spiral", img: "https://cdn.dotpe.in/reports/item/31338/Vanilla_Muffins_Pack_jpg", desc: "Spiral vanilla sponge with strawberry jam.", serves: "1", time: "Ready" }
 ];
 
+
 const collectionCards = [
-  { name: 'Cakes', desc: 'Celebration & custom cakes', img: 'https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=800', href: '#', count: '40+' },
-  { name: 'Desserts & Cupcakes', desc: 'Sweet bites for every mood', img: 'https://images.pexels.com/photos/913136/pexels-photo-913136.jpeg?auto=compress&cs=tinysrgb&w=800', href: '#', count: '25+' },
-  { name: 'Gourmet Cakes', desc: 'Artisan-crafted masterpieces', img: 'https://images.pexels.com/photos/1702373/pexels-photo-1702373.jpeg?auto=compress&cs=tinysrgb&w=800', href: '#', count: '18+' },
-  { name: 'Pastries', desc: 'Freshly baked every morning', img: 'https://images.pexels.com/photos/1510682/pexels-photo-1510682.jpeg?auto=compress&cs=tinysrgb&w=800', href: '#', count: '15+' },
+  { name: 'Cakes', desc: 'Heavenly layers for your celebrations', img: 'https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=800', href: '#', count: '100+' },
+  { name: 'Pastries', desc: 'Indulgent bites of pure joy', img: 'https://cdn.dotpe.in/reports/item/31338/Belgium_Chocolate_Pastry_JPG', href: '#', count: '40+' },
+  { name: 'Snacks', desc: 'Gourmet puffs and artisan rolls', img: 'https://cdn.dotpe.in/reports/item/31338/Ginger_Chicken_Puff_jpg', href: '#', count: '25+' },
+  { name: 'Burgers & Pizzas', desc: 'Artisan fusion at its finest', img: 'https://cdn.dotpe.in/reports/item/31338/Paneer_Tikka_Burger_jpg', href: '#', count: '15+' },
 ];
+
 
 export default function BakeryPage() {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -322,7 +610,7 @@ export default function BakeryPage() {
           </div>
 
           {/* Filter Pills refined with smooth horizontal scroll */}
-          <div className="flex items-center gap-3 overflow-x-auto no-scrollbar -mx-6 px-6 md:mx-0 md:px-0 scroll-smooth mb-16 md:mb-24">
+          <div className="flex items-center gap-3 overflow-x-auto no-scrollbar -mx-6 px-6 lg:mx-0 lg:px-0 scroll-smooth mb-16 md:mb-24 lg:flex-wrap lg:justify-center">
             {categories.map(cat => (
               <button
                 key={cat}
@@ -341,77 +629,65 @@ export default function BakeryPage() {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeCategory}
-              initial={{ opacity: 0, scale: 0.98 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.98 }}
-              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 md:gap-14"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.35 }}
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-8 md:gap-12"
             >
               {filtered.map((item, i) => (
                 <motion.div
                   key={item.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: i * 0.08 }}
-                  className="group relative bg-white rounded-[3rem] md:rounded-[4rem] overflow-hidden shadow-[0_30px_100px_rgba(0,0,0,0.03)] hover:shadow-[0_50px_120px_rgba(0,0,0,0.08)] transition-all duration-700 hover:-translate-y-4 border border-[#1a1c24]/5"
+                  initial={{ opacity: 0, y: 24 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.45, delay: i * 0.05 }}
+                  className="group bg-[#fbf9f6] rounded-[3rem] overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.05)] hover:shadow-[0_60px_120px_rgba(0,0,0,0.12)] transition-all duration-700 hover:-translate-y-4 border border-[#1a1c24]/5 active:scale-95"
                 >
-                  {/* Image with touch-ready discover button */}
-                  <div className="relative aspect-square overflow-hidden block">
-                     <Link href={`/bakery/${item.id}`} className="block w-full h-full">
-                        <img
-                          src={item.img}
-                          alt={item.name}
-                          className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"
-                          loading="lazy"
-                        />
-                     </Link>
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#1a1c24]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-
-                    {/* Tag refined */}
-                    <div className="absolute top-6 left-6 md:top-8 md:left-8">
-                      <div className="px-5 py-2.5 md:px-6 md:py-3 bg-white/95 backdrop-blur-2xl rounded-full border border-white/20 shadow-xl">
-                        <span className="text-[9px] md:text-[10px] font-outfit font-black tracking-[0.2em] uppercase text-[#ff4d6d]">{item.tag}</span>
-                      </div>
+                  {/* Image */}
+                  <div className="relative aspect-square overflow-hidden bg-[#f0ede8]">
+                    <Link href={`/bakery/${item.id}`} className="block w-full h-full">
+                      <img
+                        src={item.img}
+                        alt={item.name}
+                        className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"
+                        loading="lazy"
+                      />
+                    </Link>
+                    <div className="absolute top-6 left-6 px-4 py-2 bg-white/95 backdrop-blur-2xl rounded-full shadow-lg">
+                      <span className="text-[9px] font-outfit font-black text-[#1a1c24] uppercase tracking-widest italic">{item.tag}</span>
                     </div>
-
-                    {/* Wishlist button refined */}
                     <button
                       onClick={(e) => { e.preventDefault(); toggleWishlist(item.id); }}
-                      className={`absolute top-6 right-6 md:top-8 md:right-8 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center backdrop-blur-2xl shadow-2xl transition-all duration-500 active:scale-75 ${wishlist.includes(item.id) ? 'bg-[#ff4d6d] text-white' : 'bg-white/90 text-[#1a1c24]/20 hover:bg-white hover:text-[#ff4d6d]'}`}
+                      className="absolute top-6 right-6 w-12 h-12 bg-white/95 backdrop-blur-2xl rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all hover:bg-[#ff4d6d] hover:text-white shadow-2xl transform active:scale-75"
                     >
-                      <Heart className={`w-5 h-5 md:w-7 md:h-7 transition-all ${wishlist.includes(item.id) ? 'fill-current scale-110' : 'group-hover:scale-110'}`} />
+                      <Heart className={`w-5 h-5 transition-colors ${wishlist.includes(item.id) ? 'fill-current text-white' : 'text-[#1a1c24]'}`} />
                     </button>
-                    
-                    {/* Discovery Overlay for touch */}
-                    <Link href={`/bakery/${item.id}`} className="absolute bottom-6 left-6 right-6 md:bottom-10 md:left-10 md:right-10 py-5 md:py-7 bg-white rounded-full flex items-center justify-center gap-4 text-[10px] md:text-[11px] font-outfit font-black tracking-[0.4em] uppercase text-[#1a1c24] opacity-0 group-hover:opacity-100 translate-y-6 group-hover:translate-y-0 transition-all duration-500 shadow-2xl active:scale-95 border border-white/20">
-                       Taste the Vision <ChevronRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
-                    </Link>
+                    <div className="absolute inset-x-0 bottom-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-gradient-to-t from-[#1a1c24]/80 to-transparent">
+                       <Link href={`/bakery/${item.id}`} className="w-full py-4 bg-white text-[#1a1c24] text-center rounded-full text-[10px] font-black uppercase tracking-[0.3em] italic">Swift Manifest</Link>
+                    </div>
                   </div>
 
-                  {/* Info refined */}
-                  <div className="p-8 md:p-12 space-y-6 md:space-y-8">
-                    <div className="flex items-start justify-between gap-6">
-                      <div className="space-y-2">
-                         <div className="h-px w-10 bg-[#bfa37e]/30 mb-2" />
-                         <Link href={`/bakery/${item.id}`} className="block">
-                           <h3 className="text-lg md:text-2xl font-fraunces font-black text-[#1a1c24] leading-tight group-hover:text-[#ff4d6d] transition-colors italic group-hover:translate-x-1 duration-500">
-                             {item.name}
-                           </h3>
-                         </Link>
+                  {/* Info */}
+                  <div className="p-8 space-y-4">
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <p className="text-[9px] font-outfit font-black uppercase tracking-[0.4em] text-[#bfa37e] italic">{item.category}</p>
+                        <div className="flex items-center gap-2 text-[8px] font-outfit font-black text-[#1a1c24]/20 uppercase">
+                          <Clock className="w-3 h-3" /> {item.time}
+                        </div>
                       </div>
-                      <span className="text-xl md:text-3xl font-fraunces font-black text-[#bfa37e] italic pt-1">₹{item.price}</span>
+                      <Link href={`/bakery/${item.id}`}>
+                        <h3 className="text-base md:text-xl font-fraunces font-black text-[#1a1c24] leading-tight group-hover:text-[#ff4d6d] transition-colors line-clamp-1 italic">{item.name}</h3>
+                      </Link>
                     </div>
-                    <p className="text-sm md:text-base font-outfit font-medium text-[#1a1c24]/30 leading-relaxed italic line-clamp-2">" {item.desc} "</p>
-                    
-                    {/* Meta ritual indicators */}
+                    <p className="text-[11px] md:text-xs font-outfit text-[#1a1c24]/30 leading-relaxed font-medium italic line-clamp-2 h-10">" {item.desc} "</p>
                     <div className="flex items-center justify-between pt-4 border-t border-[#1a1c24]/5">
-                      <div className="flex items-center gap-6 text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.2em] text-[#1a1c24]/15 italic">
-                        <span className="flex items-center gap-3"><Star className="w-5 h-5 text-[#ff4d6d]/40" /> {item.serves} Realms</span>
-                        <span className="flex items-center gap-3"><Clock className="w-5 h-5 text-[#ff4d6d]/40" /> {item.time}</span>
+                      <div className="flex flex-col">
+                        <span className="text-xl md:text-2xl font-fraunces font-black text-[#1a1c24] italic">₹{item.price.toLocaleString()}</span>
+                        <span className="text-[9px] font-outfit font-black text-[#1a1c24]/20 tracking-widest uppercase italic">SERVES {item.serves}</span>
                       </div>
-                      <button className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#fbf9f6] flex items-center justify-center text-[#1a1c24]/10 group-hover:bg-[#1a1c24] group-hover:text-white transition-all transform hover:rotate-45 active:scale-75 shadow-sm">
-                        <ShoppingBag className="w-5 h-5 md:w-7 md:h-7" />
+                      <button className="flex items-center justify-center w-14 h-14 bg-[#1a1c24] text-white rounded-full hover:bg-[#ff4d6d] transition-all shadow-xl active:scale-90">
+                        <ShoppingBag className="w-5 h-5" />
                       </button>
                     </div>
                   </div>
@@ -419,6 +695,7 @@ export default function BakeryPage() {
               ))}
             </motion.div>
           </AnimatePresence>
+
         </div>
       </section>
 

@@ -2,122 +2,215 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Heart, Search, ChevronRight, SlidersHorizontal, X } from 'lucide-react';
+import { ArrowRight, Heart, Search, ChevronRight, SlidersHorizontal, X, ShoppingBag } from 'lucide-react';
 import { Navbar } from '../../components/sections/Navbar';
 import { Footer } from '../../components/sections/Footer';
 
-const categories = ['All', 'Sarees', 'Ethnic Wear', 'Gowns', 'Salwar Suits', 'Designer Blouses', 'Lehengas', 'Fabrics'];
+const categories = ['All', 'Banarasi', 'Kanchipuram', 'Luxe Sarees', 'Lehengas', 'Semi Pattu', 'Designer Blouses', 'Fabrics'];
 
 const products = [
   {
     id: 1,
-    name: 'Off White Kanchi Silk Saree',
-    category: 'Sarees',
-    price: 7960,
-    tag: 'New Arrival',
-    img: 'https://anyaonline.in/cdn/shop/files/10_91061a4c-2853-4728-b38d-e10d8f038c4d_400x.jpg?v=1771048393',
-    color: 'Off White',
+    name: "Banarasi silk Maggam Lehenga with stitched Blouse",
+    category: "Lehengas",
+    price: 4199,
+    tag: "Premium",
+    img: "https://kvsshopping.com/cdn/shop/files/rn-image_picker_lib_temp_2e05dc0d-dd47-43e9-8148-a93e3239692b.jpg?v=1763885739&width=533",
+    color: "Multi",
+    desc: "Intricate Zardosi mudi Maggam work on Banaras silk with soft cotton lining."
   },
   {
     id: 2,
-    name: 'Dark Violet Zari Creeper Saree',
-    category: 'Sarees',
-    price: 3750,
-    tag: 'Bestseller',
-    img: 'https://anyaonline.in/cdn/shop/files/1_f604d26e-5258-405f-a4c1-5fe659b6febb_400x.jpg?v=1771045647',
-    color: 'Violet',
+    name: "Ambani inspired Banarasi Soft Katan silk",
+    category: "Banarasi",
+    price: 1450,
+    tag: "Trending",
+    img: "https://kvsshopping.com/cdn/shop/files/DAF05EB6-CDFF-4D0F-B7A1-2EA78E0CB80D.jpg?v=1738144278&width=533",
+    color: "Purple",
+    desc: "Soft Katan Silk with full Sona Rupa Zari weaving and a rich Jacquard pallu."
   },
   {
     id: 3,
-    name: 'Bottle Green Bridal Silk Saree',
-    category: 'Sarees',
-    price: 5540,
-    tag: 'Bridal',
-    img: 'https://anyaonline.in/cdn/shop/files/5_4e137679-25e0-4fec-94de-0661134b06ad_400x.jpg?v=1770902247',
-    color: 'Green',
+    name: "Kanchipuram Semi Pattu Saree Luxe Look",
+    category: "Kanchipuram",
+    price: 3999,
+    tag: "Bestseller",
+    img: "https://kvsshopping.com/cdn/shop/files/6E8C2381-6646-4B3F-B12C-3819D772A0DA.jpg?v=1753532528&width=533",
+    color: "Gold",
+    desc: "Heavy Brocket Quality semi silk with traditional Kuttu weaving and grand patterns."
   },
   {
     id: 4,
-    name: 'Pink Banarasi Silk Saree',
-    category: 'Sarees',
-    price: 17400,
-    tag: 'Premium',
-    img: 'https://anyaonline.in/cdn/shop/files/1_3d4bcb96-0782-4338-9c5a-1a0740261f36_400x.jpg?v=1757499348',
-    color: 'Pink',
+    name: "Pure Banarasi Handloom Mashru silk Semi Pattu",
+    category: "Banarasi",
+    price: 3599,
+    tag: "Handloom",
+    img: "https://kvsshopping.com/cdn/shop/files/6891E3A7-6F10-4135-A544-0451C09F86AF.jpg?v=1747568006&width=533",
+    color: "Red",
+    desc: "Mashru silk with a Semi Pattu finish, combining traditional motifs with luxury texture."
   },
   {
     id: 5,
-    name: 'Apple Green Banarasi Silk Saree',
-    category: 'Sarees',
-    price: 44700,
-    tag: 'Trending',
-    img: 'https://anyaonline.in/cdn/shop/files/1_61dcbcee-17c5-44ad-8578-b3899d70b6cd_400x.jpg?v=1684480583',
-    color: 'Green',
+    name: "Bloom Viscose Tissue Designer Lehenga",
+    category: "Lehengas",
+    price: 1850,
+    tag: "New Arrival",
+    img: "https://kvsshopping.com/cdn/shop/files/rn-image_picker_lib_temp_66a82eb7-3da9-4e36-ad5c-8f9816175be4.jpg?v=1773546721&width=533",
+    color: "Pink",
+    desc: "Floral-inspired lehenga from premium Tissue, with elegant embroidery and modern sheen."
   },
   {
     id: 6,
-    name: 'Alli Green Kanchi Cotton Saree',
-    category: 'Sarees',
-    price: 4900,
-    tag: 'Limited',
-    img: 'https://anyaonline.in/cdn/shop/files/WhatsAppImage2025-04-23at11.51.58AM_2_400x.jpg?v=1745404995',
-    color: 'Green',
+    name: "Co-ord Set Tasar Silk Designer Lehenga",
+    category: "Lehengas",
+    price: 1599,
+    tag: "Trendy",
+    img: "https://kvsshopping.com/cdn/shop/files/rn-image_picker_lib_temp_1c20f02a-1e0c-4763-80f9-52df486d23e9.jpg?v=1773466908&width=533",
+    color: "Brown",
+    desc: "Contemporary Tasar Silk set designed with a matching co-ord style blouse."
   },
   {
     id: 7,
-    name: 'Black Banarasi Silk Fabric',
-    category: 'Fabrics',
-    price: 160,
-    tag: 'Per metre',
-    img: 'https://anyaonline.in/cdn/shop/files/16_4_0a2324c8-4fe4-405c-bfe2-d469231e15e1_400x.jpg?v=1771594438',
-    color: 'Black',
+    name: "Celebrity inspired Kanjivaram with Lace",
+    category: "Luxe Sarees",
+    price: 2150,
+    tag: "Celebrity Choice",
+    img: "https://kvsshopping.com/cdn/shop/files/28085CF6-C5A9-4993-B1C5-34EFCA4DFC45.jpg?v=1737546015&width=533",
+    color: "Peach",
+    desc: "Trendy Kanjivaram silk saree accented with designer lace work for a modern vibe."
   },
   {
     id: 8,
-    name: 'Navy Blue Kanchi Silk Fabric',
-    category: 'Fabrics',
-    price: 280,
-    tag: 'Per metre',
-    img: 'https://anyaonline.in/cdn/shop/files/19_fb0d9b47-2344-480d-83be-75af517ab1d4_400x.jpg?v=1771593834',
-    color: 'Navy Blue',
+    name: "Banarasi Kora Organza Embroidery Saree",
+    category: "Banarasi",
+    price: 1499,
+    tag: "Budget Luxe",
+    img: "https://kvsshopping.com/cdn/shop/files/rn-image_picker_lib_temp_2e1b199e-499d-482c-a093-4789bcdba9ae.jpg?v=1754323690&width=533",
+    color: "Green",
+    desc: "Lightweight Organza fabric featuring delicate thread embroidery for festive looks."
   },
   {
     id: 9,
-    name: 'Cream Floral Printed Khadi Frock',
-    category: 'Ethnic Wear',
-    price: 2350,
-    tag: 'Artisan',
-    img: 'https://anyaonline.in/cdn/shop/products/akashya3_400x.jpg?v=1638539806',
-    color: 'Cream',
+    name: "Banarasi Bridal Kanjeevaram Saree",
+    category: "Banarasi",
+    price: 3150,
+    tag: "Bridal",
+    img: "https://kvsshopping.com/cdn/shop/files/rn-image_picker_lib_temp_d2241e3f-033a-4b31-a3a5-16c843bad4d0.jpg?v=1760597412&width=533",
+    color: "Maroon",
+    desc: "Heavy bridal saree with Banarasi weaving and Kanjeevaram gold-toned Zari motifs."
   },
   {
     id: 10,
-    name: 'Blue Floral Multi Khadi Frock',
-    category: 'Ethnic Wear',
-    price: 2350,
-    tag: 'Exclusive',
-    img: 'https://anyaonline.in/cdn/shop/products/akashya7_400x.jpg?v=1638591046',
-    color: 'Blue',
+    name: "Chinnon Designer Viscose Lehenga",
+    category: "Lehengas",
+    price: 1750,
+    tag: "Flowy",
+    img: "https://kvsshopping.com/cdn/shop/files/rn-image_picker_lib_temp_92f419c8-6787-45f6-8d10-413c45d1f4ea.jpg?v=1773365377&width=533",
+    color: "Blue",
+    desc: "Flowy Designer Viscose Chinon set, known for its soft drape and embroidery."
   },
   {
     id: 11,
-    name: 'Anandha Dhratchai Kanchi Fabric',
-    category: 'Fabrics',
-    price: 3500,
-    tag: 'Per metre',
-    img: 'https://anyaonline.in/cdn/shop/files/1_050c940b-3534-4785-9049-54dc44c8bfee_400x.jpg?v=1711605466',
-    color: 'Rexona',
+    name: "Traditional Elegance Silk Lehenga",
+    category: "Lehengas",
+    price: 1799,
+    tag: "Classic",
+    img: "https://kvsshopping.com/cdn/shop/files/rn-image_picker_lib_temp_6e14fa40-61bc-41b1-9629-746a48307922.jpg?v=1773127875&width=533",
+    color: "Green",
+    desc: "A classic blend of tradition and trend, featuring high-quality silk and ethnic motifs."
   },
   {
     id: 12,
-    name: 'White Cotton Mul Fish Frock',
-    category: 'Ethnic Wear',
-    price: 2000,
-    tag: 'Handcrafted',
-    img: 'https://anyaonline.in/cdn/shop/products/akashya9_400x.jpg?v=1638591487',
-    color: 'White',
+    name: "Semi Kanchipattu Maggam Lehenga Set",
+    category: "Lehengas",
+    price: 4799,
+    tag: "Boutique Exclusive",
+    img: "https://kvsshopping.com/cdn/shop/files/rn-image_picker_lib_temp_136e34b0-4016-4f91-a624-e70bff13319f.jpg?v=1770217704&width=533",
+    color: "Violet",
+    desc: "Kanchipattu silk lehenga paired with a heavy Maggam work designer blouse."
   },
+  {
+    id: 13,
+    name: "Luxe Handwork Saree with Pearl Blouse",
+    category: "Luxe Sarees",
+    price: 2450,
+    tag: "Stitched Blouse",
+    img: "https://kvsshopping.com/cdn/shop/files/C1C1E969-C29F-4B18-B81C-016DC8E753F5.jpg?v=1749928608&width=533",
+    color: "White",
+    desc: "Embellished with pearls and a ready-to-wear stitched designer boutique blouse."
+  },
+  {
+    id: 14,
+    name: "Paithani Luxe with Stitched Blouse",
+    category: "Luxe Sarees",
+    price: 2850,
+    tag: "Traditional",
+    img: "https://kvsshopping.com/cdn/shop/files/4BEBCE08-872B-4218-AB1F-90BBBB115268.jpg?v=1745335808&width=533",
+    color: "Blue",
+    desc: "Maharastrian Paithani saree with peacock motifs and a fully stitched blouse."
+  },
+  {
+    id: 15,
+    name: "Handloom Pure Luxe Mashru Silk",
+    category: "Banarasi",
+    price: 4250,
+    tag: "Pure Silk",
+    img: "https://kvsshopping.com/cdn/shop/files/74ADFC94-85BB-4343-B7D7-B3113EEC0962.jpg?v=1749239870&width=533",
+    color: "Pink",
+    desc: "Expertly handloomed Pure Semi Pattu saree in premium Mashru Silk texture."
+  },
+  {
+    id: 16,
+    name: "Banarasi Classic Mashru Semi Pattu",
+    category: "Semi Pattu",
+    price: 3499,
+    tag: "Artisan Choice",
+    img: "https://kvsshopping.com/cdn/shop/files/IMG-6208.jpg?v=1748971159&width=533",
+    color: "Gold",
+    desc: "Mashru Silk saree with a defined Semi Pattu border and traditional silk weaving."
+  },
+  {
+    id: 17,
+    name: "Vasudha Kalamkari Designer Art Lehenga",
+    category: "Lehengas",
+    price: 2599,
+    tag: "Hand Painted",
+    img: "https://kvsshopping.com/cdn/shop/files/rn-image_picker_lib_temp_15feb7e5-5bcd-40f4-aac2-f2f84d98b480.jpg?v=1769515952&width=533",
+    color: "Yellow",
+    desc: "Traditional Kalamkari floral art on a premium boutique designer lehenga."
+  },
+  {
+    id: 18,
+    name: "South Indian Narayan Pattu Lehenga",
+    category: "Lehengas",
+    price: 1699,
+    tag: "Ethnic",
+    img: "https://kvsshopping.com/cdn/shop/files/rn-image_picker_lib_temp_aa979823-8064-469c-b7e4-3ff698c2c076.jpg?v=1768585958&width=533",
+    color: "Red",
+    desc: "Authentic Narayana Pattu set, capturing South Indian festive traditions."
+  },
+  {
+    id: 19,
+    name: "Ready to wear Saree Luxe Lovers",
+    category: "Luxe Sarees",
+    price: 5499,
+    tag: "Pre-Stitched",
+    img: "https://kvsshopping.com/cdn/shop/files/rn-image_picker_lib_temp_8ae9badc-3855-4b05-b0a3-3dce8a8648a8.jpg?v=1759584874&width=533",
+    color: "Black",
+    desc: "Premium pre-stitched saree with a heavily embroidered designer boutique blouse."
+  },
+  {
+    id: 20,
+    name: "Glamour Trending Handwork Luxe Saree",
+    category: "Luxe Sarees",
+    price: 2899,
+    tag: "Party Wear",
+    img: "https://kvsshopping.com/cdn/shop/files/321C25D1-A3DB-4A9F-8E3E-573532C9EDD6.jpg?v=1757007305&width=533",
+    color: "Emerald",
+    desc: "Space Silk fabric with glamorous hand-worked patterns for luxury gifting."
+  }
 ];
+
 
 export default function BoutiquePage() {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -253,7 +346,7 @@ export default function BoutiquePage() {
       <section className="sticky top-16 z-40 bg-white/80 backdrop-blur-2xl border-b border-[#1a1c24]/5 py-4 md:py-6">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10 flex items-center justify-between gap-6 overflow-hidden">
           {/* Category tabs — horizontally scrollable refined */}
-          <div className="flex items-center gap-3 overflow-x-auto no-scrollbar -mx-6 px-6 md:mx-0 md:px-0 scroll-smooth flex-1">
+          <div className="flex items-center gap-3 overflow-x-auto no-scrollbar -mx-6 px-6 lg:mx-0 lg:px-0 scroll-smooth flex-1 lg:flex-wrap lg:justify-center">
             {categories.map(cat => (
               <button
                 key={cat}
@@ -314,23 +407,22 @@ export default function BoutiquePage() {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeCategory + searchQuery}
-              initial={{ opacity: 0, scale: 0.98 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.98 }}
-              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-12"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.35 }}
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-8 md:gap-12"
             >
               {filtered.length > 0 ? filtered.map((product, i) => (
                 <motion.div
                   key={product.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.7, delay: i * 0.08 }}
-                  className="group relative"
+                  initial={{ opacity: 0, y: 24 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.45, delay: i * 0.05 }}
+                  className="group bg-[#fbf9f6] rounded-[3rem] overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.05)] hover:shadow-[0_60px_120px_rgba(0,0,0,0.12)] transition-all duration-700 hover:-translate-y-4 border border-[#1a1c24]/5 active:scale-95"
                 >
-                  {/* Image Card updated for mobile touch */}
-                  <div className="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] md:rounded-[3.5rem] bg-[#fbf9f6] shadow-[0_20px_60px_rgba(0,0,0,0.04)] transition-all duration-700 hover:-translate-y-3 hover:shadow-[0_40px_100px_rgba(0,0,0,0.1)] border border-[#1a1c24]/5">
+                  {/* Image */}
+                  <div className="relative aspect-square overflow-hidden bg-[#f0ede8]">
                     <Link href={`/boutique/${product.id}`} className="block w-full h-full">
                       <img
                         src={product.img}
@@ -339,56 +431,37 @@ export default function BoutiquePage() {
                         loading="lazy"
                       />
                     </Link>
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#1a1c24]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-
-                    {/* Tag refined */}
-                    <div className="absolute top-5 left-5 md:top-8 md:left-8">
-                      <div className="px-4 py-2 md:px-5 md:py-2.5 bg-white/95 backdrop-blur-2xl rounded-full text-[8px] md:text-[10px] font-outfit font-black uppercase tracking-[0.3em] text-[#ff4d6d] shadow-xl border border-white/20">
-                        {product.tag}
-                      </div>
+                    <div className="absolute top-6 left-6 px-4 py-2 bg-white/95 backdrop-blur-2xl rounded-full shadow-lg">
+                      <span className="text-[9px] font-outfit font-black text-[#1a1c24] uppercase tracking-widest italic">{product.tag}</span>
                     </div>
-
-                    {/* Quick Info dot */}
-                    <div className="absolute top-5 right-5 md:top-8 md:right-8 group/dot">
-                       <div className="px-4 py-2 md:px-5 md:py-2.5 bg-black/30 backdrop-blur-xl rounded-full border border-white/10 flex items-center gap-3 group-hover/dot:bg-[#ff4d6d] transition-all cursor-pointer">
-                          <span className="text-[8px] md:text-[10px] font-outfit font-black text-white/90 uppercase tracking-widest">{product.color}</span>
-                          <div className="w-2 h-2 rounded-full bg-white shadow-lg animate-pulse" />
-                       </div>
-                    </div>
-
-                    {/* Wishlist Button - accessible */}
                     <button
                       onClick={(e) => { e.preventDefault(); toggleWishlist(product.id); }}
-                      className={`absolute bottom-20 md:bottom-28 right-6 md:right-8 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center backdrop-blur-2xl shadow-2xl transition-all duration-500 active:scale-75 ${wishlist.includes(product.id) ? 'bg-[#ff4d6d] text-white' : 'bg-white/90 text-[#1a1c24]/20 hover:bg-white hover:text-[#ff4d6d]'}`}
+                      className="absolute top-6 right-6 w-12 h-12 bg-white/95 backdrop-blur-2xl rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all hover:bg-[#ff4d6d] hover:text-white shadow-2xl transform active:scale-75"
                     >
-                      <Heart className={`w-5 h-5 md:w-7 md:h-7 transition-all ${wishlist.includes(product.id) ? 'fill-current scale-110' : 'group-hover:scale-110'}`} />
+                      <Heart className={`w-5 h-5 transition-colors ${wishlist.includes(product.id) ? 'fill-current text-white' : 'text-[#1a1c24]'}`} />
                     </button>
-
-                    {/* Quick Discovery Button - perfect for touch */}
-                    <Link
-                      href={`/boutique/${product.id}`}
-                      className="absolute bottom-6 left-6 right-6 md:bottom-8 md:left-8 md:right-8 py-5 md:py-7 bg-white/95 backdrop-blur-2xl text-[#1a1c24] rounded-full font-outfit font-black text-[10px] md:text-xs tracking-[0.4em] uppercase flex items-center justify-center gap-4 hover:bg-[#ff4d6d] hover:text-white transition-all shadow-2xl translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 duration-500 active:scale-95 border border-white/20"
-                    >
-                      Discovery Design <ChevronRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
-                    </Link>
+                    <div className="absolute inset-x-0 bottom-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-gradient-to-t from-[#1a1c24]/80 to-transparent">
+                       <Link href={`/boutique/${product.id}`} className="w-full py-4 bg-white text-[#1a1c24] text-center rounded-full text-[10px] font-black uppercase tracking-[0.3em] italic">Swift Manifest</Link>
+                    </div>
                   </div>
 
-                  {/* Info refined */}
-                  <div className="mt-8 md:mt-10 px-4 md:px-6">
-                    <div className="flex items-center gap-4 mb-3">
-                       <div className="h-px w-8 bg-[#bfa37e]/30" />
-                       <p className="text-[10px] md:text-xs font-outfit font-black uppercase tracking-[0.4em] text-[#bfa37e] italic">{product.category}</p>
+                  {/* Info */}
+                  <div className="p-8 space-y-4">
+                    <div className="space-y-1">
+                      <p className="text-[9px] font-outfit font-black uppercase tracking-[0.4em] text-[#bfa37e] italic">{product.category}</p>
+                      <Link href={`/boutique/${product.id}`}>
+                        <h3 className="text-base md:text-xl font-fraunces font-black text-[#1a1c24] leading-tight group-hover:text-[#ff4d6d] transition-colors line-clamp-1 italic">{product.name}</h3>
+                      </Link>
                     </div>
-                    <div className="space-y-4">
-                       <Link href={`/boutique/${product.id}`} className="block">
-                          <h3 className="text-sm md:text-xl font-fraunces font-black text-[#1a1c24] group-hover:text-[#ff4d6d] transition-colors leading-snug line-clamp-1 italic group-hover:translate-x-1 duration-500">{product.name}</h3>
-                       </Link>
-                       <div className="flex items-center justify-between py-1 border-t border-[#1a1c24]/5">
-                          <span className="text-base md:text-2xl font-fraunces font-black text-[#1a1c24] italic">₹{product.price.toLocaleString()}<span className="text-[10px] md:text-xs font-outfit font-black text-[#1a1c24]/20 tracking-tighter ml-1">TRIBUTE</span></span>
-                          <Link href={`/boutique/${product.id}`} className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#fbf9f6] flex items-center justify-center text-[#1a1c24]/10 group-hover:bg-[#1a1c24] group-hover:text-white transition-all transform hover:rotate-45">
-                             <ArrowRight className="w-4 h-4" />
-                          </Link>
-                       </div>
+                    <p className="text-[11px] md:text-xs font-outfit text-[#1a1c24]/30 leading-relaxed font-medium italic line-clamp-2 h-10">" {product.desc || `Authentic ${product.category} crafted for boutique excellence.`} "</p>
+                    <div className="flex items-center justify-between pt-4 border-t border-[#1a1c24]/5">
+                      <div className="flex flex-col">
+                        <span className="text-xl md:text-2xl font-fraunces font-black text-[#1a1c24] italic">₹{product.price.toLocaleString()}</span>
+                        <span className="text-[9px] font-outfit font-black text-[#1a1c24]/20 tracking-widest uppercase italic">PER SCROLL</span>
+                      </div>
+                      <button className="flex items-center justify-center w-14 h-14 bg-[#1a1c24] text-white rounded-full hover:bg-[#ff4d6d] transition-all shadow-xl active:scale-90">
+                        <ShoppingBag className="w-5 h-5" />
+                      </button>
                     </div>
                   </div>
                 </motion.div>
@@ -407,6 +480,7 @@ export default function BoutiquePage() {
               )}
             </motion.div>
           </AnimatePresence>
+
 
           {/* Load More Refined */}
           <div className="text-center mt-24 md:mt-40">
