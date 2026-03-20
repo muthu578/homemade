@@ -21,7 +21,7 @@ export default function AccountPage() {
                <div className="flex flex-col md:flex-row items-center md:items-baseline justify-between mb-12 md:mb-20 gap-6 md:gap-8 text-center md:text-left">
                   <div className="space-y-4">
                      <span className="text-[10px] md:text-xs font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">Personal Atelier</span>
-                     <h1 className="text-5xl md:text-7xl lg:text-[84px] font-fraunces font-black text-[#1a1c24] leading-tight italic">My <span className="italic font-normal text-[#bfa37e]">Account.</span></h1>
+                     <h1 className="text-3xl md:text-5xl lg:text-[84px] font-fraunces font-black text-[#1a1c24] leading-tight italic">My <span className="italic font-normal text-[#bfa37e]">Account.</span></h1>
                   </div>
                   <p className="text-xl md:text-2xl font-fraunces font-black text-[#bfa37e] italic">Welcome back, <br className="md:hidden" /><span className="text-[#1a1c24] italic">Santhiya</span></p>
                </div>

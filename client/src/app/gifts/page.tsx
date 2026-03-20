@@ -246,7 +246,7 @@ export default function GiftsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-5xl md:text-7xl lg:text-[100px] font-fraunces font-black leading-[1.05] tracking-tight italic"
+              className="text-3xl md:text-5xl lg:text-[100px] font-fraunces font-black leading-[1.05] tracking-tight italic"
            >
               Handcrafted <span className="italic font-normal text-[#bfa37e] block sm:inline">Emotions.</span>
            </motion.h1>
@@ -269,7 +269,7 @@ export default function GiftsPage() {
                   <button 
                      key={occ.id}
                      onClick={() => setActiveOccasion(occ.id)}
-                     className={`flex-shrink-0 px-8 py-3.5 md:py-4 rounded-full text-[9px] md:text-[11px] font-outfit font-black tracking-[0.3em] uppercase transition-all italic ${activeOccasion === occ.id ? 'bg-[#1a1c24] text-white shadow-2xl' : 'text-[#1a1c24]/30 border border-[#1a1c24]/5 bg-white hover:border-[#ff4d6d]/50 hover:text-[#ff4d6d]'}`}
+                     className={`flex-shrink-0 px-6 py-3 rounded-full text-[9px] md:text-[10px] font-outfit font-black tracking-[0.2em] uppercase transition-all italic ${activeOccasion === occ.id ? 'bg-[#1a1c24] text-white shadow-xl' : 'text-[#1a1c24]/30 border border-[#1a1c24]/5 bg-white hover:border-[#ff4d6d]/50 hover:text-[#ff4d6d]'}`}
                   >
                      {occ.label}
                   </button>
@@ -284,50 +284,51 @@ export default function GiftsPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-10">
                <AnimatePresence mode="popLayout">
                  {filtered.map((hamper, i) => (
-                   <motion.div 
-                      key={hamper.id}
-                      layout
-                      initial={{ opacity: 0, y: 24 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, scale: 0.95 }}
-                      transition={{ delay: i * 0.05, duration: 0.45 }}
-                      className="group bg-white rounded-[2.5rem] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.04)] border border-[#1a1c24]/5 flex flex-col hover:-translate-y-3 transition-all duration-500 active:scale-[0.98]"
-                   >
-                      {/* Image Side */}
-                      <div className="relative aspect-square overflow-hidden bg-[#f0ede8]">
-                         <img src={hamper.img} alt={hamper.name} className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110" />
-                         <div className="absolute top-5 left-5 px-4 py-2 bg-white/95 backdrop-blur-2xl text-[#1a1c24] text-[8px] md:text-[9px] font-outfit font-black uppercase tracking-[0.2em] rounded-full shadow-md italic">
-                            {hamper.tag}
-                         </div>
-                         <button className="absolute top-5 right-5 w-10 h-10 bg-white/95 backdrop-blur-2xl rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all hover:bg-[#ff4d6d] hover:text-white shadow-xl">
-                            <Heart className="w-4 h-4" />
-                         </button>
-                      </div>
+                   <Link href={`/gifts/${hamper.id}`} key={hamper.id}>
+                    <motion.div 
+                       layout
+                       initial={{ opacity: 0, y: 24 }}
+                       animate={{ opacity: 1, y: 0 }}
+                       exit={{ opacity: 0, scale: 0.95 }}
+                       transition={{ delay: i * 0.05, duration: 0.45 }}
+                       className="group bg-white rounded-[2.5rem] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.04)] border border-[#1a1c24]/5 flex flex-col hover:-translate-y-3 transition-all duration-500 active:scale-[0.98] h-full cursor-pointer"
+                    >
+                       {/* Image Side */}
+                       <div className="relative aspect-square overflow-hidden bg-[#f0ede8]">
+                          <img src={hamper.img} alt={hamper.name} className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110" />
+                          <div className="absolute top-5 left-5 px-4 py-2 bg-white/95 backdrop-blur-2xl text-[#1a1c24] text-[8px] md:text-[9px] font-outfit font-black uppercase tracking-[0.2em] rounded-full shadow-md italic">
+                             {hamper.tag}
+                          </div>
+                          <button onClick={(e) => { e.preventDefault(); e.stopPropagation(); }} className="absolute top-5 right-5 w-10 h-10 bg-white/95 backdrop-blur-2xl rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all hover:bg-[#ff4d6d] hover:text-white shadow-xl">
+                             <Heart className="w-4 h-4" />
+                          </button>
+                       </div>
 
-                      {/* Content Side */}
-                      <div className="p-7 md:p-8 flex flex-col flex-1 justify-between gap-6 bg-[#fbf9f6]">
-                         <div className="space-y-4">
-                            <div className="flex items-center gap-2">
-                               <div className="flex gap-0.5 text-[#ff4d6d]">
-                                  {[...Array(5)].map((_, j) => <Star key={j} className="w-3 h-3 fill-current" />)}
-                               </div>
-                               <span className="text-[8px] font-black text-[#1a1c24]/20 uppercase tracking-[0.2em] italic">{hamper.rating}</span>
-                            </div>
-                            <h3 className="text-lg md:text-xl font-fraunces font-black leading-tight text-[#1a1c24] group-hover:text-[#ff4d6d] transition-colors italic line-clamp-2">{hamper.name}</h3>
-                            <p className="text-[11px] font-outfit text-[#1a1c24]/40 italic leading-relaxed line-clamp-2">"{hamper.desc}"</p>
-                         </div>
+                       {/* Content Side */}
+                       <div className="p-7 md:p-8 flex flex-col flex-1 justify-between gap-6 bg-[#fbf9f6]">
+                          <div className="space-y-4">
+                             <div className="flex items-center gap-2">
+                                <div className="flex gap-0.5 text-[#ff4d6d]">
+                                   {[...Array(5)].map((_, j) => <Star key={j} className="w-3 h-3 fill-current" />)}
+                                </div>
+                                <span className="text-[8px] font-black text-[#1a1c24]/20 uppercase tracking-[0.2em] italic">{hamper.rating}</span>
+                             </div>
+                             <h3 className="text-lg md:text-xl font-fraunces font-black leading-tight text-[#1a1c24] group-hover:text-[#ff4d6d] transition-colors italic line-clamp-2">{hamper.name}</h3>
+                             <p className="text-[11px] font-outfit text-[#1a1c24]/40 italic leading-relaxed line-clamp-2">"{hamper.desc}"</p>
+                          </div>
 
-                         <div className="flex items-center justify-between border-t border-[#1a1c24]/5 pt-6 mt-auto">
-                            <div className="flex flex-col">
-                               <span className="text-[8px] font-black uppercase tracking-[0.2em] text-[#ff4d6d] italic">Combo Value</span>
-                               <span className="text-xl md:text-2xl font-fraunces font-black text-[#1a1c24] italic">₹{hamper.price.toLocaleString()}</span>
-                            </div>
-                            <button className="w-12 h-12 bg-[#1a1c24] text-white rounded-full flex items-center justify-center hover:bg-[#ff4d6d] transition-all shadow-lg active:scale-90">
-                               <ShoppingBag className="w-4 h-4" />
-                            </button>
-                         </div>
-                      </div>
-                   </motion.div>
+                          <div className="flex items-center justify-between border-t border-[#1a1c24]/5 pt-6 mt-auto">
+                             <div className="flex flex-col">
+                                <span className="text-[8px] font-black uppercase tracking-[0.2em] text-[#ff4d6d] italic">Combo Value</span>
+                                <span className="text-xl md:text-2xl font-fraunces font-black text-[#1a1c24] italic">₹{hamper.price.toLocaleString()}</span>
+                             </div>
+                             <button onClick={(e) => { e.preventDefault(); e.stopPropagation(); }} className="w-12 h-12 bg-[#1a1c24] text-white rounded-full flex items-center justify-center hover:bg-[#ff4d6d] transition-all shadow-lg active:scale-90">
+                                <ShoppingBag className="w-4 h-4" />
+                             </button>
+                          </div>
+                       </div>
+                    </motion.div>
+                   </Link>
                  ))}
                </AnimatePresence>
             </div>
@@ -336,12 +337,12 @@ export default function GiftsPage() {
 
 
       {/* Recipient Sections */}
-      <section className="py-20 md:py-32 bg-white border-y border-[#1a1c24]/5 relative overflow-hidden">
+      <section className="py-10 md:py-16 bg-white border-y border-[#1a1c24]/5 relative overflow-hidden">
          <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-[#dcb0af]/5 rounded-full blur-[100px] pointer-events-none" />
          <div className="max-w-[1400px] mx-auto px-6 md:px-10 relative z-10">
             <div className="text-center space-y-4 md:space-y-6 mb-16 md:mb-20">
                <span className="text-[9px] md:text-[10px] font-outfit font-black uppercase tracking-[0.5em] text-[#dcb0af] italic">The Curation Matrix</span>
-               <h2 className="text-3xl md:text-5xl lg:text-6xl font-fraunces font-black text-[#1a1c24] leading-tight italic">
+               <h2 className="text-2xl md:text-4xl lg:text-5xl font-fraunces font-black text-[#1a1c24] leading-tight italic">
                   Gifts by <span className="text-[#bfa37e] font-normal">Recipient.</span>
                </h2>
             </div>
@@ -368,7 +369,7 @@ export default function GiftsPage() {
 
 
       {/* Gift Concierge CTA */}
-      <section className="py-24 md:py-48 bg-[#1a1c24] relative overflow-hidden">
+      <section className="py-12 md:py-20 bg-[#1a1c24] relative overflow-hidden">
          <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/silk.png')" }} />
          <div className="absolute top-0 right-0 w-[400px] h-[400px] md:w-[600px] md:h-[600px] bg-[#dcb0af]/10 rounded-full blur-[150px] md:blur-[200px]" />
          
@@ -382,7 +383,7 @@ export default function GiftsPage() {
                   "Can't find the perfect combo? Mix and match from our boutique and bakery to create a truly one-of-a-kind gift scroll."
                </p>
             </div>
-            <Link href="/gifts/builder" className="group relative inline-flex items-center justify-center gap-6 px-12 md:px-16 py-6 md:py-8 bg-[#dcb0af] text-white rounded-full font-black text-xs md:text-sm uppercase tracking-[0.5em] hover:scale-110 active:scale-95 transition-all shadow-2xl italic overflow-hidden">
+            <Link href="/gifts/builder" className="group relative inline-flex items-center justify-center gap-6 px-10 py-5 bg-[#dcb0af] text-white rounded-full font-black text-[10px] md:text-xs uppercase tracking-[0.3em] hover:scale-105 active:scale-95 transition-all shadow-xl italic overflow-hidden">
                <div className="absolute inset-0 bg-[#2d241c]/10 -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
                <span className="relative z-10 flex items-center justify-center gap-4 text-center">Enter Gift Builder <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform" /></span>
             </Link>

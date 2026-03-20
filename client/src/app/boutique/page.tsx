@@ -252,7 +252,7 @@ export default function BoutiquePage() {
                   <div className="hidden md:block h-px w-16 bg-[#ff4d6d]" />
                   <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d]">Artisan Boutique</span>
                 </div>
-                <h1 className="text-3xl md:text-5xl lg:text-6xl font-fraunces font-black text-[#1a1c24] leading-[1.1] md:leading-tight italic">
+                <h1 className="text-2xl md:text-4xl lg:text-5xl font-fraunces font-black text-[#1a1c24] leading-[1.1] md:leading-tight italic">
                   Wear Your <br className="hidden sm:block" /><span className="text-[#bfa37e] font-normal italic">Story.</span>
                 </h1>
                 <p className="text-sm md:text-xl text-[#1a1c24]/40 font-outfit leading-relaxed max-w-xl mx-auto lg:mx-0 italic">
@@ -260,12 +260,12 @@ export default function BoutiquePage() {
                 </p>
               </div>
 
-              <div className="flex flex-wrap justify-center lg:justify-start gap-3 md:gap-4 pt-4 md:pt-6">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4 pt-4 md:pt-6">
                 {['Sarees', 'Lehengas', 'Gowns', 'Fabrics'].map(tag => (
                   <button
                     key={tag}
                     onClick={() => setActiveCategory(tag)}
-                    className="px-6 md:px-10 py-3 md:py-4 rounded-full border-2 border-[#bfa37e]/10 text-[10px] md:text-xs font-outfit font-black tracking-[0.3em] uppercase text-[#bfa37e] hover:bg-[#bfa37e] hover:text-white hover:border-[#bfa37e] transition-all transform hover:-translate-y-1 active:scale-95"
+                    className="px-8 py-4 rounded-full border-2 border-[#bfa37e]/10 text-[9px] md:text-[10px] font-outfit font-black tracking-[0.2em] uppercase text-[#bfa37e] hover:bg-[#bfa37e] hover:text-white hover:border-[#bfa37e] transition-all transform hover:-translate-y-1 active:scale-95"
                   >
                     {tag}
                   </button>
@@ -292,14 +292,14 @@ export default function BoutiquePage() {
                   src="https://anyaonline.in/cdn/shop/files/1_f604d26e-5258-405f-a4c1-5fe659b6febb_400x.jpg?v=1771045647"
                   alt="Sarees"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
-                />
+                loading="lazy" />
               </div>
               <div className="absolute bottom-0 right-0 w-[140px] sm:w-[180px] md:w-[240px] h-[180px] sm:h-[250px] md:h-[320px] rounded-[2.5rem] md:rounded-[4rem] overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.12)] rotate-[4deg] z-10 border-[6px] md:border-[10px] border-white group">
                 <img
                   src="https://anyaonline.in/cdn/shop/files/10_91061a4c-2853-4728-b38d-e10d8f038c4d_400x.jpg?v=1771048393"
                   alt="Silk Sarees"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
-                />
+                loading="lazy" />
               </div>
               {/* Stats bubble updated for mobile */}
               <div className="absolute bottom-[10%] left-[10%] md:bottom-[20%] md:left-[15%] bg-white rounded-3xl px-6 md:px-10 py-4 md:py-6 shadow-[0_20px_60px_rgba(0,0,0,0.1)] z-30 transform -rotate-3 hover:rotate-0 transition-transform">
@@ -351,9 +351,9 @@ export default function BoutiquePage() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`whitespace-nowrap px-6 md:px-8 py-3 rounded-full text-[10px] md:text-[11px] font-outfit font-black tracking-[0.2em] uppercase transition-all transform active:scale-95 ${
+                className={`whitespace-nowrap px-6 py-3 rounded-full text-[9px] md:text-[10px] font-outfit font-black tracking-[0.2em] uppercase transition-all transform active:scale-95 ${
                   activeCategory === cat
-                    ? 'bg-[#1a1c24] text-white shadow-[0_10px_30px_rgba(26,28,36,0.3)]'
+                    ? 'bg-[#1a1c24] text-white shadow-lg'
                     : 'bg-[#fbf9f6] text-[#1a1c24]/30 hover:text-[#1a1c24] border border-transparent hover:border-[#1a1c24]/10 hover:bg-white'
                 }`}
               >
@@ -440,8 +440,8 @@ export default function BoutiquePage() {
                     >
                       <Heart className={`w-5 h-5 transition-colors ${wishlist.includes(product.id) ? 'fill-current text-white' : 'text-[#1a1c24]'}`} />
                     </button>
-                    <div className="absolute inset-x-0 bottom-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-gradient-to-t from-[#1a1c24]/80 to-transparent">
-                       <Link href={`/boutique/${product.id}`} className="w-full py-4 bg-white text-[#1a1c24] text-center rounded-full text-[10px] font-black uppercase tracking-[0.3em] italic">Swift Manifest</Link>
+                    <div className="absolute inset-x-0 bottom-6 flex justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500 px-8">
+                       <Link href={`/boutique/${product.id}`} className="w-full py-3 bg-white/95 backdrop-blur-md text-[#1a1c24] text-center rounded-full text-[9px] font-black uppercase tracking-[0.25em] shadow-xl border border-white/20 italic hover:bg-[#ff4d6d] hover:text-white transition-colors">Swift Manifest</Link>
                     </div>
                   </div>
 
@@ -493,21 +493,21 @@ export default function BoutiquePage() {
       </section>
 
       {/* ── CUSTOM ORDER CTA UPDATED ── */}
-      <section className="py-24 md:py-48 bg-[#1a1c24] relative overflow-hidden flex flex-col items-center">
+      <section className="py-12 md:py-20 bg-[#1a1c24] relative overflow-hidden flex flex-col items-center">
          <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/silk.png')" }} />
          <div className="absolute top-0 right-0 w-[400px] h-[400px] md:w-[600px] md:h-[600px] bg-[#ff4d6d]/10 rounded-full blur-[150px] md:blur-[200px]" />
          
          <div className="max-w-[1400px] mx-auto px-6 md:px-10 text-center space-y-10 md:space-y-16 relative z-10 flex flex-col items-center">
             <div className="space-y-6 text-center">
                <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">Private Atelier</span>
-               <h2 className="text-3xl md:text-5xl lg:text-6xl font-fraunces font-black text-white leading-tight italic">
+               <h2 className="text-2xl md:text-4xl lg:text-5xl font-fraunces font-black text-white leading-tight italic">
                   Bespoke <br className="md:hidden" /><span className="italic font-normal text-[#bfa37e]">Visionaries.</span>
                </h2>
                <p className="text-sm md:text-2xl text-white/30 font-outfit max-w-2xl mx-auto leading-relaxed italic">
                   "We invite you to the ritual of creation. Share your dreams, and our master artisans will manifest them into artifacts of pure grace."
                </p>
             </div>
-            <Link href="/contact" className="group relative inline-flex items-center justify-center gap-6 px-12 md:px-16 py-6 md:py-8 bg-[#ff4d6d] text-white rounded-full font-black text-xs md:text-sm uppercase tracking-[0.5em] hover:scale-105 active:scale-95 transition-all shadow-2xl italic overflow-hidden">
+            <Link href="/contact" className="group relative inline-flex items-center justify-center gap-6 px-10 py-5 bg-[#ff4d6d] text-white rounded-full font-black text-[10px] md:text-xs uppercase tracking-[0.3em] hover:scale-105 active:scale-95 transition-all shadow-xl italic overflow-hidden">
                <div className="absolute inset-0 bg-[#1a1c24]/10 -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
                <span className="relative z-10 flex items-center justify-center gap-4 text-center">Design Custom Outfit 👗</span>
             </Link>

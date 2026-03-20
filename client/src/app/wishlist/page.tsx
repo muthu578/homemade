@@ -31,7 +31,7 @@ export default function WishlistPage() {
           <div className="flex flex-col md:flex-row items-center md:items-baseline justify-between mb-12 md:mb-20 gap-6 md:gap-8 text-center md:text-left">
             <div className="space-y-4 w-full">
               <span className="text-[10px] md:text-xs font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] block italic">Personal Collection</span>
-              <h1 className="text-5xl md:text-7xl lg:text-[84px] font-fraunces font-black text-[#1a1c24] leading-tight italic">My <span className="italic font-normal text-[#bfa37e]">Wishlist.</span></h1>
+              <h1 className="text-3xl md:text-5xl lg:text-[84px] font-fraunces font-black text-[#1a1c24] leading-tight italic">My <span className="italic font-normal text-[#bfa37e]">Wishlist.</span></h1>
             </div>
             <p className="text-xl md:text-2xl font-fraunces font-black text-[#bfa37e] italic whitespace-nowrap lg:ml-auto w-full md:w-auto">{items.length} Artisan Pieces</p>
           </div>
@@ -100,7 +100,7 @@ export default function WishlistPage() {
                  <motion.div 
                    initial={{ opacity: 0, scale: 0.95 }}
                    animate={{ opacity: 1, scale: 1 }}
-                   className="col-span-1 sm:col-span-2 lg:col-span-3 py-24 md:py-48 text-center space-y-10 md:space-y-14 bg-white rounded-[3.5rem] md:rounded-[4rem] shadow-[0_20px_80px_rgba(0,0,0,0.03)] border border-[#1a1c24]/5 px-6 mx-auto w-full max-w-4xl"
+                   className="col-span-1 sm:col-span-2 lg:col-span-3 py-12 md:py-20 text-center space-y-10 md:space-y-14 bg-white rounded-[3.5rem] md:rounded-[4rem] shadow-[0_20px_80px_rgba(0,0,0,0.03)] border border-[#1a1c24]/5 px-6 mx-auto w-full max-w-4xl"
                  >
                     <div className="w-32 md:w-40 h-32 md:h-40 bg-[#fbf9f6] text-[#1a1c24]/10 rounded-full flex items-center justify-center mx-auto shadow-inner">
                        <Heart className="w-16 h-16 md:w-20 md:h-20" />

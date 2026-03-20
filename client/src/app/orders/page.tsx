@@ -47,7 +47,7 @@ export default function OrdersPage() {
           <div className="flex flex-col md:flex-row items-baseline justify-between mb-12 md:mb-16 gap-6 md:gap-10">
             <div className="space-y-4 md:space-y-6 text-center md:text-left w-full md:w-auto">
               <span className="text-[10px] md:text-xs font-outfit font-black uppercase tracking-[0.5em] md:tracking-[0.6em] text-[#ff4d6d] italic">The Vault</span>
-              <h1 className="text-5xl md:text-7xl lg:text-[84px] font-fraunces font-black leading-tight italic">My <span className="italic font-normal text-[#bfa37e]">Orders.</span></h1>
+              <h1 className="text-3xl md:text-5xl lg:text-[84px] font-fraunces font-black leading-tight italic">My <span className="italic font-normal text-[#bfa37e]">Orders.</span></h1>
             </div>
             
             <div className="relative group w-full md:w-[350px]">

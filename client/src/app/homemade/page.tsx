@@ -118,7 +118,7 @@ export default function HomemadePage() {
                   <div className="hidden sm:block h-px w-12 bg-[#ff4d6d]" />
                   <span className="text-[10px] md:text-xs font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">The Sacred Kitchen</span>
                 </div>
-                <h1 className="text-3xl md:text-5xl lg:text-6xl font-fraunces font-black text-[#1a1c24] leading-[1.05] tracking-tight italic">
+                <h1 className="text-2xl md:text-4xl lg:text-5xl font-fraunces font-black text-[#1a1c24] leading-[1.05] tracking-tight italic">
                   Made with <br /><span className="italic font-normal text-[#bfa37e]">Grandma's Rituals.</span>
                 </h1>
               </div>
@@ -130,12 +130,12 @@ export default function HomemadePage() {
                   <span key={t} className="px-6 md:px-8 py-3 md:py-4 rounded-full bg-white border border-[#bfa37e]/10 text-[9px] md:text-[11px] font-outfit font-black text-[#bfa37e] shadow-sm uppercase tracking-widest italic">{t}</span>
                 ))}
               </div>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start pt-4">
-                <Link href="#products" className="group relative inline-flex items-center justify-center gap-6 px-12 md:px-16 py-6 md:py-8 bg-[#1a1c24] text-white rounded-full font-black text-xs md:text-sm uppercase tracking-[0.5em] hover:scale-105 active:scale-95 transition-all shadow-[0_40px_100px_rgba(0,0,0,0.2)] overflow-hidden italic">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                <Link href="#products" className="group relative inline-flex items-center justify-center gap-6 px-10 py-5 bg-[#1a1c24] text-white rounded-full font-black text-[10px] md:text-xs uppercase tracking-[0.3em] hover:scale-105 active:scale-95 transition-all shadow-xl overflow-hidden italic">
                    <div className="absolute inset-0 bg-[#ff4d6d]/10 -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
                    <span className="relative z-10 flex items-center justify-center gap-4">Manifest Now <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" /></span>
                 </Link>
-                <Link href="/contact" className="inline-flex items-center justify-center gap-6 px-12 md:px-16 py-6 md:py-8 border-2 border-[#1a1c24]/5 bg-white text-[#1a1c24] rounded-full font-black text-xs md:text-sm uppercase tracking-[0.5em] hover:bg-[#ff4d6d]/5 hover:border-[#ff4d6d] transition-all hover:scale-105 italic">
+                <Link href="/contact" className="inline-flex items-center justify-center gap-6 px-10 py-5 border-2 border-[#1a1c24]/5 bg-white text-[#1a1c24] rounded-full font-black text-[10px] md:text-xs uppercase tracking-[0.3em] hover:bg-[#ff4d6d]/5 hover:border-[#ff4d6d] transition-all hover:scale-105 italic">
                   Custom Hampers 🎁
                 </Link>
               </div>
@@ -152,7 +152,7 @@ export default function HomemadePage() {
                 </div>
               </div>
               <div className="absolute bottom-0 left-0 w-[60%] lg:w-[280px] h-[220px] md:h-[320px] rounded-[3rem] overflow-hidden border-[8px] border-white shadow-artisan group z-10 hover:-translate-y-2 transition-transform">
-                <img src="https://vellankifoods.com/cdn/shop/files/allam_mamidi_ginger_mango_pickle_a1459065-18d2-461b-9fc7-f82febc74c5c_1024x1024.jpg?v=1689761372" alt="Pickle" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
+                <img src="https://vellankifoods.com/cdn/shop/files/allam_mamidi_ginger_mango_pickle_a1459065-18d2-461b-9fc7-f82febc74c5c_1024x1024.jpg?v=1689761372" alt="Pickle" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" loading="lazy" />
               </div>
               <div className="absolute top-[40%] left-[10%] bg-white/95 backdrop-blur-2xl rounded-[2rem] px-8 py-6 shadow-2xl z-20 border border-[#bfa37e]/10 animate-float">
                 <p className="text-[10px] font-outfit font-black uppercase tracking-widest text-[#ff4d6d] italic mb-1">Ritual Standard</p>
@@ -164,7 +164,7 @@ export default function HomemadePage() {
       </section>
 
       {/* ── WHY HOMEMADE ── Refined spacing */}
-      <section className="py-20 md:py-32 bg-white relative overflow-hidden">
+      <section className="py-10 md:py-16 bg-white relative overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
             {[
@@ -191,7 +191,7 @@ export default function HomemadePage() {
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
           <div className="text-center mb-16 md:mb-32 space-y-6 md:space-y-8">
             <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">Scroll the Archives</span>
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-fraunces font-black text-[#1a1c24] leading-tight italic">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-fraunces font-black text-[#1a1c24] leading-tight italic">
               Browse the <br className="sm:hidden" /><span className="italic font-normal text-[#bfa37e]">Sacred Library.</span>
             </h2>
           </div>
@@ -201,7 +201,7 @@ export default function HomemadePage() {
                 onClick={() => setActiveCategory(col.name)}
                 className="group relative rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden cursor-pointer aspect-square shadow-xl active:scale-90 transition-transform">
                 <div className="w-full h-full">
-                  <img src={col.img} alt={col.name} className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110" />
+                  <img src={col.img} alt={col.name} className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110" loading="lazy" />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a1c24]/90 via-[#1a1c24]/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-left space-y-1">
@@ -217,7 +217,7 @@ export default function HomemadePage() {
       </section>
 
       {/* ── PRODUCTS ── Responsive Grid refined */}
-      <section id="products" className="py-24 md:py-48 bg-white relative overflow-hidden">
+      <section id="products" className="py-12 md:py-20 bg-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-96 md:w-[600px] h-96 md:h-[600px] bg-[#ff4d6d]/5 rounded-full blur-[150px] pointer-events-none" />
         <div className="absolute bottom-0 right-0 w-96 md:w-[600px] h-96 md:h-[600px] bg-[#bfa37e]/5 rounded-full blur-[150px] pointer-events-none" />
         
@@ -226,7 +226,7 @@ export default function HomemadePage() {
           <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 md:mb-24 gap-10 md:gap-16">
             <div className="space-y-6 text-center lg:text-left">
               <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">The Full Manifestation</span>
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-fraunces font-black text-[#1a1c24] leading-tight italic">
+              <h2 className="text-2xl md:text-4xl lg:text-5xl font-fraunces font-black text-[#1a1c24] leading-tight italic">
                 {activeCategory === 'All' ? <>Our Favorite <span className="italic font-normal text-[#bfa37e]">Rituals.</span></> : <>{activeCategory} <span className="italic font-normal text-[#bfa37e]">Series.</span></>}
               </h2>
             </div>
@@ -239,7 +239,7 @@ export default function HomemadePage() {
           <div className="flex items-center gap-3 overflow-x-auto no-scrollbar pb-12 md:pb-20 -mx-6 px-6 lg:flex-wrap lg:justify-center">
             {categories.map(cat => (
               <button key={cat} onClick={() => setActiveCategory(cat)}
-                className={`flex-shrink-0 px-8 py-3.5 md:py-4 rounded-full text-[9px] md:text-[11px] font-outfit font-black tracking-[0.3em] uppercase transition-all italic ${activeCategory === cat ? 'bg-[#1a1c24] text-white shadow-2xl' : 'text-[#1a1c24]/30 border border-[#1a1c24]/5 bg-[#fbf9f6] hover:border-[#ff4d6d]/50 hover:text-[#ff4d6d]'}`}>
+                className={`flex-shrink-0 px-6 py-3 rounded-full text-[9px] md:text-[10px] font-outfit font-black tracking-[0.2em] uppercase transition-all italic ${activeCategory === cat ? 'bg-[#1a1c24] text-white shadow-xl' : 'text-[#1a1c24]/30 border border-[#1a1c24]/5 bg-[#fbf9f6] hover:border-[#ff4d6d]/50 hover:text-[#ff4d6d]'}`}>
                 {cat}
               </button>
             ))}
@@ -264,8 +264,8 @@ export default function HomemadePage() {
                       className="absolute top-6 right-6 w-12 h-12 bg-white/95 backdrop-blur-2xl rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all hover:bg-[#ff4d6d] hover:text-white shadow-2xl transform active:scale-75">
                       <Heart className={`w-5 h-5 transition-colors ${wishlist.includes(item.id) ? 'fill-current text-white' : 'text-[#1a1c24]'}`} />
                     </button>
-                    <div className="absolute inset-x-0 bottom-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-gradient-to-t from-[#1a1c24]/80 to-transparent">
-                       <div className="w-full py-4 bg-white text-[#1a1c24] text-center rounded-full text-[10px] font-black uppercase tracking-[0.3em] italic">Swift Manifest</div>
+                    <div className="absolute inset-x-0 bottom-6 flex justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500 px-8">
+                       <div className="w-full py-3 bg-white/95 backdrop-blur-md text-[#1a1c24] text-center rounded-full text-[9px] font-black uppercase tracking-[0.3em] italic shadow-xl border border-white/20">Swift Manifest</div>
                     </div>
                   </Link>
 
@@ -296,21 +296,21 @@ export default function HomemadePage() {
       </section>
 
       {/* ── CUSTOM HAMPER CTA ── Refined stacking */}
-      <section className="py-24 md:py-48 bg-[#1a1c24] relative overflow-hidden flex flex-col items-center">
+      <section className="py-12 md:py-20 bg-[#1a1c24] relative overflow-hidden flex flex-col items-center">
          <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/silk.png')" }} />
          <div className="absolute top-0 right-0 w-[400px] h-[400px] md:w-[600px] md:h-[600px] bg-[#ff4d6d]/10 rounded-full blur-[150px] md:blur-[200px]" />
          
          <div className="max-w-[1400px] mx-auto px-6 md:px-10 text-center space-y-10 md:space-y-16 relative z-10 flex flex-col items-center">
             <div className="space-y-6 text-center">
                <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">The Gifting Protocol</span>
-               <h2 className="text-3xl md:text-5xl lg:text-6xl font-fraunces font-black text-white leading-tight italic">
+               <h2 className="text-2xl md:text-4xl lg:text-5xl font-fraunces font-black text-white leading-tight italic">
                   Craft Your Own <br className="md:hidden" /><span className="italic font-normal text-[#bfa37e]">Gift Scroll.</span>
                </h2>
                <p className="text-sm md:text-2xl text-white/30 font-outfit max-w-2xl mx-auto leading-relaxed italic">
                   "Weave your own ritual box with divine sweets, snacks, and sacred threads. Hand-packed in premium artifacts for your most celestial celebrations."
                </p>
             </div>
-            <Link href="/contact" className="group relative inline-flex items-center justify-center gap-6 px-12 md:px-16 py-6 md:py-8 bg-[#ff4d6d] text-white rounded-full font-black text-xs md:text-sm uppercase tracking-[0.5em] hover:scale-105 active:scale-95 transition-all shadow-2xl italic overflow-hidden">
+            <Link href="/contact" className="group relative inline-flex items-center justify-center gap-6 px-10 py-5 bg-[#ff4d6d] text-white rounded-full font-black text-[10px] md:text-xs uppercase tracking-[0.3em] hover:scale-105 active:scale-95 transition-all shadow-xl italic overflow-hidden">
                <div className="absolute inset-0 bg-[#1a1c24]/10 -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
                <span className="relative z-10 flex items-center justify-center gap-4 text-center">Design Custom Hamper 🎁</span>
             </Link>

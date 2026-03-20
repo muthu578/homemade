@@ -95,7 +95,7 @@ export default function ContactPage() {
               {submitted ? (
                 <AnimatePresence>
                   <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="h-full flex flex-col items-center justify-center text-center space-y-10 py-16 md:py-32 relative z-10">
-                    <div className="w-24 h-24 md:w-32 md:h-32 bg-[#ff4d6d]/10 rounded-full flex items-center justify-center text-5xl md:text-7xl animate-bounce">✨</div>
+                    <div className="w-24 h-24 md:w-32 md:h-32 bg-[#ff4d6d]/10 rounded-full flex items-center justify-center text-3xl md:text-5xl animate-bounce">✨</div>
                     <div className="space-y-4">
                        <h3 className="text-3xl md:text-5xl font-fraunces font-black text-[#1a1c24] italic">Message Received!</h3>
                        <p className="text-sm md:text-xl text-[#1a1c24]/40 font-outfit max-w-sm mx-auto italic">"The masters have heard your vision. We shall return within a lunar cycle (24h) to finalize the manifestation."</p>

@@ -12,7 +12,7 @@ export const Footer = () => {
 
           {/* Brand Col - Hidden on mobile */}
           <div className="hidden md:flex flex-col space-y-8">
-            <Logo />
+            <Logo isFooter={true} />
             <p className="text-sm font-outfit text-[#1a1c24]/40 leading-relaxed max-w-xs">
               Handcrafting elegance in fashion and artisan mastery in baking. From our home atelier to yours.
             </p>

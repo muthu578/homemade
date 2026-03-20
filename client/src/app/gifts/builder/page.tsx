@@ -139,7 +139,7 @@ export default function GiftBuilderPage() {
                              <div key={cat} className="space-y-4 text-center">
                                 <div className="aspect-square rounded-[2rem] overflow-hidden border border-white/10 relative group">
                                    {item ? (
-                                     <img src={item.img} alt={item.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                                     <img src={item.img} alt={item.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
                                    ) : (
                                      <div className="w-full h-full bg-white/5 flex items-center justify-center text-white/10 italic text-[8px] font-black uppercase tracking-widest">Empty Realm</div>
                                    )}

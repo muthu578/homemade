@@ -138,7 +138,7 @@ export default function ProductDetailPage() {
                        onClick={() => setActiveImg(i)}
                        className={`w-24 h-32 flex-shrink-0 rounded-[2rem] overflow-hidden border-2 transition-all duration-500 transform ${activeImg === i ? 'border-[#dcb0af] shadow-xl scale-105 active:scale-95' : 'border-transparent opacity-40 hover:opacity-100 bg-white scale-100'}`}
                     >
-                       <img src={img} alt="Thumb" className="w-full h-full object-cover" />
+                       <img src={img} alt="Thumb" className="w-full h-full object-cover" loading="lazy" />
                     </button>
                   ))}
                </div>
@@ -156,7 +156,7 @@ export default function ProductDetailPage() {
                         <span className="text-[10px] font-outfit font-black uppercase tracking-[0.2em] text-[#2d241c]/20 italic">{product.rating} ({product.reviews} Witnessed)</span>
                      </div>
                   </div>
-                  <h1 className="text-4xl md:text-7xl font-fraunces font-black leading-tight italic tracking-tight text-[#2d241c]">{product.name}</h1>
+                  <h1 className="text-2xl md:text-5xl font-fraunces font-black leading-tight italic tracking-tight text-[#2d241c]">{product.name}</h1>
                   <p className="text-3xl md:text-6xl font-fraunces font-black text-[#dcb0af] italic flex items-baseline gap-4">
                      ₹{product.price.toLocaleString()}
                      <span className="text-[10px] font-outfit font-black uppercase tracking-[0.4em] text-[#2d241c]/15 not-italic">Tribute Incl.</span>
@@ -290,7 +290,7 @@ export default function ProductDetailPage() {
       </section>
 
       {/* Social Proof & Reviews Section */}
-      <section className="py-24 md:py-48 bg-[#fbf9f6] relative border-y border-[#1a1c24]/5">
+      <section className="py-12 md:py-20 bg-[#fbf9f6] relative border-y border-[#1a1c24]/5">
          <div className="max-w-[1500px] mx-auto px-6 md:px-10">
             <div className="grid lg:grid-cols-12 gap-20 items-center">
                <div className="lg:col-span-5 space-y-10">

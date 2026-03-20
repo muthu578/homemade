@@ -78,7 +78,7 @@ export default function BakeryProductPage() {
                            {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 md:w-5 md:h-5 fill-current animate-pulse" style={{ animationDelay: `${i * 150}ms` }} />)}
                         </div>
                      </div>
-                     <h1 className="text-4xl md:text-7xl lg:text-8xl font-fraunces font-black leading-[1.1] text-[#1a1c24] italic tracking-tight">{product.name}</h1>
+                     <h1 className="text-2xl md:text-4xl lg:text-5xl font-fraunces font-black leading-tight text-[#1a1c24] italic tracking-tight">{product.name}</h1>
                      <div className="flex items-baseline gap-4">
                         <p className="text-3xl md:text-5xl font-fraunces font-black text-[#bfa37e] italic">₹{product.price.toLocaleString()}</p>
                         <span className="text-[10px] md:text-xs font-outfit font-black text-[#1a1c24]/20 uppercase tracking-[0.2em] italic">Artisan Value</span>
@@ -142,7 +142,7 @@ export default function BakeryProductPage() {
       </section>
 
       {/* Craftsmanship Section refined */}
-      <section className="py-24 md:py-48 bg-white border-y border-[#1a1c24]/5 relative overflow-hidden">
+      <section className="py-12 md:py-20 bg-white border-y border-[#1a1c24]/5 relative overflow-hidden">
          <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/natural-paper.png')" }} />
          <div className="max-w-[1400px] mx-auto px-6 md:px-10 text-center relative z-10 space-y-20 md:space-y-32">
             <div className="space-y-6">

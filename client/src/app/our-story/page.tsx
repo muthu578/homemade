@@ -33,7 +33,7 @@ export default function OurStoryPage() {
         <div className="max-w-[1400px] mx-auto px-6 md:px-10 text-center relative z-10 space-y-8 md:space-y-12">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9 }} className="space-y-6 md:space-y-8">
             <span className="text-[10px] md:text-xs font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">Our Sacred Origin</span>
-            <h1 className="text-5xl md:text-7xl lg:text-[100px] font-fraunces font-black text-[#1a1c24] leading-[1.05] tracking-tight italic">
+            <h1 className="text-3xl md:text-5xl lg:text-[100px] font-fraunces font-black text-[#1a1c24] leading-[1.05] tracking-tight italic">
               From a Kitchen<br /><span className="italic font-normal text-[#bfa37e]"> to a Craft.</span>
             </h1>
             <p className="text-base md:text-2xl text-[#1a1c24]/30 font-outfit leading-relaxed max-w-3xl mx-auto italic">
@@ -44,7 +44,7 @@ export default function OurStoryPage() {
       </section>
 
       {/* FOUNDER FEATURE */}
-      <section className="py-24 md:py-48 bg-white relative overflow-hidden">
+      <section className="py-12 md:py-20 bg-white relative overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-center">
             <motion.div
@@ -55,13 +55,12 @@ export default function OurStoryPage() {
               className="relative h-[450px] md:h-[700px] group order-2 lg:order-1"
             >
               <div className="absolute inset-0 rounded-[3rem] md:rounded-[4rem] overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.08)] border border-[#1a1c24]/5 bg-[#f0ede8]">
-                <img src="https://images.pexels.com/photos/3814892/pexels-photo-3814892.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Founder" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.5s]" />
+                <img src="/media__1773990064875.jpg" alt="Founder" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.5s]" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a1c24]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               </div>
-              <div className="absolute -bottom-6 -right-2 md:bottom-10 md:-right-10 bg-white/95 backdrop-blur-2xl rounded-[2.5rem] md:rounded-[3rem] px-8 md:px-12 py-6 md:py-8 shadow-2xl z-10 border border-[#bfa37e]/10 animate-float">
-                <p className="text-[9px] md:text-[10px] font-outfit font-black uppercase tracking-[0.4em] text-[#ff4d6d] italic">Founded by</p>
-                <p className="text-2xl md:text-4xl font-fraunces font-black text-[#1a1c24] mt-2 italic">Pranavika</p>
-                <p className="text-[11px] md:text-sm font-outfit italic text-[#1a1c24]/30 font-medium mt-1">"Artistry Manifested"</p>
+              <div className="absolute -bottom-6 -right-2 md:bottom-10 md:-right-10 bg-white/95 backdrop-blur-2xl rounded-[2.5rem] md:rounded-[3rem] px-8 md:px-12 py-6 md:py-8 shadow-2xl z-10 border border-[#bfa37e]/10 animate-float active:scale-95 transition-transform cursor-pointer">
+                <p className="text-[9px] md:text-[10px] font-outfit font-black uppercase tracking-[0.4em] text-[#ff4d6d] italic">The Heritage</p>
+                <p className="text-2xl md:text-3xl font-fraunces font-black text-[#1a1c24] mt-2 italic text-center">Rooted in <br />Tradition</p>
               </div>
             </motion.div>
 
@@ -74,7 +73,7 @@ export default function OurStoryPage() {
             >
               <div className="space-y-4">
                 <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">The Creator</span>
-                <h2 className="text-4xl md:text-6xl lg:text-7xl font-fraunces font-black text-[#1a1c24] leading-tight italic">
+                <h2 className="text-2xl md:text-4xl lg:text-5xl font-fraunces font-black text-[#1a1c24] leading-tight italic">
                   A Passion for <br className="hidden lg:block" /><span className="italic font-normal text-[#bfa37e]">Sacred Beauty.</span>
                 </h2>
               </div>
@@ -84,7 +83,7 @@ export default function OurStoryPage() {
                 <p className="text-[#1a1c24] font-black tracking-wide">"Create with devotion, deliver with grace, and never compromise on the purity of the craft."</p>
               </div>
               <div className="pt-6">
-                <Link href="/contact" className="group inline-flex items-center justify-center gap-6 px-12 md:px-16 py-6 md:py-8 bg-[#1a1c24] text-white rounded-full font-black text-xs md:text-sm uppercase tracking-[0.5em] hover:bg-[#ff4d6d] hover:scale-105 transition-all shadow-2xl active:scale-95 w-full sm:w-auto italic">
+                <Link href="/contact" className="group relative inline-flex items-center justify-center gap-6 px-10 py-5 bg-[#1a1c24] text-white rounded-full font-black text-[10px] md:text-xs uppercase tracking-[0.3em] hover:bg-[#ff4d6d] hover:scale-105 transition-all shadow-xl active:scale-95 w-full sm:w-auto italic">
                   Consult the Artisan <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                 </Link>
               </div>
@@ -94,11 +93,11 @@ export default function OurStoryPage() {
       </section>
 
       {/* TIMELINE */}
-      <section className="py-24 md:py-48 bg-[#fbf9f6] relative overflow-hidden">
+      <section className="py-12 md:py-20 bg-[#fbf9f6] relative overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
           <div className="text-center mb-20 md:mb-32 space-y-6">
             <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">The Evolution</span>
-            <h2 className="text-4xl md:text-7xl lg:text-8xl font-fraunces font-black text-[#1a1c24] leading-tight italic">The Milestones <br className="sm:hidden" /><span className="italic font-normal text-[#bfa37e]">That Made Us.</span></h2>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-fraunces font-black text-[#1a1c24] leading-tight italic">The Milestones <span className="italic font-normal text-[#bfa37e]">That Made Us.</span></h2>
           </div>
 
           <div className="relative">
@@ -123,8 +122,8 @@ export default function OurStoryPage() {
                   <div className={`w-full lg:w-1/2 pl-16 md:pl-24 lg:pl-0 ${i % 2 !== 0 ? 'lg:pr-24 lg:text-right' : 'lg:pl-24 lg:text-left'}`}>
                     <div className="p-8 md:p-14 rounded-[3rem] md:rounded-[4rem] bg-white shadow-[0_40px_100px_rgba(0,0,0,0.03)] border border-[#1a1c24]/5 space-y-6 md:space-y-8 group hover:shadow-[0_60px_120px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-700">
                       <div className={`flex flex-col lg:flex-row lg:items-end gap-3 md:gap-6 ${i % 2 !== 0 ? 'lg:flex-row-reverse lg:text-right' : ''}`}>
-                        <span className="text-6xl md:text-[100px] font-fraunces font-black text-[#ff4d6d]/5 group-hover:text-[#ff4d6d]/10 transition-colors leading-none italic">{m.year}</span>
-                        <h3 className="text-2xl md:text-4xl font-fraunces font-black text-[#1a1c24] leading-tight pb-2 italic">{m.title}</h3>
+                        <span className="text-4xl md:text-5xl lg:text-[70px] font-fraunces font-black text-[#ff4d6d] group-hover:text-[#bfa37e] transition-colors leading-none italic">{m.year}</span>
+                        <h3 className="text-lg md:text-xl lg:text-2xl font-fraunces font-black text-[#1a1c24] leading-tight pb-2 italic">{m.title}</h3>
                       </div>
                       <p className="text-[11px] md:text-sm text-[#1a1c24]/30 font-outfit leading-relaxed italic font-medium">" {m.desc} "</p>
                     </div>
@@ -137,7 +136,7 @@ export default function OurStoryPage() {
       </section>
 
       {/* VALUES */}
-      <section className="py-24 md:py-48 bg-white overflow-hidden relative">
+      <section className="py-12 md:py-20 bg-white overflow-hidden relative">
         <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-[#bfa37e]/5 rounded-full blur-[100px] pointer-events-none" />
         <div className="max-w-[1400px] mx-auto px-6 md:px-10 relative z-10">
           <div className="text-center mb-20 md:mb-32 space-y-6">
@@ -167,7 +166,7 @@ export default function OurStoryPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 md:py-48 bg-[#1a1c24] relative overflow-hidden">
+      <section className="py-12 md:py-20 bg-[#1a1c24] relative overflow-hidden">
         {/* Pattern Background */}
         <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/silk.png')" }} />
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#ff4d6d]/10 rounded-full blur-[150px] md:blur-[200px] pointer-events-none" />
@@ -176,7 +175,7 @@ export default function OurStoryPage() {
         <div className="max-w-[1400px] mx-auto px-6 md:px-10 text-center space-y-12 md:space-y-16 relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic mb-6 block">The Next Chapter</span>
-            <h2 className="text-5xl md:text-7xl lg:text-[100px] font-fraunces font-black text-white leading-tight italic">
+            <h2 className="text-3xl md:text-5xl lg:text-[100px] font-fraunces font-black text-white leading-tight italic">
               Be Part of Our <span className="italic font-normal text-[#bfa37e]">Scroll.</span>
             </h2>
           </motion.div>

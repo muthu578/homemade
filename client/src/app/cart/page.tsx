@@ -54,7 +54,7 @@ export default function CartPage() {
               <div className="hidden sm:block h-px w-12 bg-[#ff4d6d]" />
               <span className="text-[10px] md:text-xs font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">Your Sacred Selection</span>
             </div>
-            <h1 className="text-5xl md:text-7xl lg:text-[100px] font-fraunces font-black text-[#1a1c24] leading-[1.05] tracking-tight italic">
+            <h1 className="text-3xl md:text-5xl lg:text-[100px] font-fraunces font-black text-[#1a1c24] leading-[1.05] tracking-tight italic">
               Review Your <br className="hidden sm:block" /><span className="italic font-normal text-[#bfa37e]">Cravings.</span> <span className="text-2xl md:text-5xl font-fraunces font-black text-[#1a1c24]/20 align-top ml-2">({cart.length})</span>
             </h1>
           </motion.div>
@@ -97,8 +97,8 @@ export default function CartPage() {
                       {/* Image */}
                       <div className="w-full sm:w-40 md:w-48 aspect-[4/3] sm:aspect-square rounded-[2rem] md:rounded-[2.5rem] overflow-hidden flex-shrink-0 bg-[#f0ede8] shadow-inner relative">
                         <img src={item.img} alt={item.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.5s]" />
-                        <div className="absolute inset-x-0 bottom-0 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-gradient-to-t from-[#1a1c24]/80 to-transparent sm:hidden">
-                           <div className="w-full py-2 bg-white text-[#1a1c24] text-center rounded-full text-[8px] font-black uppercase tracking-[0.3em] italic">Swift Manifest</div>
+                        <div className="absolute inset-x-0 bottom-3 flex justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500 px-4">
+                           <div className="w-full py-2 bg-white/95 backdrop-blur-md text-[#1a1c24] text-center rounded-full text-[7px] font-black uppercase tracking-[0.2em] shadow-lg border border-white/20 italic">Swift Manifest</div>
                         </div>
                       </div>
 
@@ -168,9 +168,9 @@ export default function CartPage() {
                 <div className="bg-[#1a1c24] text-white rounded-[3rem] md:rounded-[4rem] p-10 md:p-14 shadow-[0_40px_100px_rgba(0,0,0,0.2)] space-y-10 md:space-y-14 relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-60 h-60 bg-white opacity-[0.03] rounded-full -mr-30 -mt-30 blur-3xl pointer-events-none" />
                   
-                  <div className="space-y-4">
-                    <h3 className="text-3xl md:text-5xl font-fraunces font-black text-white italic">Order Summary</h3>
-                    <div className="h-1.5 w-16 bg-[#ff4d6d] rounded-full" />
+                  <div className="space-y-3">
+                    <h3 className="text-2xl md:text-3xl font-fraunces font-black text-white italic leading-tight">Order Summary</h3>
+                    <div className="h-1 w-12 bg-[#ff4d6d] rounded-full" />
                   </div>
 
                   {/* Coupon */}
@@ -189,9 +189,9 @@ export default function CartPage() {
                       <button 
                         onClick={applyCoupon} 
                         disabled={couponApplied}
-                        className={`w-full py-5 md:py-6 rounded-full text-[10px] md:text-xs font-outfit font-black uppercase tracking-[0.4em] transition-all flex items-center justify-center gap-3 active:scale-95 shadow-xl italic ${couponApplied ? 'bg-green-500 text-white' : 'bg-[#ff4d6d] text-white hover:scale-[1.02] shadow-[#ff4d6d]/20'}`}
+                        className={`w-full py-4 rounded-full text-[9px] md:text-[10px] font-outfit font-black uppercase tracking-[0.2em] transition-all flex items-center justify-center gap-2 active:scale-95 shadow-lg italic ${couponApplied ? 'bg-green-500 text-white' : 'bg-[#ff4d6d] text-white hover:scale-[1.02]'}`}
                       >
-                        {couponApplied ? '✓ Applied Successfully' : 'Apply Discount'}
+                        {couponApplied ? '✓ Applied' : 'Apply Discount'}
                       </button>
                     </div>
                   </div>
@@ -203,9 +203,9 @@ export default function CartPage() {
                       ...(discount > 0 ? [{ label: 'Discount Applied', value: `−₹${discount.toLocaleString()}` }] : []),
                       { label: delivery === 0 ? 'Divine Delivery' : 'Standard Delivery', value: delivery === 0 ? 'FREE' : `₹${delivery}` },
                     ].map(({ label, value }) => (
-                      <div key={label} className="flex justify-between items-center px-4">
-                        <span className="text-[10px] md:text-xs font-outfit font-black text-white/40 uppercase tracking-[0.4em] italic">{label}</span>
-                        <span className={`text-base md:text-xl font-fraunces font-black italic ${value === 'FREE' || label.includes('Discount') ? 'text-green-400' : 'text-white'}`}>{value}</span>
+                      <div key={label} className="flex justify-between items-center px-2">
+                        <span className="text-[9px] md:text-[10px] font-outfit font-black text-white/40 uppercase tracking-[0.3em] italic">{label}</span>
+                        <span className={`text-sm md:text-lg font-fraunces font-black italic ${value === 'FREE' || label.includes('Discount') ? 'text-green-400' : 'text-white'}`}>{value}</span>
                       </div>
                     ))}
 
@@ -217,17 +217,17 @@ export default function CartPage() {
                       </div>
                     )}
 
-                    <div className="flex justify-between items-center pt-10 border-t border-white/10 px-4 mt-6">
-                      <span className="font-fraunces font-black text-white/40 text-2xl md:text-3xl italic">Total</span>
+                    <div className="flex justify-between items-end pt-8 border-t border-white/10 px-2 mt-4">
+                      <span className="font-fraunces font-black text-white/40 text-xl md:text-2xl italic">Total</span>
                       <div className="text-right">
-                         <span className="block font-fraunces font-black text-white text-4xl md:text-5xl shadow-glow shadow-[#ff4d6d]/5 italic">₹{total.toLocaleString()}</span>
-                         <span className="text-[9px] font-outfit font-black text-white/20 uppercase tracking-[0.4em] italic mt-2 block">Incl. all taxes</span>
+                         <span className="block font-fraunces font-black text-white text-3xl md:text-4xl italic">₹{total.toLocaleString()}</span>
+                         <span className="text-[8px] font-outfit font-black text-white/20 uppercase tracking-[0.3em] italic mt-1 block">Incl. all taxes</span>
                       </div>
                     </div>
                   </div>
 
-                  <Link href="/checkout" className="group w-full py-6 md:py-8 bg-white text-[#1a1c24] rounded-full font-black text-[10px] md:text-xs uppercase tracking-[0.4em] hover:bg-[#ff4d6d] hover:text-white transition-all shadow-[0_20px_50px_rgba(255,255,255,0.1)] hover:shadow-[#ff4d6d]/30 flex items-center justify-center gap-4 active:scale-95 select-none italic">
-                    Proceed to Checkout <ArrowRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-2 transition-transform" />
+                  <Link href="/checkout" className="group w-full py-5 bg-white text-[#1a1c24] rounded-full font-black text-[9px] md:text-[10px] uppercase tracking-[0.25em] hover:bg-[#ff4d6d] hover:text-white transition-all shadow-xl flex items-center justify-center gap-3 active:scale-95 select-none italic">
+                    Proceed to Checkout <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1.5 transition-transform" />
                   </Link>
 
                   <div className="flex items-center justify-center gap-6 pt-6 grayscale opacity-20 group-hover:grayscale-0 group-hover:opacity-100 transition-all cursor-crosshair">

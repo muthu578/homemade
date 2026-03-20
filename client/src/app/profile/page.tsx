@@ -87,7 +87,7 @@ export default function ProfilePage() {
                  className="bg-white rounded-[3rem] md:rounded-[4rem] p-8 md:p-12 lg:p-16 shadow-[0_20px_60px_rgba(0,0,0,0.03)] border border-[#1a1c24]/5 space-y-12 md:space-y-16"
               >
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 md:gap-8 border-b-2 sm:border-b-0 border-[#1a1c24]/5 pb-6 sm:pb-0">
-                   <h3 className="text-4xl md:text-5xl lg:text-6xl font-fraunces font-black leading-tight italic">My Profile <br className="hidden md:block lg:hidden" /><span className="italic font-normal text-[#bfa37e]">Atelier.</span></h3>
+                   <h3 className="text-2xl md:text-4xl lg:text-5xl font-fraunces font-black leading-tight italic">My Profile <br className="hidden md:block lg:hidden" /><span className="italic font-normal text-[#bfa37e]">Atelier.</span></h3>
                    <button 
                      onClick={() => setIsEditing(!isEditing)}
                      className={`w-full sm:w-auto px-8 md:px-10 py-4 md:py-5 border-2 rounded-full text-[10px] md:text-xs font-outfit font-black uppercase tracking-[0.4em] flex items-center justify-center gap-4 transition-all active:scale-95 italic shadow-sm hover:shadow-xl ${isEditing ? 'border-[#ff4d6d] bg-[#ff4d6d] text-white hover:bg-[#e63c5a]' : 'border-[#1a1c24]/10 bg-white text-[#1a1c24] hover:bg-[#1a1c24] hover:border-[#1a1c24] hover:text-white'}`}

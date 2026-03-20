@@ -145,7 +145,7 @@ export default function FAQPage() {
                   <div className="absolute -bottom-20 -left-20 w-[400px] h-[400px] bg-[#bfa37e]/10 rounded-full blur-[100px] -z-0" />
 
                   <div className="relative z-10 space-y-4 md:space-y-6">
-                     <h2 className="text-4xl md:text-6xl lg:text-7xl font-fraunces font-black text-white leading-tight">Need a Private <br /><span className="italic text-[#bfa37e] font-normal">Consultation?</span></h2>
+                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-fraunces font-black text-white leading-tight">Need a Private <br /><span className="italic text-[#bfa37e] font-normal">Consultation?</span></h2>
                      <p className="text-white/40 font-outfit text-sm md:text-lg max-w-xl mx-auto leading-relaxed italic">Our artisans are available Monday–Saturday, 10 AM to 7 PM to guide your choices.</p>
                   </div>
                   

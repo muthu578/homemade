@@ -56,7 +56,7 @@ export default function HomemadeProductPage() {
                               {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-current" />)}
                            </div>
                         </div>
-                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-fraunces font-black leading-tight text-[#1a1c24]">{product.name}</h1>
+                        <h1 className="text-2xl md:text-4xl lg:text-5xl font-fraunces font-black leading-tight text-[#1a1c24]">{product.name}</h1>
                         <div className="flex items-baseline justify-center lg:justify-start gap-4">
                            <p className="text-2xl md:text-3xl font-fraunces font-black text-[#1a1c24]/80">₹{product.price.toLocaleString()}</p>
                            <span className="text-xs md:text-sm font-outfit text-[#1a1c24]/20 uppercase tracking-[0.2em]">/ {product.unit}</span>

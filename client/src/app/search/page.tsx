@@ -29,7 +29,7 @@ export default function SearchPage() {
           <div className="max-w-4xl mx-auto space-y-12 md:space-y-16 mb-20 md:mb-32">
             <div className="text-center space-y-6">
               <span className="text-[10px] md:text-xs font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">Global Search</span>
-              <h1 className="text-5xl md:text-7xl lg:text-[84px] font-fraunces font-black text-[#1a1c24] leading-[1.05] tracking-tight italic">
+              <h1 className="text-3xl md:text-5xl lg:text-[84px] font-fraunces font-black text-[#1a1c24] leading-[1.05] tracking-tight italic">
                 Artisan <span className="italic font-normal text-[#bfa37e]">Discoveries.</span>
               </h1>
             </div>
@@ -114,7 +114,7 @@ export default function SearchPage() {
           <div className="mt-24 md:mt-40 text-center py-24 md:py-32 px-6 bg-white rounded-[3.5rem] md:rounded-[4rem] shadow-[0_20px_80px_rgba(0,0,0,0.03)] border border-[#1a1c24]/5 relative overflow-hidden group">
              <div className="absolute top-0 right-0 w-[200px] md:w-[300px] h-[200px] md:h-[300px] bg-[#ff4d6d]/5 rounded-full blur-[80px] group-hover:bg-[#ff4d6d]/10 transition-colors duration-1000 -z-0 pointer-events-none" />
              <div className="relative z-10 space-y-6">
-               <h4 className="text-3xl md:text-5xl lg:text-6xl font-fraunces font-black text-[#1a1c24]/40 italic">Can't find what you're looking for?</h4>
+               <h4 className="text-2xl md:text-4xl lg:text-5xl font-fraunces font-black text-[#1a1c24]/40 italic">Can't find what you're looking for?</h4>
                <p className="text-sm md:text-lg font-outfit text-[#1a1c24]/30 max-w-lg mx-auto leading-relaxed italic font-medium">"We offer custom and bespoke designs for both boutique and bakery. Let us weave something unique together."</p>
                <div className="pt-6">
                  <Link href="/contact" className="group/btn inline-flex items-center justify-center gap-4 px-12 md:px-14 py-5 md:py-6 bg-[#1a1c24] text-white rounded-full font-black text-[10px] md:text-xs uppercase tracking-[0.4em] hover:bg-[#ff4d6d] transition-all shadow-xl active:scale-95 italic text-center w-full sm:w-auto">

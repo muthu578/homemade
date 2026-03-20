@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ShoppingBag, Search, User, Menu, X, ArrowRight } from 'lucide-react';
 import { Logo } from '../ui/Logo';
@@ -7,6 +7,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navLinks = [
     { name: 'BOUTIQUE', href: '/boutique' },
@@ -17,7 +24,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-background/80 backdrop-blur-md py-2 border-b border-border/10">
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${scrolled ? 'bg-white shadow-[0_30px_100px_rgba(0,0,0,0.08)] py-1' : 'bg-background/80 backdrop-blur-md py-2'}`}>
         <div className="max-w-[1800px] mx-auto px-4 md:px-10 flex items-center justify-between h-16 md:h-20">
           {/* Left: Logo */}
           <div className="flex-shrink-1 min-w-0 pr-2">

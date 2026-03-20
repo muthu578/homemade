@@ -473,7 +473,7 @@ export default function BakeryPage() {
                   <div className="hidden md:block h-px w-16 bg-[#ff4d6d]" />
                   <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d]">Celestial Bakery</span>
                 </div>
-                <h1 className="text-3xl md:text-5xl lg:text-6xl font-fraunces font-black text-[#1a1c24] leading-[1.1] md:leading-tight italic">
+                <h1 className="text-2xl md:text-4xl lg:text-5xl font-fraunces font-black text-[#1a1c24] leading-[1.1] md:leading-tight italic">
                   Baked with <br className="hidden sm:block" /><span className="text-[#bfa37e] font-normal italic">Pure Love.</span>
                 </h1>
                 <p className="text-sm md:text-xl text-[#1a1c24]/40 font-outfit leading-relaxed max-w-xl mx-auto lg:mx-0 italic">
@@ -496,12 +496,12 @@ export default function BakeryPage() {
                 ))}
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-6 pt-6 md:pt-10 items-center justify-center lg:justify-start">
-                <Link href="#menu" className="group relative w-full sm:w-auto px-12 md:px-16 py-6 md:py-8 bg-[#1a1c24] text-white rounded-full font-black text-xs md:text-sm uppercase tracking-[0.4em] hover:scale-105 transition-all shadow-2xl active:scale-95 overflow-hidden">
+              <div className="flex flex-col sm:flex-row gap-4 pt-6 md:pt-10 items-center justify-center lg:justify-start">
+                <Link href="#menu" className="group relative w-full sm:w-auto px-10 py-5 bg-[#1a1c24] text-white rounded-full font-black text-[10px] md:text-xs uppercase tracking-[0.3em] hover:scale-105 transition-all shadow-xl active:scale-95 overflow-hidden">
                    <div className="absolute inset-0 bg-white/10 -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
-                   <span className="relative z-10 flex items-center justify-center gap-6">Explore Menu <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" /></span>
+                   <span className="relative z-10 flex items-center justify-center gap-4">Explore Menu <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" /></span>
                 </Link>
-                <Link href="/contact" className="w-full sm:w-auto px-12 md:px-16 py-6 md:py-8 border-2 border-[#ff4d6d]/10 text-[#1a1c24] rounded-full font-black text-xs md:text-sm uppercase tracking-[0.4em] hover:bg-[#ff4d6d] hover:text-white hover:border-[#ff4d6d] transition-all active:scale-95 text-center">
+                <Link href="/contact" className="w-full sm:w-auto px-10 py-5 border-2 border-[#ff4d6d]/10 text-[#1a1c24] rounded-full font-black text-[10px] md:text-xs uppercase tracking-[0.3em] hover:bg-[#ff4d6d] hover:text-white hover:border-[#ff4d6d] transition-all active:scale-95 text-center">
                   Custom Ritual 🎂
                 </Link>
               </div>
@@ -534,7 +534,7 @@ export default function BakeryPage() {
                   src="https://images.pexels.com/photos/808941/pexels-photo-808941.jpeg?auto=compress&cs=tinysrgb&w=400"
                   alt="Cupcakes"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2s]"
-                />
+                loading="lazy" />
               </div>
 
               {/* Floating pill refined */}
@@ -553,11 +553,11 @@ export default function BakeryPage() {
       </section>
 
       {/* ── OUR COLLECTIONS ── */}
-      <section className="py-24 md:py-48 bg-white relative overflow-hidden">
+      <section className="py-12 md:py-20 bg-white relative overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10 relative z-10">
           <div className="text-center mb-20 md:mb-32 space-y-6">
             <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">The Realms</span>
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-fraunces font-black text-[#1a1c24] leading-[1.1] italic">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-fraunces font-black text-[#1a1c24] leading-[1.1] italic">
               Something for <br className="hidden md:block" /><span className="text-[#bfa37e] font-normal italic">Every Craving.</span>
             </h2>
           </div>
@@ -572,7 +572,7 @@ export default function BakeryPage() {
                 className="group relative rounded-[3rem] md:rounded-[4rem] overflow-hidden cursor-pointer aspect-[4/5] md:aspect-square shadow-[0_20px_60px_rgba(0,0,0,0.03)] hover:shadow-[0_40px_100px_rgba(0,0,0,0.1)] transition-all duration-700 hover:-translate-y-4"
               >
                 <div className="w-full h-full overflow-hidden">
-                  <img src={col.img} alt={col.name} className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110" />
+                  <img src={col.img} alt={col.name} className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110" loading="lazy" />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a1c24]/80 via-[#1a1c24]/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12 space-y-4">
@@ -590,7 +590,7 @@ export default function BakeryPage() {
       </section>
 
       {/* ── MENU / PRODUCT GRID ── */}
-      <section id="menu" className="py-24 md:py-48 bg-[#fbf9f6] relative overflow-hidden">
+      <section id="menu" className="py-12 md:py-20 bg-[#fbf9f6] relative overflow-hidden">
         {/* Decorative halos */}
         <div className="absolute top-0 left-0 w-[400px] md:w-[800px] h-[400px] md:h-[800px] bg-[#ff4d6d]/5 rounded-full blur-[120px] -z-0" />
         <div className="absolute bottom-0 right-0 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-[#bfa37e]/5 rounded-full blur-[100px] -z-0" />
@@ -600,7 +600,7 @@ export default function BakeryPage() {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-32 gap-10">
             <div className="space-y-6 text-center md:text-left">
               <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">The Full Archive</span>
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-fraunces font-black text-[#1a1c24] leading-[1.1] italic">
+              <h2 className="text-2xl md:text-4xl lg:text-5xl font-fraunces font-black text-[#1a1c24] leading-[1.1] italic">
                 Our Sacred <br className="hidden md:block" /><span className="text-[#bfa37e] font-normal italic">Catalogue.</span>
               </h2>
             </div>
@@ -610,14 +610,14 @@ export default function BakeryPage() {
           </div>
 
           {/* Filter Pills refined with smooth horizontal scroll */}
-          <div className="flex items-center gap-3 overflow-x-auto no-scrollbar -mx-6 px-6 lg:mx-0 lg:px-0 scroll-smooth mb-16 md:mb-24 lg:flex-wrap lg:justify-center">
+          <div className="flex items-center gap-2 overflow-x-auto no-scrollbar -mx-6 px-6 lg:mx-0 lg:px-0 scroll-smooth mb-16 md:mb-24 lg:flex-wrap lg:justify-center">
             {categories.map(cat => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`flex-shrink-0 px-8 py-4 rounded-full text-[10px] md:text-[11px] font-outfit font-black tracking-[0.3em] uppercase transition-all transform active:scale-90 ${activeCategory === cat
-                    ? 'bg-[#1a1c24] text-white shadow-[0_15px_40px_rgba(26,28,36,0.25)]'
-                    : 'bg-white text-[#1a1c24]/20 border border-[#1a1c24]/5 hover:border-[#1a1c24]/10 hover:text-[#1a1c24]/40 hover:bg-white'
+                className={`flex-shrink-0 px-6 py-3 rounded-full text-[9px] md:text-[10px] font-outfit font-black tracking-[0.2em] uppercase transition-all transform active:scale-90 ${activeCategory === cat
+                    ? 'bg-[#1a1c24] text-white shadow-lg'
+                    : 'bg-white text-[#1a1c24]/20 border border-[#1a1c24]/5 hover:border-[#1a1c24]/10 hover:text-[#1a1c24]/40'
                   }`}
               >
                 {cat}
@@ -662,8 +662,8 @@ export default function BakeryPage() {
                     >
                       <Heart className={`w-5 h-5 transition-colors ${wishlist.includes(item.id) ? 'fill-current text-white' : 'text-[#1a1c24]'}`} />
                     </button>
-                    <div className="absolute inset-x-0 bottom-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-gradient-to-t from-[#1a1c24]/80 to-transparent">
-                       <Link href={`/bakery/${item.id}`} className="w-full py-4 bg-white text-[#1a1c24] text-center rounded-full text-[10px] font-black uppercase tracking-[0.3em] italic">Swift Manifest</Link>
+                    <div className="absolute inset-x-0 bottom-6 flex justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500 px-8">
+                       <Link href={`/bakery/${item.id}`} className="w-full py-3 bg-white/95 backdrop-blur-md text-[#1a1c24] text-center rounded-full text-[9px] font-black uppercase tracking-[0.25em] shadow-xl border border-white/20 italic hover:bg-[#ff4d6d] hover:text-white transition-colors">Swift Manifest</Link>
                     </div>
                   </div>
 
@@ -700,14 +700,14 @@ export default function BakeryPage() {
       </section>
 
       {/* ── TESTIMONIALS ── */}
-      <section className="py-32 md:py-64 bg-white relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-white relative overflow-hidden">
         {/* Subtle silk texture */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/silk.png')" }} />
         
         <div className="max-w-[1400px] mx-auto px-6 md:px-10 relative z-10">
           <div className="text-center mb-24 md:mb-40 space-y-6">
             <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">The Witnesses</span>
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-fraunces font-black text-[#1a1c24] leading-[1.1] italic">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-fraunces font-black text-[#1a1c24] leading-[1.1] italic">
               Words of <br className="hidden md:block" /><span className="text-[#bfa37e] font-normal italic">True Satisfaction.</span>
             </h2>
           </div>
@@ -750,21 +750,21 @@ export default function BakeryPage() {
       </section>
 
       {/* ── CUSTOM ORDER CTA UPDATED ── */}
-      <section className="py-24 md:py-48 bg-[#1a1c24] relative overflow-hidden flex flex-col items-center">
+      <section className="py-12 md:py-20 bg-[#1a1c24] relative overflow-hidden flex flex-col items-center">
          <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/silk.png')" }} />
          <div className="absolute top-0 right-0 w-[400px] h-[400px] md:w-[600px] md:h-[600px] bg-[#ff4d6d]/10 rounded-full blur-[150px] md:blur-[200px]" />
          
          <div className="max-w-[1400px] mx-auto px-6 md:px-10 text-center space-y-10 md:space-y-16 relative z-10 flex flex-col items-center">
             <div className="space-y-6 text-center">
                <span className="text-[10px] md:text-[12px] font-outfit font-black uppercase tracking-[0.6em] text-[#ff4d6d] italic">CUSTOM RITUALS</span>
-               <h2 className="text-3xl md:text-5xl lg:text-6xl font-fraunces font-black text-white leading-tight italic">
+               <h2 className="text-2xl md:text-4xl lg:text-5xl font-fraunces font-black text-white leading-tight italic">
                   Celebrate With <br className="md:hidden" /><span className="italic font-normal text-[#bfa37e]">Pure Vision.</span>
                </h2>
                <p className="text-sm md:text-2xl text-white/30 font-outfit max-w-2xl mx-auto leading-relaxed italic">
                   "We invite you to the altar of creation. Share your dreams, and our master bakers will manifest them into artifacts of pure celestial joy."
                </p>
             </div>
-            <Link href="/contact" className="group relative inline-flex items-center justify-center gap-6 px-12 md:px-16 py-6 md:py-8 bg-[#ff4d6d] text-white rounded-full font-black text-xs md:text-sm uppercase tracking-[0.5em] hover:scale-105 active:scale-95 transition-all shadow-2xl italic overflow-hidden">
+            <Link href="/contact" className="group relative inline-flex items-center justify-center gap-6 px-10 py-5 bg-[#ff4d6d] text-white rounded-full font-black text-[10px] md:text-xs uppercase tracking-[0.3em] hover:scale-105 active:scale-95 transition-all shadow-xl italic overflow-hidden">
                <div className="absolute inset-0 bg-[#1a1c24]/10 -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
                <span className="relative z-10 flex items-center justify-center gap-4 text-center">Order Custom Cake 🎂</span>
             </Link>

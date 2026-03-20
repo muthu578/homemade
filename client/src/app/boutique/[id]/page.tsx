@@ -76,7 +76,7 @@ export default function BoutiqueProductPage() {
                        onClick={() => setActiveImg(i)}
                        className={`relative flex-shrink-0 w-20 h-24 md:w-32 md:h-40 rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden transition-all duration-500 transform active:scale-90 ${activeImg === i ? 'ring-4 ring-[#ff4d6d]/40 scale-105 shadow-xl' : 'opacity-40 grayscale hover:opacity-100 hover:grayscale-0'}`}
                     >
-                       <img src={product.img} alt="Thumb" className="w-full h-full object-cover" />
+                       <img src={product.img} alt="Thumb" className="w-full h-full object-cover" loading="lazy" />
                     </button>
                   ))}
                   <div className="flex-shrink-0 w-20 h-24 md:w-32 md:h-40 rounded-[1.5rem] md:rounded-[2.5rem] bg-[#fbf9f6] border-2 border-dashed border-[#1a1c24]/5 flex flex-col items-center justify-center text-[#1a1c24]/10">
@@ -101,7 +101,7 @@ export default function BoutiqueProductPage() {
                            {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 md:w-5 md:h-5 fill-current animate-pulse" style={{ animationDelay: `${i * 150}ms` }} />)}
                         </div>
                      </div>
-                     <h1 className="text-4xl md:text-7xl lg:text-8xl font-fraunces font-black leading-[1.1] text-[#1a1c24] italic tracking-tight">{product.name}</h1>
+                     <h1 className="text-2xl md:text-4xl lg:text-5xl font-fraunces font-black leading-tight text-[#1a1c24] italic tracking-tight">{product.name}</h1>
                      <div className="flex items-baseline gap-4">
                         <p className="text-3xl md:text-5xl font-fraunces font-black text-[#1a1c24]/80 italic">₹{product.price.toLocaleString()}</p>
                         <span className="text-[10px] md:text-xs font-outfit font-black text-[#1a1c24]/20 uppercase tracking-[0.2em] italic">Honorary Tribute</span>
